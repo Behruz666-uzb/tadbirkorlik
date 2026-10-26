@@ -9,30 +9,35 @@ var C=window.TB_CONFIG||{},FB=C.firebase||{},ADM=(C.admins||[]).map(function(e){
 var VER="10.12.2";
 var configured=FB.apiKey&&FB.apiKey.indexOf("YOUR_")!==0&&FB.projectId&&FB.projectId.indexOf("YOUR_")!==0;
 var local=location.protocol==="file:"||/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+function sessionStorageGet(){try{return sessionStorage.getItem("tb-demo")}catch(e){return null}}
 function now(){var d=new Date();return d.toLocaleDateString("uz-UZ")+" "+d.toLocaleTimeString("uz-UZ",{hour:"2-digit",minute:"2-digit"})}
 
 /* ----- DEMO (faqat kompyuterda sinash uchun, Firebase sozlanmaguncha) ----- */
-if(!configured){
- if(!local){TB.gate("gSetup");return}
- var K="tb-demo-allowed",KV="tb-demo-videos";
- function rd(k,d){try{return JSON.parse(localStorage.getItem(k)||d)}catch(e){return JSON.parse(d)}}
- function wr(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+var K="tb-demo-allowed",KV="tb-demo-videos",MEM={};
+function rd(k,d){try{var v=localStorage.getItem(k);return JSON.parse(v||MEM[k]||d)}catch(e){return JSON.parse(MEM[k]||d)}}
+function wr(k,v){var s=JSON.stringify(v);MEM[k]=s;try{localStorage.setItem(k,s)}catch(e){}}
+function startDemo(){
  window.TBAuth={
   listAllowed:function(){return Promise.resolve(rd(K,"[]"))},
   addAllowed:function(email,note){var l=rd(K,"[]"),rec={email:email,note:note,addedAt:now()};l.unshift(rec);wr(K,l);return Promise.resolve(rec)},
   removeAllowed:function(email){wr(K,rd(K,"[]").filter(function(x){return x.email!==email}));return Promise.resolve()},
   getVideos:function(){return Promise.resolve(rd(KV,"{}"))},
   setVideo:function(key,url){var v=rd(KV,"{}");v[key]=url;wr(KV,v);return Promise.resolve()},
-  signOut:function(){TB.toast("Demo rejimda chiqish yo‘q")}
+  signOut:function(){TB.toast(TB.tr("Demo rejimda chiqish yo‘q"))}
  };
  TB.start({email:ADM[0]||"demo@local",name:"Demo",isAdmin:true,demo:true});
+}
+if(!configured){
+ if(local||sessionStorageGet()==="1"||/[?&#]demo\b/.test(location.search+location.hash)){startDemo();return}
+ TB.gate("gSetup");var bd=document.getElementById("btnDemo");
+ if(bd)bd.onclick=function(){try{sessionStorage.setItem("tb-demo","1")}catch(e){}startDemo()};
  return;
 }
 
 /* ----- Firebase ----- */
 function load(src){return new Promise(function(res,rej){var s=document.createElement("script");s.src=src;s.onload=res;s.onerror=function(){rej(new Error("Yuklab bo‘lmadi: "+src))};document.head.appendChild(s)})}
 var base="https://www.gstatic.com/firebasejs/"+VER+"/";
-load(base+"firebase-app-compat.js").then(function(){return Promise.all([load(base+"firebase-auth-compat.js"),load(base+"firebase-firestore-compat.js")])}).then(init).catch(function(e){TB.gate("gLogin","Internetga ulanib bo‘lmadi. Sahifani yangilang. ("+e.message+")")});
+load(base+"firebase-app-compat.js").then(function(){return Promise.all([load(base+"firebase-auth-compat.js"),load(base+"firebase-firestore-compat.js")])}).then(init).catch(function(e){TB.gate("gLogin",TB.tr("Internetga ulanib bo‘lmadi. Sahifani yangilang.")+" ("+e.message+")")});
 
 function init(){
  firebase.initializeApp(FB);
@@ -51,10 +56,10 @@ function init(){
  document.getElementById("btnGoogle").onclick=function(){TB.gate("gLogin","");auth.signInWithPopup(provider).catch(function(e){
    if(e&&(e.code==="auth/popup-blocked"||e.code==="auth/operation-not-supported-in-this-environment"||e.code==="auth/cancelled-popup-request"))return auth.signInWithRedirect(provider);
    if(e&&e.code==="auth/popup-closed-by-user")return;
-   if(e&&e.code==="auth/unauthorized-domain"){TB.gate("gLogin","Bu domen Firebase’da ruxsat etilmagan. Authentication → Settings → Authorized domains bo‘limiga sayt domenini qo‘shing.");return}
-   TB.gate("gLogin","Kirishda xato: "+(e&&e.message||e))})};
+   if(e&&e.code==="auth/unauthorized-domain"){TB.gate("gLogin",TB.tr("Bu domen Firebase’da ruxsat etilmagan. Authentication → Settings → Authorized domains bo‘limiga sayt domenini qo‘shing."));return}
+   TB.gate("gLogin",TB.tr("Kirishda xato: ")+(e&&e.message||e))})};
  document.getElementById("btnSwitch").onclick=function(){auth.signOut().then(function(){TB.gate("gLogin")})};
- auth.getRedirectResult().catch(function(e){TB.gate("gLogin","Kirishda xato: "+(e&&e.message||e))});
+ auth.getRedirectResult().catch(function(e){TB.gate("gLogin",TB.tr("Kirishda xato: ")+(e&&e.message||e))});
  auth.onAuthStateChanged(function(u){
   if(!u){TB.gate("gLogin");return}
   var email=(u.email||"").toLowerCase(),isAdmin=ADM.indexOf(email)>=0;
