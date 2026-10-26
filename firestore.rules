@@ -1,0 +1,33 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Administrator emaillari (js/config.js dagi admins bilan bir xil bo‘lsin)
+    function isAdmin() {
+      return request.auth != null
+        && request.auth.token.email_verified == true
+        && request.auth.token.email.lower() in ['dilfuzamavlanova446@gmail.com'];
+    }
+    function isAllowed() {
+      return request.auth != null
+        && (isAdmin() || exists(/databases/$(database)/documents/allowed/$(request.auth.token.email.lower())));
+    }
+
+    // Ruxsat ro‘yxati: foydalanuvchi faqat o‘z yozuvini o‘qiy oladi, admin hammasini boshqaradi
+    match /allowed/{email} {
+      allow read: if isAdmin() || (request.auth != null && request.auth.token.email.lower() == email);
+      allow write: if isAdmin();
+    }
+
+    // Sozlamalar (mavzular videolari): ruxsat berilganlar o‘qiydi, admin yozadi
+    match /settings/{doc} {
+      allow read: if isAllowed();
+      allow write: if isAdmin();
+    }
+
+    // Qolgan hamma narsa yopiq
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
