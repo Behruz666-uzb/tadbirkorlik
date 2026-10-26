@@ -6,3 +6,9 @@
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Admin panel alohida manzilda: https://SAYT/admin
+[[redirects]]
+  from = "/admin"
+  to = "/admin.html"
+  status = 200

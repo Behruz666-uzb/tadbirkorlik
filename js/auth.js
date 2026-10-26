@@ -12,6 +12,18 @@ var local=location.protocol==="file:"||/^(localhost|127\.0\.0\.1|\[::1\])$/.test
 function sessionStorageGet(){try{return sessionStorage.getItem("tb-demo")}catch(e){return null}}
 function now(){var d=new Date();return d.toLocaleDateString("uz-UZ")+" "+d.toLocaleTimeString("uz-UZ",{hour:"2-digit",minute:"2-digit"})}
 
+var ADMIN_MODE=window.TB_MODE==="admin";
+function ss(k,v){try{if(v===undefined)return sessionStorage.getItem(k);if(v===null)sessionStorage.removeItem(k);else sessionStorage.setItem(k,v)}catch(e){return null}}
+function sha256(str){if(!(window.crypto&&crypto.subtle&&window.TextEncoder))return Promise.reject(new Error("crypto"));return crypto.subtle.digest("SHA-256",new TextEncoder().encode(str)).then(function(b){return Array.prototype.map.call(new Uint8Array(b),function(x){return ("0"+x.toString(16)).slice(-2)}).join("")})}
+/* Admin login formasi (email + parol). onTry(email, pw, done(errText)) */
+function adminForm(onTry){
+ var f=document.getElementById("admF"),e=document.getElementById("admE"),p=document.getElementById("admP"),go=document.getElementById("admGo"),eye=document.getElementById("admEye");
+ TB.gate("gAdmin");setTimeout(function(){try{e.focus()}catch(x){}},50);
+ eye.onclick=function(){var show=p.type==="password";p.type=show?"text":"password";eye.classList.toggle("on",show)};
+ f.onsubmit=function(ev){ev.preventDefault();var em=e.value.trim().toLowerCase(),pw=p.value;if(!em||!pw)return;
+  go.disabled=true;document.getElementById("admErr").textContent="";
+  onTry(em,pw,function(err){go.disabled=false;if(err){document.getElementById("admErr").textContent=err;p.value="";p.focus();f.classList.remove("shake");void f.offsetWidth;f.classList.add("shake")}})}}
+
 /* ----- DEMO (faqat kompyuterda sinash uchun, Firebase sozlanmaguncha) ----- */
 var K="tb-demo-allowed",KV="tb-demo-videos",MEM={};
 function rd(k,d){try{var v=localStorage.getItem(k);return JSON.parse(v||MEM[k]||d)}catch(e){return JSON.parse(MEM[k]||d)}}
@@ -23,9 +35,16 @@ function startDemo(){
   removeAllowed:function(email){wr(K,rd(K,"[]").filter(function(x){return x.email!==email}));return Promise.resolve()},
   getVideos:function(){return Promise.resolve(rd(KV,"{}"))},
   setVideo:function(key,url){var v=rd(KV,"{}");v[key]=url;wr(KV,v);return Promise.resolve()},
-  signOut:function(){TB.toast(TB.tr("Demo rejimda chiqish yo‘q"))}
+  signOut:function(){if(ADMIN_MODE){ss("tb-admin",null);location.reload()}else TB.toast(TB.tr("Demo rejimda chiqish yo‘q"))}
  };
  TB.start({email:ADM[0]||"demo@local",name:"Demo",isAdmin:true,demo:true});
+}
+if(!configured&&ADMIN_MODE){
+ if(ss("tb-admin")==="1"){startDemo();return}
+ adminForm(function(em,pw,done){
+  if(ADM.indexOf(em)<0){done(TB.tr("Email yoki parol noto‘g‘ri"));return}
+  sha256(pw).then(function(h){if(h===C.demoAdminPassHash){ss("tb-admin","1");done();startDemo()}else done(TB.tr("Email yoki parol noto‘g‘ri"))}).catch(function(){done(TB.tr("Brauzer parolni tekshira olmadi"))})});
+ return;
 }
 if(!configured){
  if(local||sessionStorageGet()==="1"||/[?&#]demo\b/.test(location.search+location.hash)){startDemo();return}
@@ -53,6 +72,24 @@ function init(){
   setVideo:function(key,url){var o={};o[key]=url;return db.collection("settings").doc("videos").set(o,{merge:true})},
   signOut:function(){auth.signOut().then(function(){location.reload()})}
  };
+ if(ADMIN_MODE){
+  var pending=null;
+  adminForm(function(em,pw,done){pending=done;
+   auth.signInWithEmailAndPassword(em,pw).catch(function(e){var c=e&&e.code||"";pending=null;
+    if(/invalid-credential|wrong-password|user-not-found|invalid-email|invalid-login/.test(c))done(TB.tr("Email yoki parol noto‘g‘ri"));
+    else if(/too-many-requests/.test(c))done(TB.tr("Juda ko‘p urinish. Birozdan keyin qayta urining."));
+    else if(/operation-not-allowed/.test(c))done(TB.tr("Firebase’da Email/Password kirish usuli yoqilmagan."));
+    else if(/network/.test(c))done(TB.tr("Internetga ulanib bo‘lmadi. Sahifani yangilang."));
+    else done(TB.tr("Kirishda xato: ")+(e&&e.message||e))})});
+  auth.onAuthStateChanged(function(u){
+   if(!u){TB.gate("gAdmin");return}
+   var email=(u.email||"").toLowerCase();
+   if(ADM.indexOf(email)<0){auth.signOut();var d=pending;pending=null;TB.gate("gAdmin",TB.tr("Bu akkaunt administrator emas"));if(d)d(TB.tr("Bu akkaunt administrator emas"));return}
+   if(pending){pending();pending=null}
+   TB.start({email:email,name:u.displayName||"",photo:u.photoURL||"",isAdmin:true});
+  });
+  return;
+ }
  document.getElementById("btnGoogle").onclick=function(){TB.gate("gLogin","");auth.signInWithPopup(provider).catch(function(e){
    if(e&&(e.code==="auth/popup-blocked"||e.code==="auth/operation-not-supported-in-this-environment"||e.code==="auth/cancelled-popup-request"))return auth.signInWithRedirect(provider);
    if(e&&e.code==="auth/popup-closed-by-user")return;

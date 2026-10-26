@@ -10,7 +10,11 @@ Sayt faqat **ruxsat berilgan emaillar** uchun ochiladi. Admin panel orqali email
 ## 1. Firebase loyihasini yaratish (bir marta, ~10 daqiqa)
 
 1. <https://console.firebase.google.com> → **Add project** (masalan, `tadbirkorlik-asoslari`). Google Analytics shart emas.
-2. **Build → Authentication → Get started → Sign-in method → Google → Enable**. Support email sifatida o‘z emailingizni tanlang → Save.
+2. **Build → Authentication → Get started → Sign-in method**:
+   - **Google → Enable** (o‘quvchi va o‘qituvchilar shu orqali kiradi). Support email sifatida o‘z emailingizni tanlang → Save.
+   - **Email/Password → Enable** (faqat admin panel uchun).
+   - **Authentication → Users → Add user**: email `dilfuzamavlanova446@gmail.com` va o‘zingiz tanlagan admin parolini kiriting. Parol faqat Firebase’da saqlanadi, kodda yo‘q.
+   - **Authentication → Settings → User actions**: «Enable create (sign-up)» belgisini olib tashlang — shunda saytda hech kim o‘zi akkaunt ocha olmaydi.
 3. **Authentication → Settings → Authorized domains → Add domain**: Netlify manzilingizni qo‘shing (masalan, `tadbirkorlik.netlify.app`). Keyinroq o‘z domeningiz bo‘lsa, uni ham qo‘shing.
 4. **Build → Firestore Database → Create database** → Location: `eur3` (yoki yaqinroq) → **Start in production mode**.
 5. **Firestore → Rules** bo‘limiga `firestore.rules` faylidagi matnni to‘liq qo‘yib, **Publish** bosing.
@@ -39,17 +43,23 @@ window.TB_CONFIG = {
 
 ## 3. Foydalanish
 
-- Saytga kiring → **Google bilan kirish**.
-- Admin (`dilfuzamavlanova446@gmail.com`) doim kiradi; o‘ng pastdagi dumaloq tugma → **Admin panel**.
-- **Admin panel**: email qo‘shish (izoh bilan), qidirish, o‘chirish; har bir mavzuga YouTube havolasini biriktirish.
+- **Sayt**: `https://SAYT/` → **Google orqali kirish**. Faqat ruxsat berilgan emaillar kiradi, qolganlarga «Siz kira olmaysiz» sahifasi chiqadi.
+- **Admin panel**: `https://SAYT/admin` (yoki `admin.html`) → admin email va parolini kiriting. Asosiy saytda admin tugmasi ko‘rinmaydi.
+- **Admin panelda**: email qo‘shish (izoh bilan), qidirish, o‘chirish; har bir mavzuga YouTube havolasini biriktirish.
 - Ro‘yxatda yo‘q email bilan kirilsa — **«Siz kira olmaysiz»** sahifasi chiqadi.
 
+### Admin parolini o‘zgartirish
+Firebase Console → Authentication → Users → admin qatori → ⋮ → **Reset password**.
+
 ### Yangi admin qo‘shish
-Ikki joyda yozish kerak: `js/config.js` → `admins` ro‘yxati va `firestore.rules` → `isAdmin()` ichidagi ro‘yxat (rules’ni Firebase Console’da qayta Publish qiling).
+Ikki joyda yozish kerak: `js/config.js` → `admins` ro‘yxati va `firestore.rules` → `isAdmin()` ichidagi ro‘yxat (rules’ni Firebase Console’da qayta Publish qiling). Keyin Authentication → Users’da unga akkaunt yarating.
+
+### admin.html haqida
+`admin.html` fayli `index.html` dan avtomatik yasaladi. `index.html` ni o‘zgartirsangiz, `python3 make-admin.py` ni ishga tushiring.
 
 ## 4. Lokal sinash
 
-`index.html` ni brauzerda ochsangiz (Firebase sozlanmagan bo‘lsa) **DEMO rejim** ishlaydi: kirish taqlid qilinadi, ma’lumotlar brauzer xotirasida saqlanadi.
+`index.html` ni brauzerda ochsangiz (Firebase sozlanmagan bo‘lsa) **DEMO rejim** ishlaydi: kirish taqlid qilinadi, ma’lumotlar brauzer xotirasida saqlanadi. `admin.html` demo rejimda ham email va parol so‘raydi (bu holatda tekshiruv brauzerda bo‘ladi — u faqat sinov uchun; haqiqiy himoya Firebase ulangach ishlaydi).
 
 ## Muhim eslatma
 
@@ -64,6 +74,9 @@ js/config.js          — Firebase sozlamalari va adminlar
 js/auth.js            — kirish, ruxsat tekshiruvi, admin funksiyalari
 js/app.js             — kutubxona (kitob javoni), dars bo‘limlari, admin panel, asboblar
 js/film.js            — multfilm dvigateli
-js/topics/t01–t30.js  — 30 mavzu kontenti
+js/topics/t01–t30.js  — 30 mavzu kontenti (o‘zbekcha)
+js/topics/ru/t01–t30.js — ruscha tarjima
+js/i18n.js            — interfeys tarjimasi (UZ/RU)
+admin.html            — admin panel sahifasi (make-admin.py yasaydi)
 firestore.rules       — Firestore xavfsizlik qoidalari
 ```

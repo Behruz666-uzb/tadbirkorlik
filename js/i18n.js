@@ -8,6 +8,10 @@ var lang="uz";try{lang=localStorage.getItem("tb-lang")||"uz"}catch(e){}
 var qm=/[?&]lang=(uz|ru)/.exec(location.search);if(qm)lang=qm[1];
 if(lang!=="ru")lang="uz";
 var RU={
+/* --- admin kirish --- */
+"Admin panelga kirish":"Вход в админ-панель","Administrator email va parolini kiriting.":"Введите email и пароль администратора.","Email":"Email","Parol":"Пароль","Kirish":"Войти","← Saytga qaytish":"← Вернуться на сайт","Parolni ko‘rsatish":"Показать пароль",
+"Email yoki parol noto‘g‘ri":"Неверный email или пароль","Juda ko‘p urinish. Birozdan keyin qayta urining.":"Слишком много попыток. Повторите позже.","Firebase’da Email/Password kirish usuli yoqilmagan.":"В Firebase не включён вход по Email/Password.","Bu akkaunt administrator emas":"Этот аккаунт не является администратором","Brauzer parolni tekshira olmadi":"Браузер не смог проверить пароль","Admin panel · Tadbirkorlik asoslari":"Админ-панель · Основы предпринимательства",
+
 /* --- umumiy --- */
 "Yopish":"Закрыть","Taymer":"Таймер","Boshlash":"Старт","Qayta o‘rnatish":"Сброс","Pauza":"Пауза",
 "Kim javob beradi?":"Кто отвечает?","Tanlash":"Выбрать","O‘quvchilar soni (jurnal raqami)":"Число учеников (номер в журнале)",

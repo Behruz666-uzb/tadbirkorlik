@@ -52,6 +52,25 @@
   </div>
 </div>
 
+<div class="gate" id="gAdmin" hidden>
+  <div class="gate-card">
+    <div class="deny-ic adm-ic"><svg class="i" viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <div class="eyebrow">Boshqaruv</div>
+    <h1>Admin panelga kirish</h1>
+    <p>Administrator email va parolini kiriting.</p>
+    <form class="admf" id="admF" autocomplete="on">
+      <label for="admE">Email</label>
+      <input id="admE" type="email" required autocomplete="username" placeholder="email@gmail.com">
+      <label for="admP">Parol</label>
+      <div class="pw"><input id="admP" type="password" required autocomplete="current-password" placeholder="••••••••"><button type="button" class="pw-eye" id="admEye" aria-label="Parolni ko‘rsatish"><svg class="i" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
+      <button class="btn gold" type="submit" id="admGo">Kirish</button>
+      <div class="gate-err" id="admErr"></div>
+    </form>
+    <a class="adm-back" href="index.html">← Saytga qaytish</a>
+    <div style="margin-top:1rem;display:flex;gap:.5rem;justify-content:center"><button class="btn" data-lang="uz">O‘zbekcha</button><button class="btn" data-lang="ru">Русский</button></div>
+  </div>
+</div>
+
 <!-- ========== APP ========== -->
 <div class="app" id="app" hidden>
   <div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div><div class="ticker-tag">o‘quv birjasi · kompaniyalar o‘ylab topilgan</div></div>

@@ -11,5 +11,8 @@ window.TB_CONFIG = {
   },
   // Administratorlar: ular doim kira oladi va admin panelni ko‘radi.
   // Eslatma: shu emaillar firestore.rules faylida ham yozilgan bo‘lishi kerak.
-  admins: ["dilfuzamavlanova446@gmail.com"]
+  admins: ["dilfuzamavlanova446@gmail.com"],
+  // Faqat DEMO rejim (Firebase sozlanmagan) uchun: admin parolining SHA-256 xeshi.
+  // Firebase ulangach parol Firebase'da saqlanadi va bu qator ishlatilmaydi.
+  demoAdminPassHash: "d44d3ebe93543c2da153f3384b8cc08fadd9a85436c0d7c7582e1e5248cab533"
 };

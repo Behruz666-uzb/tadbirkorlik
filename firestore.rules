@@ -3,19 +3,26 @@ service cloud.firestore {
   match /databases/{database}/documents {
 
     // Administrator emaillari (js/config.js dagi admins bilan bir xil bo‘lsin)
+    // Admin: Google (tasdiqlangan email) yoki admin sahifasidagi email+parol orqali kiradi.
+    // Email+parol akkauntini faqat siz Firebase Console'da yaratasiz (Authentication → Users → Add user).
     function isAdmin() {
       return request.auth != null
-        && request.auth.token.email_verified == true
-        && request.auth.token.email.lower() in ['dilfuzamavlanova446@gmail.com'];
+        && request.auth.token.email.lower() in ['dilfuzamavlanova446@gmail.com']
+        && (request.auth.token.email_verified == true
+            || request.auth.token.firebase.sign_in_provider == 'password');
+    }
+    // Oddiy foydalanuvchilar faqat Google orqali (tasdiqlangan email bilan)
+    function isVerified() {
+      return request.auth != null && request.auth.token.email_verified == true;
     }
     function isAllowed() {
-      return request.auth != null
-        && (isAdmin() || exists(/databases/$(database)/documents/allowed/$(request.auth.token.email.lower())));
+      return isAdmin() || (isVerified()
+        && exists(/databases/$(database)/documents/allowed/$(request.auth.token.email.lower())));
     }
 
     // Ruxsat ro‘yxati: foydalanuvchi faqat o‘z yozuvini o‘qiy oladi, admin hammasini boshqaradi
     match /allowed/{email} {
-      allow read: if isAdmin() || (request.auth != null && request.auth.token.email.lower() == email);
+      allow read: if isAdmin() || (isVerified() && request.auth.token.email.lower() == email);
       allow write: if isAdmin();
     }
 
