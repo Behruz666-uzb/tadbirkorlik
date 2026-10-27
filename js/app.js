@@ -219,14 +219,78 @@ function markSeen(n){var s=seen();if(s.indexOf(n)<0){s.push(n);store("tb-seen",J
 
 /* ---------- LIBRARY ---------- */
 var libMode=store("tb-libmode")||"shelf",libQ="";
+var CHX={
+ I:{ic:"chart",m:"bulb",uz:"G‘oya — har qanday biznesning boshlanishi.",ru:"Идея — начало любого бизнеса."},
+ II:{ic:"hand",m:"target",uz:"Reja, intizom va to‘g‘ri boshqaruv — muvaffaqiyat kaliti.",ru:"План, дисциплина и правильное управление — ключ к успеху."},
+ III:{ic:"gear",m:"coins",uz:"Samarali boshqaruv — yuqori natija.",ru:"Эффективное управление — высокий результат."},
+ IV:{ic:"people",m:"flag",uz:"Maqsad sari qat’iyat bilan!",ru:"К цели — с упорством!"},
+ V:{ic:"shield",m:"shield",uz:"Xavflarni angla, imkoniyatlarni qo‘lga kirit!",ru:"Осознай риски — используй возможности!"}
+};
+var SHI={
+ chart:'<path d="M3 21h18"/><path d="M6 18v-4M11 18v-7M16 18V9"/><path d="M3 10l6-4 4 3 7-6"/><path d="M16 3h4v4"/>',
+ gear:'<circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7"/><path d="M12 2v3M12 19v3M4.9 4.9L7 7M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1L7 17M17 7l2.1-2.1"/>',
+ people:'<circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.2c2.9.4 5 2.8 5 5.8"/>',
+ shield:'<path d="M12 2l8 3v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5z"/><path d="M8.5 12l2.5 2.5 4.5-5"/>',
+ bulb:'<path d="M9 18h6M10 21h4"/><path d="M12 5a5.5 5.5 0 00-3.3 9.9c.5.4.8 1 .8 1.6V17h5v-.5c0-.6.3-1.2.8-1.6A5.5 5.5 0 0012 5z"/><path d="M12 1.5v1M4 5l.8.8M20 5l-.8.8M1.5 11h1M21.5 11h-1M10.5 11.5l1.5 1.5 1.5-1.5M12 13v3"/>',
+ target:'<circle cx="11" cy="13" r="8"/><circle cx="11" cy="13" r="4.5"/><circle cx="11" cy="13" r="1.2"/><path d="M11 13l9-9M16.5 3.5H20v3.5"/>',
+ coins:'<ellipse cx="8" cy="16" rx="5" ry="2"/><path d="M3 16v3.5c0 1.1 2.2 2 5 2s5-.9 5-2V16"/><ellipse cx="16" cy="12" rx="5" ry="2"/><path d="M11 12v3.5c0 1.1 2.2 2 5 2s5-.9 5-2V12"/><path d="M11 8l3.5-3.5 2.5 2L21 2.5M18 2.5h3v3"/>',
+ flag:'<path d="M2 21l7-10 3.5 4.5L15 12l7 9z"/><path d="M12.5 15.5V3l5 2-5 2"/>',
+ orn:'<path d="M12 3l2.2 4.8L19 10l-4.8 2.2L12 17l-2.2-4.8L5 10l4.8-2.2z" fill="currentColor" stroke="none"/><path d="M3 20h18" />',
+ grow:'<path d="M3 20h18"/><rect x="4" y="14" width="3" height="6" fill="currentColor" stroke="none"/><rect x="9.5" y="11" width="3" height="9" fill="currentColor" stroke="none"/><rect x="15" y="8" width="3" height="12" fill="currentColor" stroke="none"/><path d="M3 11l6-5 4 3 8-7M16 2h5v5"/>'
+};
+function shi(n){return SHI[n]?'<svg class="i" viewBox="0 0 24 24">'+SHI[n]+'</svg>':ic(n)}
+var LEAF='<svg viewBox="0 0 120 120" aria-hidden="true"><g fill="currentColor"><path d="M14 116C12 74 34 38 84 14 76 60 52 94 14 116z"/><path d="M14 116C40 84 58 58 84 14" fill="none" stroke="rgba(0,0,0,.25)" stroke-width="2"/><path d="M50 118c6-32 28-54 62-60-8 30-30 52-62 60z" opacity=".7"/></g></svg>';
+var SKY='<svg viewBox="0 0 1000 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><defs>'+
+ '<linearGradient id="hsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a1330"/><stop offset=".5" stop-color="#1b2b60"/><stop offset=".8" stop-color="#6a3f63"/><stop offset="1" stop-color="#e88c48"/></linearGradient>'+
+ '<radialGradient id="hglow" cx=".62" cy="1" r=".55"><stop offset="0" stop-color="#ffb35c" stop-opacity=".75"/><stop offset="1" stop-color="#ffb35c" stop-opacity="0"/></radialGradient>'+
+ '<linearGradient id="hdome" x1="0" x2="1"><stop offset="0" stop-color="#145394"/><stop offset=".45" stop-color="#4fb9f0"/><stop offset="1" stop-color="#11487f"/></linearGradient>'+
+ '<linearGradient id="harch" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffcf7a"/><stop offset="1" stop-color="#a35a22"/></linearGradient>'+
+ '<linearGradient id="harw" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#f59e0b" stop-opacity="0"/><stop offset=".35" stop-color="#f7b23e"/><stop offset="1" stop-color="#ffe7a0"/></linearGradient>'+
+ '<pattern id="hwin" width="9" height="11" patternUnits="userSpaceOnUse"><rect x="2" y="2" width="3.5" height="5" fill="#ffd27a" opacity=".55"/></pattern>'+
+ '<pattern id="htile" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#2a58a0"/><path d="M4 0L8 4 4 8 0 4z" fill="#3d78c6"/><circle cx="4" cy="4" r="1" fill="#e7c06a"/></pattern>'+
+ '<filter id="hblur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="5"/></filter></defs>'+
+ '<rect width="1000" height="300" fill="url(#hsky)"/>'+
+ [[120,30],[210,60],[300,22],[380,70],[460,35],[560,18],[640,55],[720,28],[820,48],[900,20],[960,62],[260,95],[700,90]].map(function(p,i){return '<circle cx="'+p[0]+'" cy="'+p[1]+'" r="'+(i%3?.9:1.5)+'" fill="#fff" opacity="'+(i%2?.5:.8)+'"/>'}).join("")+
+ '<g fill="#5a5f9a" opacity=".22"><ellipse cx="260" cy="120" rx="120" ry="14"/><ellipse cx="760" cy="105" rx="150" ry="16"/><ellipse cx="560" cy="140" rx="90" ry="10"/></g>'+
+ '<rect width="1000" height="300" fill="url(#hglow)"/>'+
+ '<path d="M0 232L80 196L150 218L240 176L330 212L420 186L520 218L600 180L700 208L800 170L900 204L1000 184V300H0Z" fill="#26346a" opacity=".85"/>'+
+ '<g fill="#1a2550"><rect x="150" y="236" width="40" height="34"/><path d="M155 236q15-22 30 0z"/><rect x="200" y="226" width="8" height="44"/><rect x="215" y="240" width="60" height="30"/><path d="M228 240q17-20 34 0z"/><rect x="290" y="232" width="7" height="38"/><rect x="305" y="244" width="60" height="26"/></g>'+
+ // Registon
+ '<g><rect x="398" y="150" width="13" height="120" fill="#9a6a44"/><rect x="394" y="144" width="21" height="8" rx="2" fill="#d6a85e"/><path d="M397 144q7-14 14 0z" fill="url(#hdome)"/>'+
+ '<rect x="629" y="150" width="13" height="120" fill="#9a6a44"/><rect x="625" y="144" width="21" height="8" rx="2" fill="#d6a85e"/><path d="M628 144q7-14 14 0z" fill="url(#hdome)"/>'+
+ '<path d="M432 206q16-30 32 0z" fill="url(#hdome)"/><path d="M576 206q16-30 32 0z" fill="url(#hdome)"/>'+
+ '<rect x="411" y="204" width="65" height="66" fill="#7d5134"/><rect x="564" y="204" width="65" height="66" fill="#7d5134"/>'+
+ '<g fill="#1a2140"><path d="M420 270v-26q8-12 16 0v26z"/><path d="M445 270v-26q8-12 16 0v26z"/><path d="M579 270v-26q8-12 16 0v26z"/><path d="M604 270v-26q8-12 16 0v26z"/></g>'+
+ '<rect x="497" y="130" width="46" height="12" fill="#2b5c90"/><path d="M490 132q0-46 30-52q30 6 30 52z" fill="url(#hdome)"/><path d="M505 132q2-36 15-48M535 132q-2-36-15-48M520 84v48" stroke="#0e3a66" stroke-width="1.5" fill="none" opacity=".6"/>'+
+ '<rect x="468" y="138" width="104" height="132" fill="#835639"/><rect x="476" y="146" width="88" height="124" fill="url(#htile)"/>'+
+ '<path d="M490 270v-62q30-46 60 0v62z" fill="url(#harch)"/><path d="M490 270v-62q30-46 60 0v62" fill="none" stroke="#f0c86a" stroke-width="3"/><rect x="476" y="146" width="88" height="124" fill="none" stroke="#f0c86a" stroke-width="2"/></g>'+
+ // zamonaviy shahar
+ '<g><rect x="672" y="200" width="34" height="70" fill="#1a2650"/><rect x="672" y="200" width="34" height="70" fill="url(#hwin)"/>'+
+ '<rect x="712" y="160" width="40" height="110" fill="#1d2b5a"/><rect x="712" y="160" width="40" height="110" fill="url(#hwin)"/><rect x="728" y="140" width="8" height="20" fill="#1d2b5a"/>'+
+ '<rect x="758" y="120" width="36" height="150" fill="#22336a"/><rect x="758" y="120" width="36" height="150" fill="url(#hwin)"/><path d="M758 120l18-18 18 18z" fill="#22336a"/>'+
+ '<rect x="800" y="180" width="44" height="90" fill="#1a2650"/><rect x="800" y="180" width="44" height="90" fill="url(#hwin)"/>'+
+ '<rect x="850" y="140" width="30" height="130" fill="#1e2d5e"/><rect x="850" y="140" width="30" height="130" fill="url(#hwin)"/>'+
+ '<rect x="886" y="196" width="50" height="74" fill="#18234a"/><rect x="886" y="196" width="50" height="74" fill="url(#hwin)"/><rect x="942" y="214" width="58" height="56" fill="#17214a"/></g>'+
+ '<rect y="268" width="1000" height="32" fill="#0a1124"/><g fill="#ffc871" opacity=".7">'+[420,470,530,600,690,740,780,830,870,910,960].map(function(x,i){return '<circle cx="'+x+'" cy="'+(276+(i%3)*5)+'" r="1.6"/>'}).join("")+'</g>'+
+ // o‘sish strelkasi
+ '<polyline points="560,250 640,214 690,232 760,164 800,186 874,98" fill="none" stroke="#ffb547" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity=".55" filter="url(#hblur)"/>'+
+ '<polyline points="560,250 640,214 690,232 760,164 800,186 874,98" fill="none" stroke="url(#harw)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>'+
+ '<polygon points="895,72 863,88 885,107" fill="#ffe7a0"/>'+
+ // kuzatuvchi
+ '<circle cx="948" cy="190" r="15" fill="#070c1c"/><path d="M912 300c0-56 12-88 36-92 24 4 36 36 36 92z" fill="#070c1c"/><path d="M932 206q16-10 32 0" stroke="#2a3a6a" stroke-width="2" fill="none"/></svg>';
 function renderLib(){var v=$("#v-lib"),last=+store("tb-last")||0,lt=topicByN(last),sn=seen(),avail=TB.topics.length;
- var h='<div class="wrap"><div class="lib-hero"><div><div class="eyebrow">'+tr("11-sinf · U. G‘afurov, Q. Sharipov")+'</div><h1>'+(RU?'Основы <em>предпринимательства</em>':'Tadbirkorlik <em>asoslari</em>')+'</h1><p>'+tr("30 ta mavzu, 5 ta bob. Kitobni javondan oling: har bir mavzuda slaydlar, multfilm, video, o‘yinlar va amaliy topshiriqlar bor.")+'</p></div>'+
- '<div class="lib-tools"><label class="lib-search">'+ic("search")+'<input id="libQ" type="search" placeholder="'+tr("Mavzu qidirish…")+'" value="'+esc(libQ)+'"></label><div class="view-toggle"><button data-lm="shelf" class="'+(libMode==="shelf"?"on":"")+'">'+tr("Javon")+'</button><button data-lm="grid" class="'+(libMode==="grid"?"on":"")+'">'+tr("Ro‘yxat")+'</button></div></div></div>';
+ var h='<div class="wrap"><div class="lib3-hero"><div class="lh-txt"><div class="eyebrow">'+tr("11-sinf · U. G‘afurov, Q. Sharipov")+'</div><h1>'+(RU?'Основы предпринимательства<em>11 класс</em>':'Tadbirkorlik asoslari<em>11-sinf</em>')+'</h1><p>'+(RU?'Знания для будущего — возможности, которые начинаются сегодня!':'Kelajak uchun bilim, bugundan boshlangan imkoniyatlar!')+'</p>'+
+ '<div class="lib-tools"><label class="lib-search">'+ic("search")+'<input id="libQ" type="search" placeholder="'+tr("Mavzu qidirish…")+'" value="'+esc(libQ)+'"></label><div class="view-toggle"><button data-lm="shelf" class="'+(libMode==="shelf"?"on":"")+'">'+tr("Javon")+'</button><button data-lm="grid" class="'+(libMode==="grid"?"on":"")+'">'+tr("Ro‘yxat")+'</button></div></div></div>'+
+ '<div class="lh-art">'+SKY+'</div><div class="lh-tag"><span>'+(RU?'Маленькая идея —<br>большие возможности!':'Kichik g‘oya —<br>katta imkoniyat!')+'</span>'+shi("grow")+'</div></div>';
  if(lt)h+='<div class="continue">'+ic("book")+'<b>'+F.mv(lt.n)+': '+esc(lt.title)+'</b><span>'+tr("Oxirgi ochilgan dars · ")+''+sn.length+' / '+avail+''+tr(" mavzu ko‘rilgan")+'</span><button class="btn gold" data-nav="t'+pad(lt.n)+'-slides">'+tr("Davom ettirish")+'</button></div>';
- if(libMode==="shelf"){CH.forEach(function(c){var ts=TB.topics.filter(function(t){return t.n>=c.from&&t.n<=c.to});if(!ts.length)return;
-   h+='<section class="shelf"><div class="shelf-h"><span class="bob" style="background:'+c.c+'">'+F.BOB(c.n)+'</span><h2>'+c.t+'</h2><small>'+F.mvs(c.from,c.to)+'</small></div><div class="books">'+
-   ts.map(function(t,i){var hh=13.4+((t.n*37)%5)*.6,ww=3.9+((t.n*53)%4)*.28,match=!libQ||(t.n+" "+t.title).toLowerCase().indexOf(libQ.toLowerCase())>=0;return '<button class="spine'+(match?"":" dim")+(i===ts.length-1&&ts.length>3?" lean":"")+'" data-book="'+t.n+'" style="--c:'+c.c+';--h:'+hh.toFixed(1)+'rem;--w:'+ww.toFixed(2)+'rem;--b:'+[1,.88,1.07,.94,1.12,.9][t.n%6]+'" aria-label="'+F.mv(t.n)+': '+esc(t.title)+'"><span class="band b1"></span><span class="sn">'+t.n+'</span><span class="st">'+esc(t.title)+'</span><span class="band b2"></span>'+(sn.indexOf(t.n)>=0?'<span class="seen">'+ic("check")+'</span>':"")+'</button>'}).join("")+
-   '</div><div class="plank"></div></section>'})}
+ if(libMode==="shelf"){CH.forEach(function(c){var ts=TB.topics.filter(function(t){return t.n>=c.from&&t.n<=c.to});if(!ts.length)return;var x=CHX[c.n]||CHX.I,
+   rgb=[1,3,5].map(function(i){return parseInt(c.c.substr(i,2),16)}).join(",");
+   h+='<section class="ch2" style="--c:'+c.c+';--rgb:'+rgb+'"><span class="ch2-deco d1">'+LEAF+'</span><span class="ch2-deco d2">'+LEAF+'</span>'+
+   '<div class="ch2-l"><span class="ch2-n">'+c.n+'</span><span class="ch2-ic">'+shi(x.ic)+'</span><div><h2>'+c.t+'</h2><small>'+ic("book")+F.mvs(c.from,c.to)+'</small></div></div>'+
+   '<div class="ch2-shelf"><div class="books2">'+
+   ts.map(function(t,i){var hh=7.7+((t.n*37)%3)*.28,match=!libQ||(t.n+" "+t.title).toLowerCase().indexOf(libQ.toLowerCase())>=0;return '<button class="spine'+(match?"":" dim")+(i===ts.length-1&&ts.length>2?" lean":"")+'" data-book="'+t.n+'" title="'+F.mv(t.n)+': '+esc(t.title)+'" style="--c:'+c.c+';--h:'+hh.toFixed(2)+'rem;--b:'+[1,.95,1.04,.97,1.06,.94][t.n%6]+'" aria-label="'+F.mv(t.n)+': '+esc(t.title)+'"><span class="sn">'+t.n+'</span><span class="band b1"></span><span class="orn">'+shi("orn")+'</span><span class="band b2"></span>'+(sn.indexOf(t.n)>=0?'<span class="seen">'+ic("check")+'</span>':"")+'</button>'}).join("")+
+   '</div><div class="plank2"></div></div>'+
+   '<div class="ch2-r"><span class="ric">'+shi(x.m)+'</span><p>'+(RU?x.ru:x.uz)+'</p></div></section>'})}
  else{h+='<div class="grid-lib">'+TB.topics.filter(function(t){return !libQ||(t.n+" "+t.title).toLowerCase().indexOf(libQ.toLowerCase())>=0}).map(function(t){var c=chOf(t.n);return '<button class="gl" data-book="'+t.n+'"><span class="gn" style="background:'+c.c+'">'+t.n+'</span><span><small>'+F.bob(c.n)+'</small><b>'+esc(t.title)+'</b></span></button>'}).join("")+'</div>'}
  v.innerHTML=h+'</div>';
  var q=$("#libQ");q.oninput=function(){libQ=q.value;var pos=q.selectionStart;renderLib();var q2=$("#libQ");q2.focus();try{q2.setSelectionRange(pos,pos)}catch(e){}};
