@@ -12,7 +12,7 @@ function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return
 function pad(n){return String(n).padStart(2,"0")}
 
 var TBL=window.TBL||{lang:"uz",tr:function(s){return s},F:{}},tr=TBL.tr,F=TBL.F,RU=TBL.lang==="ru";
-var TB=window.TB={mode:window.TB_MODE==='admin'?'admin':'site',topics:[],videos:{},user:null,lang:TBL.lang,tr:tr,F:F,_t:{uz:{},ru:{}}};
+var TB=window.TB={topics:[],videos:{},user:null,lang:TBL.lang,tr:tr,F:F,_t:{uz:{},ru:{}}};
 TB.add=function(t){var l=t.lang==="ru"?"ru":"uz";TB._t[l][t.n]=t;var ns={},k;for(k in TB._t.uz)ns[k]=1;for(k in TB._t.ru)ns[k]=1;TB.topics=Object.keys(ns).map(Number).sort(function(a,b){return a-b}).map(function(n){return (RU&&TB._t.ru[n])||TB._t.uz[n]||TB._t.ru[n]})};
 function topicByN(n){for(var i=0;i<TB.topics.length;i++)if(TB.topics[i].n===n)return TB.topics[i];return null}
 
@@ -126,7 +126,6 @@ function setupTools(){
  $("#tTheme").onclick=function(){var cur=document.documentElement.getAttribute("data-theme");var dark=cur?cur==="dark":!window.matchMedia("(prefers-color-scheme: light)").matches;var nx=dark?"light":"dark";document.documentElement.setAttribute("data-theme",nx);store("tb-theme",nx)};
  $("#tFull").onclick=function(){try{if(document.fullscreenElement)document.exitFullscreen();else document.documentElement.requestFullscreen().catch(function(){})}catch(e){}};
  $("#tLib").onclick=function(){nav("lib")};
- $("#tAdmin").onclick=function(){nav("admin")};
  $("#tOut").onclick=function(){if(window.TBAuth&&TBAuth.signOut)TBAuth.signOut()};
  $("#tLangL").textContent=RU?"O‘zbekcha":"Русский";$("#tLangB").textContent=RU?"UZ":"RU";
  $("#tLang").onclick=function(){if(TBL.setLang)TBL.setLang(RU?"uz":"ru")};
@@ -203,7 +202,6 @@ function fillSheet(){var g=$("#sheetGrid");
   g.innerHTML=TB.topics.map(function(t,i){var ch=chOf(t.n);return '<button class="sg" data-nav="t'+pad(t.n)+'-slides" style="animation-delay:'+(i*.015)+'s"><span class="ic" style="background:'+ch.c+';font-family:var(--display);font-weight:900;color:#fff">'+t.n+'</span><span class="t"><small>'+F.bob(ch.n)+'</small><b>'+esc(t.title)+'</b></span></button>'}).join("")}}
 function dockUI(){var ic1,num,tt;
  if(cur.view==="lesson"){var s=SECS.filter(function(x){return x.id===cur.sec})[0];ic1=s.ic;$("#dkIc").style.background=s.c;num=F.mv(cur.n)+" · "+(SECS.indexOf(s)+1)+"/"+SECS.length;tt=s.t}
- else if(cur.view==="admin"){ic1="shield";$("#dkIc").style.background="var(--gold)";num=""+tr("Boshqaruv")+"";tt=""+tr("Admin panel")+""}
  else{ic1="book";$("#dkIc").style.background="var(--gold)";num=""+tr("11-sinf")+"";tt=""+tr("Kutubxona")+""}
  $("#dkIc").innerHTML=ic(ic1);$("#dkNum").textContent=num;$("#dkT").textContent=tt;
  var lesson=cur.view==="lesson";$("#dkPrev").disabled=!lesson||(cur.sec===SECS[0].id&&!topicByN(cur.n-1));$("#dkNext").disabled=!lesson||(cur.sec===SECS[SECS.length-1].id&&!topicByN(cur.n+1))}
@@ -212,10 +210,9 @@ function dockUI(){var ic1,num,tt;
 function nav(token){try{history.replaceState(null,"","#"+token)}catch(e){location.hash=token}route()}
 TB.nav=nav;
 function route(){var h=(location.hash||"").replace("#",""),m=/^t(\d\d)(?:-(\w+))?$/.exec(h);stopLesson();sheet(false);closeBook();
- $("#v-lib").hidden=$("#v-lesson").hidden=$("#v-admin").hidden=true;
- if(m&&topicByN(+m[1])){cur.view="lesson";cur.n=+m[1];cur.sec=SECS.some(function(s){return s.id===m[2]})?m[2]:"slides";$("#v-lesson").hidden=false;renderLesson();markSeen(cur.n)}
- else if((h==="admin"||(!h&&TB.mode==="admin"))&&TB.user&&TB.user.isAdmin&&TB.mode==="admin"){cur.view="admin";$("#v-admin").hidden=false;renderAdmin()}
- else{cur.view="lib";$("#v-lib").hidden=false;renderLib()}
+ $("#v-lib").hidden=$("#v-lesson").hidden=true;
+ if(m&&topicByN(+m[1])){cur.view="lesson";cur.n=+m[1];if(window.TBTheme)TBTheme.apply(cur.n);cur.sec=SECS.some(function(s){return s.id===m[2]})?m[2]:"slides";$("#v-lesson").hidden=false;renderLesson();markSeen(cur.n)}
+ else{cur.view="lib";if(window.TBTheme)TBTheme.clear();$("#v-lib").hidden=false;renderLib()}
  dockUI();var v=$("#v-"+(cur.view==="lesson"?"lesson":cur.view));if(v&&cur.view!=="lesson")v.scrollTop=0}
 function seen(){try{return JSON.parse(store("tb-seen")||"[]")}catch(e){return []}}
 function markSeen(n){var s=seen();if(s.indexOf(n)<0){s.push(n);store("tb-seen",JSON.stringify(s))}store("tb-last",String(n))}
@@ -231,7 +228,6 @@ function renderLib(){var v=$("#v-lib"),last=+store("tb-last")||0,lt=topicByN(las
    ts.map(function(t,i){var hh=13.4+((t.n*37)%5)*.6,ww=3.9+((t.n*53)%4)*.28,match=!libQ||(t.n+" "+t.title).toLowerCase().indexOf(libQ.toLowerCase())>=0;return '<button class="spine'+(match?"":" dim")+(i===ts.length-1&&ts.length>3?" lean":"")+'" data-book="'+t.n+'" style="--c:'+c.c+';--h:'+hh.toFixed(1)+'rem;--w:'+ww.toFixed(2)+'rem;--b:'+[1,.88,1.07,.94,1.12,.9][t.n%6]+'" aria-label="'+F.mv(t.n)+': '+esc(t.title)+'"><span class="band b1"></span><span class="sn">'+t.n+'</span><span class="st">'+esc(t.title)+'</span><span class="band b2"></span>'+(sn.indexOf(t.n)>=0?'<span class="seen">'+ic("check")+'</span>':"")+'</button>'}).join("")+
    '</div><div class="plank"></div></section>'})}
  else{h+='<div class="grid-lib">'+TB.topics.filter(function(t){return !libQ||(t.n+" "+t.title).toLowerCase().indexOf(libQ.toLowerCase())>=0}).map(function(t){var c=chOf(t.n);return '<button class="gl" data-book="'+t.n+'"><span class="gn" style="background:'+c.c+'">'+t.n+'</span><span><small>'+F.bob(c.n)+'</small><b>'+esc(t.title)+'</b></span></button>'}).join("")+'</div>'}
- if(TB.user&&TB.user.isAdmin&&TB.mode==="admin")h+='<p style="margin-top:2rem;color:var(--muted)">'+tr("Siz administratorsiz. ")+'<button class="btn" data-nav="admin">'+ic("shield")+' '+tr("Admin panelni ochish")+'</button></p>';
  v.innerHTML=h+'</div>';
  var q=$("#libQ");q.oninput=function(){libQ=q.value;var pos=q.selectionStart;renderLib();var q2=$("#libQ");q2.focus();try{q2.setSelectionRange(pos,pos)}catch(e){}};
  $$("[data-lm]",v).forEach(function(b){b.onclick=function(){libMode=b.dataset.lm;store("tb-libmode",libMode);renderLib()}});
@@ -245,7 +241,7 @@ function openBook(n,srcEl,instant){var t=topicByN(n);if(!t)return;var c=chOf(n);
  var had=!!$("#bookM");BK.src=srcEl||null;
  $("#bookHost").innerHTML='<div class="bookm'+(had?" on":"")+'" id="bookM"><div class="open-book" id="oBook" style="--c:'+c.c+'"><button class="bm-x" id="bmX" aria-label="'+tr("Yopish")+'">'+ic("x")+'</button>'+
  '<div class="page l"><div class="kicker">'+F.BOB(c.n)+' · '+F.MV(n)+'</div><div class="bignum">'+pad(n)+'</div><h2>'+esc(t.title)+'</h2><p>'+esc(t.sum||"")+'</p><div class="learn">'+(t.learn||[]).map(function(x){return '<span>'+esc(x)+'</span>'}).join("")+'</div><div class="foot"><span>'+F.bet(t.page||"")+'</span><span>'+c.t+'</span></div></div>'+
- '<div class="page r"><button class="go-lesson" data-nav="t'+pad(n)+'-slides">'+ic("play")+' '+tr("Darsni boshlash")+'</button><div class="secs">'+SECS.map(function(s){return '<button class="sec" data-nav="t'+pad(n)+'-'+s.id+'"><span class="si" style="background:'+s.c+'">'+ic(s.ic)+'</span>'+s.t+'</button>'}).join("")+'</div><div class="foot"><span>'+(t.terms||[]).length+''+tr(" atama · ")+''+(t.quiz||[]).length+''+tr(" savol · ")+''+(t.cards||[]).length+''+tr(" kartochka")+'</span></div></div>'+
+ '<div class="page r"><button class="go-lesson" data-nav="t'+pad(n)+'-slides">'+ic("play")+' '+tr("Darsni boshlash")+'</button><div class="secs">'+SECS.map(function(s){return '<button class="sec" data-nav="t'+pad(n)+'-'+s.id+'"><span class="si" style="background:'+s.c+'">'+ic(s.ic)+'</span>'+s.t+'</button>'}).join("")+'</div><div class="foot"><span>'+(t.terms||[]).length+''+tr(" atama · ")+''+(t.quiz||[]).length+''+tr(" savol · ")+''+cardsOf(t).length+''+tr(" kartochka")+'</span></div></div>'+
  '<div class="cover" id="oCover"><div class="front"><div class="cv-k">'+F.BOB(c.n)+'</div><span>'+n+'</span><b>'+esc(t.title)+'</b><div class="cv-a">'+tr("11-sinf · U. G‘afurov, Q. Sharipov")+'</div><i class="shade" id="oShade"></i></div><div class="back" id="oBack"></div><div class="cv-spine"><i>'+n+'</i><em>'+esc(t.title)+'</em><i></i></div></div>'+
  '<div class="bm-nav">'+(topicByN(n-1)?'<button data-bk="'+(n-1)+'">‹ '+F.mv(n-1)+'</button>':"")+(topicByN(n+1)?'<button data-bk="'+(n+1)+'">'+F.mv(n+1)+' ›</button>':"")+'</div></div></div>';
  var M=$("#bookM"),B=$("#oBook"),CV=$("#oCover"),SH=$("#oShade"),BA=$("#oBack"),PL=$(".page.l",B);
@@ -313,12 +309,22 @@ function slideHTML(s,t){var h=(s.tag?'<div class="tag">'+s.tag+'</div>':'')+(s.h
  case "big": if(s.big&&!s.num){s.num=s.big;if(!s.text){s.text=s.p;p=""}}return h+'<div style="display:flex;gap:2rem;align-items:center;flex-wrap:wrap"><div><div class="big-num">'+s.num+'</div><p style="font-size:1.3rem;font-weight:700;margin:.2rem 0">'+(s.unit||"")+'</p></div><div style="flex:1;min-width:14rem;font-size:1.15rem">'+(s.text||"")+'</div></div>'+p;
  case "review": return '<div class="tag">'+tr("BILIMINGIZNI SINAB KO‘RING")+'</div><h3>'+(s.h||""+tr("Takrorlash savollari")+"")+'</h3><div class="reveal-q">'+s.qa.map(function(q,i){return '<button class="rq">'+(i+1)+'. '+q[0]+' <span class="hint">'+tr("javob")+'</span><span class="a" hidden>'+q[1]+'</span></button>'}).join("")+'</div>';
  default: return h+(s.html||"")+p;}}
-function coverSlide(t){var c=chOf(t.n);return '<div class="tag">'+F.BOB(c.n)+' · '+F.MV(t.n)+'</div><div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:2rem;align-items:center;flex:1" class="sl-cover"><div><h3 style="font-size:clamp(1.9rem,4vw,3.6rem)">'+t.title+'</h3><p>'+tr("Bugun bilib olamiz:")+'</p><div class="chips">'+(t.learn||[]).map(function(x){return '<span class="chip">'+x+'</span>'}).join("")+'</div></div>'+
- (t.hook?'<div class="hook"><small>'+tr("Faollashtiruvchi savol")+'</small><div style="font-size:1.15rem;font-weight:600">'+t.hook.q+'</div><div class="reveal-q" style="margin-top:.8rem"><button class="rq">'+tr("Fikrlar va javob")+' <span class="hint">'+tr("bosing")+'</span><span class="a" hidden>'+t.hook.a+'</span></button></div></div>':'<div class="gate-book" style="margin:auto;background:'+c.c+'">'+t.n+'</div>')+'</div>'}
-function fitSlide(sl){if(!sl)return;var sin=sl.firstElementChild;sin.style.transform="";sin.style.width="";sin.style.flex="";var cs=getComputedStyle(sl),avail=sl.clientHeight-parseFloat(cs.paddingTop)-parseFloat(cs.paddingBottom);var need=sin.scrollHeight;if(need<=avail+1){sin.dataset.s="1";return}var sc=1;for(var k=0;k<3;k++){sc=Math.max(.45,Math.min(1,(avail-1)/sin.scrollHeight));sin.style.flex="none";sin.style.width=(100/sc)+"%";sin.style.transform="scale("+sc+")";if(sin.scrollHeight*sc<=avail+1)break}sin.dataset.s=sc}
-function secSlides(t,b){var S=[coverSlide(t)].concat((t.slides||[]).map(function(s){return slideHTML(s,t)}));var idx=0;
- b.innerHTML='<div class="deck"><div class="slide-area" id="slideArea">'+S.map(function(h,i){return '<article class="slide" data-i="'+i+'"><div class="sin">'+h+'</div></article>'}).join("")+'</div><div class="deck-bar"><button class="arrow" id="sPrev" aria-label="'+tr("Oldingi slayd")+'"><svg class="i" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button><div class="dots" id="sDots">'+S.map(function(_,i){return '<button aria-label="'+F.slayd(i+1)+'" data-s="'+i+'"></button>'}).join("")+'</div><span class="count" id="sCount"></span><button class="arrow gold" id="sNext" aria-label="'+tr("Keyingi slayd")+'"><svg class="i" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button></div></div>';
- function show(i){idx=Math.max(0,Math.min(S.length-1,i));$$(".slide",b).forEach(function(s,k){s.classList.toggle("on",k===idx);s.classList.toggle("prev",k<idx);if(k===idx){$$(".ic-card,.lst li,.steps-sl div",s).forEach(function(c){c.style.animation="none";c.offsetHeight;c.style.animation=""})}});$$("#sDots button",b).forEach(function(d,k){d.className=k===idx?"on":(k<idx?"seen":"")});$("#sCount").textContent=(idx+1)+" / "+S.length;fitSlide($(".slide.on",b));clearTimeout(show._t);show._t=setTimeout(function(){fitSlide($(".slide.on",b))},900)}
+function coverSlide(t){var c=chOf(t.n),sc=(t.film||[])[0];
+ return (sc?'<div class="cv-bg"><div class="scn">'+TBFilm.renderScene(sc)+'</div></div><div class="cv-shade"></div>':'')+'<div class="cv-fg"><div><div class="cv-k"><b>'+t.n+'</b>'+F.BOB(c.n)+' · '+F.MV(t.n)+'</div><h3>'+t.title+'</h3><p>'+tr("Bugun bilib olamiz:")+'</p><div class="chips">'+(t.learn||[]).map(function(x){return '<span class="chip">'+x+'</span>'}).join("")+'</div></div>'+
+ (t.hook?'<div class="hook"><small>'+tr("Faollashtiruvchi savol")+'</small><div style="font-size:1.15rem;font-weight:600">'+t.hook.q+'</div><div class="reveal-q" style="margin-top:.8rem"><button class="rq">'+tr("Fikrlar va javob")+' <span class="hint">'+tr("bosing")+'</span><span class="a" hidden>'+t.hook.a+'</span></button></div></div>':'')+'</div>'}
+/* mos slaydlarga mavzu multfilmidan sahna-rasm qo‘shish (uslubga qarab har xil) */
+var ILL_OK={def:1,law:1,fact:1,big:1,list:1,steps:1,review:1};
+function withIll(s,h,i,t){var film=t.film||[];if(!film.length||!ILL_OK[s.k]||!window.TBTheme)return h;
+ var n=(s.items||s.steps||s.qa||[]).length;if((s.k==="list"&&n>5)||(s.k==="steps"&&n>4)||(s.k==="review"&&n>5)||(s.k==="def"&&(s.items||[]).length>2))return h;
+ if(h.replace(/<[^>]+>/g,"").length>520)return h;
+ var lay=TBTheme.of(t.n).lay;if((lay==="card"&&i%2)||(lay==="poster"&&!(i%2)))return h;
+ var sc=film[(i+1)%film.length],rev=lay==="split"&&i%2===1;
+ return '<div class="sl-split'+(rev?" rev":"")+'"><div class="sl-txt">'+h+'</div><figure class="sl-ill"><div class="scn">'+TBFilm.renderScene(sc)+'</div><figcaption>'+esc(sc.t)+'</figcaption></figure></div>'}
+function fitSlide(sl){if(!sl)return;var sin=sl.querySelector(".sin")||sl.firstElementChild;sin.style.transform="";sin.style.width="";sin.style.flex="";var cs=getComputedStyle(sl),avail=sl.clientHeight-parseFloat(cs.paddingTop)-parseFloat(cs.paddingBottom);var need=sin.scrollHeight;if(need<=avail+1){sin.dataset.s="1";return}var sc=1;for(var k=0;k<3;k++){sc=Math.max(.45,Math.min(1,(avail-1)/sin.scrollHeight));sin.style.flex="none";sin.style.width=(100/sc)+"%";sin.style.transform="scale("+sc+")";if(sin.scrollHeight*sc<=avail+1)break}sin.dataset.s=sc}
+function secSlides(t,b){var S=[coverSlide(t)].concat((t.slides||[]).map(function(s,i){return withIll(s,slideHTML(s,t),i,t)}));var idx=0;
+ b.innerHTML='<div class="deck"><div class="slide-area" id="slideArea"><div class="wm" aria-hidden="true">'+pad(t.n)+'</div>'+S.map(function(h,i){return '<article class="slide'+(i===0?" cvr":"")+'" data-i="'+i+'"><div class="sin">'+h+'</div></article>'}).join("")+'</div><div class="deck-bar"><button class="arrow" id="sPrev" aria-label="'+tr("Oldingi slayd")+'"><svg class="i" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button><div class="dots" id="sDots">'+S.map(function(_,i){return '<button aria-label="'+F.slayd(i+1)+'" data-s="'+i+'"></button>'}).join("")+'</div><span class="count" id="sCount"></span><button class="arrow gold" id="sNext" aria-label="'+tr("Keyingi slayd")+'"><svg class="i" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button></div></div>';
+ $$(".slide.cvr",b).forEach(function(cv){var sin=$(".sin",cv);["cv-bg","cv-shade"].forEach(function(c){var e=$("."+c,sin);if(e)cv.insertBefore(e,sin)})});
+ function show(i){idx=Math.max(0,Math.min(S.length-1,i));$$(".slide",b).forEach(function(s,k){s.classList.toggle("on",k===idx);s.classList.toggle("prev",k<idx);if(k===idx){$$(".ic-card,.lst li,.steps-sl div,.sl-ill,.cv-fg .chip",s).forEach(function(c){c.style.animation="none";c.offsetHeight;c.style.animation=""});$$(".scn",s).forEach(function(z){z.innerHTML=z.innerHTML})}});$$("#sDots button",b).forEach(function(d,k){d.className=k===idx?"on":(k<idx?"seen":"")});$("#sCount").textContent=(idx+1)+" / "+S.length;fitSlide($(".slide.on",b));clearTimeout(show._t);show._t=setTimeout(function(){fitSlide($(".slide.on",b))},900)}
  $("#sPrev").onclick=function(){if(idx===0)return stepNav(-1);show(idx-1)};$("#sNext").onclick=function(){if(idx===S.length-1)return nav("t"+pad(t.n)+"-film");show(idx+1)};
  $("#sDots").onclick=function(e){var x=e.target.closest("[data-s]");if(x)show(+x.dataset.s)};
  $("#slideArea").addEventListener("click",function(e){var q=e.target.closest(".rq");if(q){var a=$(".a",q);a.hidden=!a.hidden;if(!a.hidden)sTick();fitSlide(q.closest(".slide"))}});
@@ -361,7 +367,7 @@ function ytId(u){if(!u)return null;u=String(u);var m=/(?:youtube\.com\/(?:embed\
 TB.ytId=ytId;
 function secVideo(t,b){var key="t"+pad(t.n),raw=TB.videos[key]||t.video||"",id=ytId(raw);
  b.innerHTML='<div class="player">'+(id?'<div class="yt-frame"><iframe src="https://www.youtube.com/embed/'+id+'?rel=0" title="'+esc(t.title)+''+tr(" — video dars")+'" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><p class="yt-note">'+tr("Video ochilmasa: ")+'<a href="https://www.youtube.com/watch?v='+id+'" target="_blank" rel="noopener">'+tr("YouTube’da ochish ↗")+'</a></p>':
- '<div class="vph">'+ic("video")+'<b>'+tr("Bu mavzuga video hali qo‘shilmagan")+'</b><span>'+(TB.user&&TB.user.isAdmin?''+tr("Admin panelda «Mavzular videolari» bo‘limiga YouTube havolasini qo‘ying.")+'':''+tr("Video qo‘shilishi uchun administratorga murojaat qiling.")+'')+'</span>'+(TB.user&&TB.user.isAdmin?'<button class="btn gold" data-nav="admin">'+tr("Admin panelni ochish")+'</button>':'')+'</div>')+'</div>'}
+ '<div class="vph">'+ic("video")+'<b>'+tr("Bu mavzuga video hali qo‘shilmagan")+'</b><span>'+tr("Video qo‘shilishi uchun administratorga murojaat qiling.")+'</span></div>')+'</div>'}
 
 /* ===== terms ===== */
 function secTerms(t,b){var T=t.terms||[];b.innerHTML='<div class="wrap" style="width:100%"><div class="vh"><div><div class="eyebrow">'+tr("Lug‘at · ")+''+T.length+''+tr(" ta atama")+'</div><h2>'+tr("Tushunchalar kartalari")+'</h2><p>'+tr("O‘quvchi atamaning ma’nosini aytadi, keyin kartani bosib tekshiradi.")+'</p></div><button class="btn" id="flipAll">'+tr("Hammasini aylantirish")+'</button></div><div class="fgrid" id="fgrid">'+T.map(function(x,i){return '<button class="flip" aria-label="'+esc(x[0])+'"><div class="inner"><div class="f"><span class="n">'+pad(i+1)+'</span><b>'+x[0]+'</b><small>'+tr("Bosing va tekshiring")+'</small></div><div class="b"><b>'+x[0]+'</b>'+x[1]+'</div></div></button>'}).join("")+'</div></div>';
@@ -407,7 +413,21 @@ function secQuiz(t,b){var QS=t.quiz||[],Q={n:10,list:[],i:0,turn:0,pts:[0,0],ll:
  setup()}
 
 /* ===== Q&A cards ===== */
-function secCards(t,b){var KQ=t.cards||[],K={st:{},cur:0,swap:null};
+/* Har mavzuda 30 ta karta: asosiy kartalar + qo‘shimchalar + lug‘at + takrorlash + viktorina */
+function cardsOf(t){if(t._c30)return t._c30;var out=[],keys=[];
+ function strip(x){return String(x).replace(/<[^>]+>/g,"")}
+ function norm(x){return strip(x).toLowerCase().replace(/[«»"“”‘’'`.,:;!?()\-—–]/g," ").replace(/\s+/g," ").trim()}
+ function push(q,a){if(out.length>=30||!q||!a)return;var k=norm(q);if(!k||keys.indexOf(k)>=0)return;keys.push(k);out.push([q,a])}
+ (t.cards||[]).forEach(function(c){push(c[0],c[1])});
+ var EX=window.TB_EXTRA_CARDS||{};((EX[t.lang==="ru"?"ru":"uz"]||{})[t.n]||[]).forEach(function(c){push(c[0],c[1])});
+ var qtext=out.map(function(c){return norm(c[0])}).join(" | ");
+ (t.terms||[]).forEach(function(x){var nm=norm(x[0]);if(nm&&qtext.indexOf(nm)>=0)return;push(t.lang==="ru"?"Что такое «"+x[0]+"»?":"«"+x[0]+"» nima?",x[1])});
+ var rv=[];(t.slides||[]).forEach(function(s){if(s.k==="review")rv=rv.concat(s.qa||[])});
+ var qz=(t.quiz||[]).filter(function(q){return !/ emas\b|emas:|emas\?|не является|не относится|не входит|кроме|не метод|не функция/i.test(q[0])}).map(function(q){return [q[0],q[1][0]]});
+ for(var i=0;out.length<30&&(i<qz.length||i<rv.length);i++){if(i<rv.length)push(rv[i][0],rv[i][1]);if(i<qz.length)push(qz[i][0],qz[i][1])}
+ if(t.hook)push(t.hook.q,t.hook.a);
+ t._c30=out;return out}
+function secCards(t,b){var KQ=cardsOf(t),K={st:{},cur:0,swap:null};
  b.innerHTML='<div class="wrap" style="width:100%"><div class="vh"><div><div class="eyebrow">'+KQ.length+''+tr(" ta savol-javob")+'</div><h2>'+tr("Savol-javob kartochkalari")+'</h2><p>'+tr("Raqamni tanlang. O‘quvchi savolga javob beradi, keyin kartani bosib to‘g‘ri javobni tekshiramiz.")+'</p></div><div class="kstats"><span class="chip ok">'+tr("Bildi: ")+'<b id="kOk">0</b></span><span class="chip no">'+tr("Bilmadi: ")+'<b id="kNo">0</b></span><span class="chip">'+tr("Qoldi: ")+'<b id="kLeft">'+KQ.length+'</b></span><button class="btn gold" id="kRand">'+tr("Tasodifiy karta")+'</button><button class="btn ghost" id="kReset">'+tr("Qaytadan")+'</button></div></div><div class="qgrid" id="qgrid"></div></div>';
  function grid(){$("#qgrid").innerHTML=KQ.map(function(k,i){var s=K.st[i];return '<button class="qn'+(s?" "+s:"")+'" data-k="'+i+'" aria-label="'+(i+1)+'">'+(i+1)+'<small>'+(s==="ok"?""+tr("✓ bildi")+"":s==="no"?""+tr("✗ bilmadi")+"":""+tr("savol")+"")+'</small></button>'}).join("");var ok=0,no=0;for(var i in K.st){if(K.st[i]==="ok")ok++;else no++}$("#kOk").textContent=ok;$("#kNo").textContent=no;$("#kLeft").textContent=KQ.length-ok-no}
  function open(i){K.cur=(i+KQ.length)%KQ.length;var k=KQ[K.cur],fl=$("#kFlip"),was=fl.classList.contains("on");fl.classList.remove("on");$("#kNum").textContent=F.savol(K.cur+1,KQ.length);$("#kTopic").textContent=F.mv(t.n);$("#kQ").innerHTML=k[0];clearTimeout(K.swap);if(was)K.swap=setTimeout(function(){$("#kA").innerHTML=k[1]},380);else $("#kA").innerHTML=k[1];var s=K.st[K.cur];$("#kState").textContent=s==="ok"?""+tr("✓ Avval to‘g‘ri javob berilgan")+"":s==="no"?""+tr("✗ Avval javob topilmagan")+"":"";$("#mCard").hidden=false;tone(520,.07,"triangle")}
@@ -434,30 +454,6 @@ function secTask(t,b){var TS=t.tasks||[];
    if(x.answer&&!$("[data-ans]",card).innerHTML){$("[data-ans]",card).innerHTML='<div class="answer">'+x.answer+'</div>'+(x.note?'<p class="note">'+x.note+'</p>':'');sOk();sb.hidden=true}};
   $("[data-reset]",card).onclick=function(){k=0;$("[data-steps]",card).innerHTML="";$("[data-ans]",card).innerHTML="";sb.hidden=false;sb.textContent=steps.length?""+tr("Yechimni boshlash")+"":""+tr("Javobni ko‘rsatish")+""}})}
 
-/* ---------- ADMIN ---------- */
-function renderAdmin(){var v=$("#v-admin"),A=window.TBAuth;
- v.innerHTML='<div class="wrap"><div class="vh"><div><div class="eyebrow">'+tr("Boshqaruv")+'</div><h2>'+tr("Admin panel")+'</h2><p>'+tr("Saytga kim kira olishini shu yerda boshqarasiz. Ro‘yxatdagi emaillar Google akkaunti bilan kirganda darslarni ko‘ra oladi, qolganlarga «Siz kira olmaysiz» sahifasi chiqadi.")+'</p></div></div>'+
- '<div class="adm"><div class="panel"><h3>'+ic("users")+' '+tr("Ruxsat berilgan emaillar")+' <span class="count" id="eCount">…</span></h3><form class="addf" id="addF"><input id="addE" type="email" required placeholder="email@gmail.com" autocomplete="off"><input id="addN" type="text" placeholder="'+tr("Izoh (masalan: 11-A sinf o‘qituvchisi)")+'"><button class="btn gold" type="submit">'+tr("Qo‘shish")+'</button></form><div class="lib-search" style="margin-bottom:.8rem">'+ic("search")+'<input id="eQ" type="search" placeholder="'+tr("Ro‘yxatdan qidirish…")+'"></div><div class="elist" id="eList"><div class="spinner" style="margin:1rem auto"></div></div></div>'+
- '<div class="panel"><h3>'+ic("video")+' '+tr("Mavzular videolari")+'</h3><p class="note" style="margin-top:0">'+tr("Har mavzuga YouTube havolasini yoki iframe kodini qo‘ying. U «Video dars» bo‘limida chiqadi.")+'</p><div id="vList"></div></div></div>'+
- '<div class="panel" style="margin-top:1.2rem"><h3>'+ic("info")+' '+tr("Ma’lumot")+'</h3><p class="note" style="margin:0">'+tr("Administrator: ")+'<b>'+esc((window.TB_CONFIG&&TB_CONFIG.admins||[]).join(", "))+'</b>'+tr(". Administrator ro‘yxatda bo‘lmasa ham doim kira oladi. Siz kirgan akkaunt: ")+'<b>'+esc(TB.user.email)+'</b>'+(TB.user.demo?' <span style="color:var(--down)">'+tr("(DEMO rejim: o‘zgarishlar faqat shu brauzerda saqlanadi)")+'</span>':'')+'</p></div></div>';
- var all=[],confirmE=null;
- function draw(){var q=($("#eQ").value||"").toLowerCase(),admins=(TB_CONFIG.admins||[]).map(function(x){return x.toLowerCase()});var rows=admins.map(function(a){return {email:a,note:""+tr("Administrator")+"",admin:true}}).concat(all.filter(function(x){return admins.indexOf(x.email)<0}));
-  rows=rows.filter(function(x){return !q||x.email.indexOf(q)>=0||(x.note||"").toLowerCase().indexOf(q)>=0});$("#eCount").textContent=all.length+""+tr(" ta")+"";
-  var cols=["#3b82f6","#10b981","#f59e0b","#a855f7","#ef4444","#14b8a6"];
-  $("#eList").innerHTML=rows.length?rows.map(function(x){var c=cols[x.email.charCodeAt(0)%cols.length];return '<div class="erow'+(x.admin?" admin-row":"")+'"><span class="av" style="background:'+c+'">'+esc(x.email.charAt(0).toUpperCase())+'</span><div><div class="em">'+esc(x.email)+'</div><small>'+esc(x.note||"")+(x.addedAt?''+tr(" · qo‘shilgan: ")+''+esc(x.addedAt):'')+'</small></div><div class="del">'+(x.admin?'<span class="chip">Admin</span>':(confirmE===x.email?'<button class="yes" data-del="'+esc(x.email)+'">'+tr("O‘chirish")+'</button><button data-cancel="1" style="background:var(--surface);color:var(--fg)">'+tr("Bekor")+'</button>':'<button data-ask="'+esc(x.email)+'">'+tr("O‘chirish")+'</button>'))+'</div></div>'}).join(""):'<p class="note">'+tr("Hali hech kim qo‘shilmagan. Yuqoridagi formadan email qo‘shing.")+'</p>';
-  $$("[data-ask]",v).forEach(function(bb){bb.onclick=function(){confirmE=bb.dataset.ask;draw()}});
-  $$("[data-cancel]",v).forEach(function(bb){bb.onclick=function(){confirmE=null;draw()}});
-  $$("[data-del]",v).forEach(function(bb){bb.onclick=function(){var em=bb.dataset.del;bb.disabled=true;A.removeAllowed(em).then(function(){all=all.filter(function(x){return x.email!==em});confirmE=null;draw();toast(em+""+tr(" o‘chirildi")+"")}).catch(function(e){toast(""+tr("Xato: ")+""+(e&&e.message||e),1);bb.disabled=false})}})}
- function load(){A.listAllowed().then(function(list){all=list;draw()}).catch(function(e){$("#eList").innerHTML='<p class="note" style="color:var(--down)">'+tr("Ro‘yxatni yuklab bo‘lmadi: ")+''+esc(e&&e.message||e)+'</p>'})}
- $("#eQ").oninput=draw;
- $("#addF").onsubmit=function(e){e.preventDefault();var em=$("#addE").value.trim().toLowerCase(),note=$("#addN").value.trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){toast(""+tr("Email noto‘g‘ri")+"",1);return}
-  if(all.some(function(x){return x.email===em})){toast(""+tr("Bu email ro‘yxatda bor")+"",1);return}
-  A.addAllowed(em,note).then(function(rec){all.unshift(rec);$("#addE").value="";$("#addN").value="";draw();toast(em+""+tr(" qo‘shildi")+"");sOk()}).catch(function(err){toast(""+tr("Xato: ")+""+(err&&err.message||err),1)})};
- // videos
- $("#vList").innerHTML=TB.topics.map(function(t){var key="t"+pad(t.n);return '<div class="vrow"><span class="vn">'+t.n+'</span><div><label for="vi-'+key+'">'+esc(t.title)+'</label><div class="vin"><input id="vi-'+key+'" data-vk="'+key+'" value="'+esc(TB.videos[key]||"")+'" placeholder="'+tr("https://youtu.be/… yoki iframe kodi")+'"><button data-vs="'+key+'">'+tr("Saqlash")+'</button></div></div></div>'}).join("");
- $$("[data-vs]",v).forEach(function(bb){bb.onclick=function(){var key=bb.dataset.vs,val=$('[data-vk="'+key+'"]',v).value.trim(),id=ytId(val);if(val&&!id){toast(""+tr("YouTube havolasi tanilmadi")+"",1);return}var url=id?"https://youtu.be/"+id:"";bb.disabled=true;A.setVideo(key,url).then(function(){TB.videos[key]=url;$('[data-vk="'+key+'"]',v).value=url;bb.classList.add("ok");bb.textContent=""+tr("Saqlandi")+"";setTimeout(function(){bb.classList.remove("ok");bb.textContent=""+tr("Saqlash")+"";bb.disabled=false},1600)}).catch(function(e){toast(""+tr("Xato: ")+""+(e&&e.message||e),1);bb.disabled=false})}});
- load()}
-
 /* ---------- keyboard ---------- */
 document.addEventListener("keydown",function(e){if(/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;
  if(!$("#mCard")||!$("#mCard").hidden){if(L.cardKey)L.cardKey(e);return}
@@ -467,12 +463,12 @@ document.addEventListener("keydown",function(e){if(/INPUT|TEXTAREA|SELECT/.test(
 /* ---------- boot ---------- */
 var booted=false;
 TB.start=function(user){TB.user=user;if(booted)return;booted=true;
- ["gLoading","gLogin","gDenied","gSetup","gAdmin"].forEach(function(id){var g=$("#"+id);if(g)g.hidden=true});
- $("#app").hidden=false;$("#fab").hidden=false;$("#dock").hidden=false;$("#tAdmin").hidden=!(user.isAdmin&&TB.mode==="admin");
+ ["gLoading","gLogin","gDenied","gSetup"].forEach(function(id){var g=$("#"+id);if(g)g.hidden=true});
+ $("#app").hidden=false;$("#fab").hidden=false;$("#dock").hidden=false;
  if(user.demo){var d=document.createElement("div");d.className="demo-banner";d.textContent=""+tr("DEMO rejim · Firebase sozlanmagan")+"";document.body.appendChild(d)}
  buildOverlays();ticker();setupTools();setupFab();setupDock();
  var go=function(){addEventListener("hashchange",route);route()};
  if(window.TBAuth&&TBAuth.getVideos)TBAuth.getVideos().then(function(v){TB.videos=v||{}}).catch(function(){}).then(go);else go()};
 if(TBL.applyStatic)TBL.applyStatic();
-TB.gate=function(which,info){["gLoading","gLogin","gDenied","gSetup","gAdmin"].forEach(function(id){var g=$("#"+id);if(g)g.hidden=id!==which});if(which==="gAdmin")$("#admErr").textContent=info||"";if(which==="gDenied")$("#deniedEmail").textContent=info||"";if(which==="gLogin")$("#loginErr").textContent=info||""};
+TB.gate=function(which,info){["gLoading","gLogin","gDenied","gSetup"].forEach(function(id){var g=$("#"+id);if(g)g.hidden=id!==which});if(which==="gDenied")$("#deniedEmail").textContent=info||"";if(which==="gLogin")$("#loginErr").textContent=info||""};
 })();

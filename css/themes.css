@@ -1,0 +1,150 @@
+/* =========================================================
+   DARS USLUBLARI — har bir dars o‘z rangi, shrifti, naqshi,
+   joylashuvi va o‘tish animatsiyasi bilan (js/themes.js)
+   ========================================================= */
+:root{--a2:#5ec9ff;--a-rgb:244,183,63;--b-rgb:94,201,255;--tfont:var(--display)}
+
+/* ---------- umumiy ---------- */
+.themed .slide h3,.themed .vh h2,.themed .lhead .lt b,.themed .tcard h3,.themed .qtext,.themed .big-num{font-family:var(--tfont);letter-spacing:-.01em}
+.themed .lhead .lnum{background:linear-gradient(135deg,var(--gold),var(--a2))!important;color:var(--gold-ink);box-shadow:0 .5rem 1.2rem -.4rem rgba(var(--a-rgb),.7)}
+.themed .lsec .ic{background:linear-gradient(135deg,var(--gold),var(--a2))!important;color:var(--gold-ink)}
+.themed .view.lesson{background:radial-gradient(70rem 30rem at 100% -10%,rgba(var(--a-rgb),.10),transparent 60%),radial-gradient(50rem 30rem at -10% 110%,rgba(var(--b-rgb),.10),transparent 60%)}
+.themed .big-num{background:linear-gradient(120deg,var(--gold),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.themed .deck-bar .arrow.gold,.themed .dots button.on{background:var(--gold);color:var(--gold-ink)}
+.themed .eyebrow{color:var(--gold)}
+
+/* slayd maydoni: fon naqshi + katta raqam */
+.themed .slide-area{background:linear-gradient(160deg,rgba(var(--a-rgb),.06),transparent 45%),var(--surface);border-color:rgba(var(--a-rgb),.28)}
+.themed .slide-area::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:1}
+.pat-dots .slide-area::before{background:radial-gradient(rgba(var(--a-rgb),.17) 1.6px,transparent 1.8px) 0 0/24px 24px}
+.pat-grid .slide-area::before{background:linear-gradient(rgba(var(--a-rgb),.08) 1px,transparent 1px) 0 0/30px 30px,linear-gradient(90deg,rgba(var(--a-rgb),.08) 1px,transparent 1px) 0 0/30px 30px}
+.pat-diag .slide-area::before{background:repeating-linear-gradient(45deg,rgba(var(--a-rgb),.07) 0 2px,transparent 2px 18px)}
+.pat-rings .slide-area::before{background:repeating-radial-gradient(circle at 105% 110%,rgba(var(--a-rgb),.10) 0 2px,transparent 2px 28px)}
+.pat-confetti .slide-area::before{background:radial-gradient(rgba(var(--a-rgb),.2) 3px,transparent 3.5px) 0 0/64px 64px,radial-gradient(rgba(var(--b-rgb),.28) 2.5px,transparent 3px) 32px 32px/64px 64px}
+.pat-waves .slide-area::before{background:repeating-radial-gradient(circle at -5% -10%,rgba(var(--b-rgb),.12) 0 2px,transparent 2px 34px)}
+.slide-area .wm{position:absolute;right:1.2rem;bottom:-1.4rem;font-family:var(--tfont);font-weight:900;font-size:clamp(7rem,16vw,14rem);line-height:1;color:rgba(var(--a-rgb),.07);pointer-events:none;user-select:none}
+.slide{z-index:1}
+
+/* ---------- o‘tish animatsiyalari ---------- */
+.tr-zoom .slide{transform:scale(.94)}.tr-zoom .slide.on{transform:none}.tr-zoom .slide.prev{transform:scale(1.04)}
+.tr-rise .slide{transform:translateY(5%)}.tr-rise .slide.on{transform:none}.tr-rise .slide.prev{transform:translateY(-5%)}
+.tr-flip .slide-area{perspective:1600px}.tr-flip .slide{transform:rotateY(10deg) translateX(3%);transform-origin:left center}.tr-flip .slide.on{transform:none}.tr-flip .slide.prev{transform:rotateY(-10deg) translateX(-3%);transform-origin:right center}
+
+/* ---------- slayd elementlari ---------- */
+.themed .slide .tag{display:inline-flex;align-self:flex-start;align-items:center;gap:.4rem;padding:.25rem .7rem;border-radius:2rem;background:rgba(var(--a-rgb),.12);color:var(--gold);font-weight:700;letter-spacing:.08em}
+.themed .def{background:linear-gradient(90deg,rgba(var(--a-rgb),.13),rgba(var(--a-rgb),.04));box-shadow:0 .4rem 1rem -.7rem rgba(var(--a-rgb),.6)}
+.themed .lst li{border:1px solid rgba(var(--a-rgb),.14)}
+.themed .lst li:before{background:linear-gradient(135deg,var(--gold),var(--a2))}
+.themed .steps-sl{position:relative}
+.themed .steps-sl div{border:1px solid rgba(var(--a-rgb),.15);position:relative}
+.themed .steps-sl div:before{background:linear-gradient(135deg,var(--gold),var(--a2));color:var(--gold-ink);box-shadow:0 .3rem .7rem -.3rem rgba(var(--a-rgb),.8)}
+.themed .steps-sl div+div::after{content:"";position:absolute;left:2.05rem;top:-.6rem;width:3px;height:.65rem;background:linear-gradient(var(--gold),var(--a2));border-radius:2px}
+.themed .cmpT th{background:linear-gradient(135deg,var(--gold),var(--a2));color:var(--gold-ink);border-radius:.6rem}
+.themed .cmpT tr:nth-child(even) td{background:rgba(var(--a-rgb),.08)}
+.themed .ic-card{border:1px solid rgba(var(--a-rgb),.15);transition:transform .2s,box-shadow .2s}
+.themed .ic-card:hover{transform:translateY(-3px);box-shadow:0 .8rem 1.4rem -.8rem rgba(var(--a-rgb),.7)}
+.themed .ic-card:nth-child(1) .ic{background:var(--gold)!important;color:var(--gold-ink)}
+.themed .ic-card:nth-child(2) .ic{background:var(--a2)!important;color:#14110a}
+.themed .vs-col{border:1px solid rgba(var(--a-rgb),.12)}
+.themed .fact{background:linear-gradient(135deg,rgba(var(--a-rgb),.12),rgba(var(--b-rgb),.12));border-color:rgba(var(--a-rgb),.5)}
+.themed .fact .fi{background:linear-gradient(135deg,var(--gold),var(--a2))}
+.themed .rq{border:1px solid rgba(var(--a-rgb),.18);transition:border-color .15s,transform .15s}
+.themed .rq:hover{border-color:var(--gold);transform:translateX(3px)}
+.themed .hook{border-left-color:var(--gold)}
+
+/* ---------- joylashuv 1: CARD — sarlavha ostida rangli chiziq ---------- */
+.lay-card .slide h3{position:relative;padding-bottom:.55rem}
+.lay-card .slide h3::after{content:"";position:absolute;left:0;bottom:0;width:4.5rem;height:.32rem;border-radius:1rem;background:linear-gradient(90deg,var(--gold),var(--a2))}
+/* ---------- joylashuv 2: SPLIT — sarlavha chap chiziqli ---------- */
+.lay-split .slide h3{border-left:.45rem solid var(--gold);padding-left:.9rem;border-radius:.2rem}
+/* ---------- joylashuv 3: POSTER — sarlavha rangli plashkada ---------- */
+.lay-poster .slide h3{align-self:flex-start;background:linear-gradient(120deg,var(--gold),var(--a2));color:var(--gold-ink);padding:.45rem 1.1rem .5rem;border-radius:.9rem;box-shadow:0 .7rem 1.4rem -.8rem rgba(var(--a-rgb),.9);transform:rotate(-.6deg)}
+.lay-poster .slide .tag{background:transparent;padding-left:0}
+
+/* ---------- slayd rasmlari (multfilm sahnalari) ---------- */
+.sl-split{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:2rem;align-items:center;flex:1;min-height:0}
+.sl-split.rev{grid-template-columns:minmax(0,1fr) minmax(0,1.35fr)}
+.sl-split.rev .sl-ill{order:-1}
+.sl-txt{display:flex;flex-direction:column;min-width:0}
+.sl-ill{margin:0;position:relative;border-radius:1.4rem;overflow:hidden;aspect-ratio:16/11;background:var(--surface-2);box-shadow:0 1.4rem 2.4rem -1.2rem rgba(0,0,0,.45),0 0 0 1px rgba(var(--a-rgb),.25);animation:illIn .7s cubic-bezier(.2,1,.3,1) both}
+.sl-ill .scn{position:absolute;inset:0}
+.sl-ill .scn svg{animation-duration:14s}
+.sl-ill figcaption{position:absolute;left:.7rem;bottom:.7rem;max-width:calc(100% - 1.4rem);padding:.35rem .8rem;border-radius:2rem;background:rgba(10,14,25,.72);color:#fff;font-weight:700;font-size:.85rem;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lay-poster .sl-ill{border:.55rem solid #fff;border-bottom-width:2.4rem;border-radius:.5rem;transform:rotate(2deg);box-shadow:0 1.6rem 2.6rem -1.2rem rgba(0,0,0,.5)}
+.lay-poster .sl-ill figcaption{background:transparent;color:#2b2f45;bottom:-2rem;left:.3rem;backdrop-filter:none;font-family:var(--tfont)}
+.lay-split .sl-ill{border-radius:3rem .9rem 3rem .9rem}
+@keyframes illIn{from{opacity:0;transform:translateY(1.2rem) scale(.96)}}
+.lay-poster .sl-ill{animation-name:illInP}
+@keyframes illInP{from{opacity:0;transform:rotate(8deg) translateY(1.2rem) scale(.92)}to{transform:rotate(2deg)}}
+
+/* ---------- MUQOVA SLAYDI ---------- */
+.slide.cvr{padding:2.2rem 2.8rem}
+.slide.cvr .sin{position:relative;z-index:2}
+.cv-bg{position:absolute;inset:0;overflow:hidden;z-index:0}
+.cv-bg .scn{position:absolute;inset:0}
+.cv-bg .scn svg{animation-duration:18s}
+.cv-shade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(var(--a-rgb),.97) 0%,rgba(var(--a-rgb),.9) 42%,rgba(var(--a-rgb),.35) 70%,rgba(var(--a-rgb),0) 100%)}
+.cv-fg{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:2rem;align-items:center;flex:1;color:var(--gold-ink)}
+.cv-fg .cv-k{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.9}
+.cv-fg .cv-k b{display:grid;place-items:center;min-width:2.4rem;height:2.4rem;border-radius:.8rem;background:rgba(255,255,255,.22);font-family:var(--tfont);font-size:1.1rem;letter-spacing:0}
+.cv-fg h3{font-family:var(--tfont);font-size:clamp(2.1rem,4.4vw,4rem)!important;line-height:1.05;color:inherit!important;margin:.6rem 0 1rem!important;text-shadow:0 .2rem 1rem rgba(0,0,0,.15);background:none!important;padding:0!important;box-shadow:none!important;transform:none!important;border:0!important}
+.cv-fg h3::after{display:none}
+.cv-fg p{color:inherit;opacity:.9;font-weight:600;margin:0 0 .4rem}
+.cv-fg .chips .chip{background:rgba(255,255,255,.2);color:inherit;border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);animation:rise .5s both}
+.cv-fg .chips .chip:nth-child(2){animation-delay:.06s}.cv-fg .chips .chip:nth-child(3){animation-delay:.12s}.cv-fg .chips .chip:nth-child(4){animation-delay:.18s}.cv-fg .chips .chip:nth-child(5){animation-delay:.24s}.cv-fg .chips .chip:nth-child(6){animation-delay:.3s}
+.cv-fg .hook{background:rgba(255,255,255,.9);color:#1b2033;border:0;border-radius:1.3rem;box-shadow:0 1.4rem 2.6rem -1rem rgba(0,0,0,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.cv-fg .hook small{color:var(--gold)}
+.cv-fg .hook .rq{background:#f1f4fb;color:#1b2033}
+.cv-fg .hook .rq .hint{color:#6b7390}
+.cv-fg .hook .rq .a{color:#0f8a53}
+/* muqova variantlari */
+.lay-split .cv-shade{background:linear-gradient(0deg,rgba(var(--a-rgb),.97) 0%,rgba(var(--a-rgb),.86) 45%,rgba(var(--a-rgb),.2) 80%,rgba(var(--a-rgb),0) 100%)}
+.lay-split .cv-fg{align-items:end}
+.lay-poster .cv-shade{background:linear-gradient(100deg,rgba(var(--a-rgb),.98) 0 52%,rgba(var(--b-rgb),.55) 52.2%,rgba(var(--b-rgb),0) 80%)}
+.lay-poster .cv-fg h3{transform:rotate(-1deg)!important}
+.themed .slide.cvr .wm{display:none}
+@media (max-width:820px){.sl-split,.sl-split.rev,.cv-fg{grid-template-columns:1fr}.sl-ill{display:none}}
+@media (prefers-reduced-motion: reduce){.sl-ill,.cv-fg .chips .chip{animation:none!important}}
+/* 30 ta karta — keng ekranda 10 ustun */
+.qgrid{grid-template-columns:repeat(10,minmax(0,1fr))}
+@media (max-width:1300px){.qgrid{grid-template-columns:repeat(6,minmax(0,1fr))}}
+@media (max-width:760px){.qgrid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.themed .qn{border-color:rgba(var(--a-rgb),.25)}
+.themed .qn:hover{border-color:var(--gold)}
+
+/* ---------- boshqa bo‘limlar: rangli sarlavha banneri va bezaklar ---------- */
+.themed .view.lesson .lbody>.wrap>.vh,.themed .view.lesson #quizRoot>.vh{position:relative;overflow:hidden;background:linear-gradient(120deg,rgba(var(--a-rgb),.16),rgba(var(--b-rgb),.12));border:1px solid rgba(var(--a-rgb),.25);border-radius:1.5rem;padding:1.1rem 1.4rem;margin-bottom:1.2rem}
+.themed .view.lesson .lbody>.wrap>.vh::after,.themed .view.lesson #quizRoot>.vh::after{content:"";position:absolute;right:-3rem;top:-3rem;width:12rem;height:12rem;border-radius:50%;background:radial-gradient(circle,rgba(var(--a-rgb),.25),transparent 70%);pointer-events:none}
+.themed .vh h2{font-size:clamp(1.6rem,2.6vw,2.2rem)}
+/* lug‘at kartalari */
+.themed .flip .f{border-top:.35rem solid var(--gold);background:linear-gradient(180deg,rgba(var(--a-rgb),.06),transparent 60%),var(--surface)}
+.themed .flip .f .n{color:var(--gold);font-family:var(--tfont)}
+.themed .flip .f b{font-family:var(--tfont)}
+.themed .flip .b{background:linear-gradient(135deg,var(--gold),var(--a2));color:var(--gold-ink)}
+.themed .flip .b b{color:inherit}
+.themed .flip:nth-child(3n+2) .f{border-top-color:var(--a2)}
+/* saralash */
+.themed .bucket.L{border-color:var(--gold);color:var(--gold);background:linear-gradient(160deg,rgba(var(--a-rgb),.12),var(--surface))}
+.themed .bucket.R{border-color:var(--a2);background:linear-gradient(200deg,rgba(var(--b-rgb),.16),var(--surface))}
+.themed .sitem{border:2px solid rgba(var(--a-rgb),.2);background:radial-gradient(circle at 50% 0,rgba(var(--a-rgb),.08),var(--surface) 70%)}
+.themed .sitem .txt{font-family:var(--tfont)}
+/* viktorina */
+.themed .setup{border:1px solid rgba(var(--a-rgb),.25);box-shadow:0 1.4rem 2.4rem -1.6rem rgba(var(--a-rgb),.7)}
+.themed .qbox{border:1px solid rgba(var(--a-rgb),.22)}
+.themed .opt .L{background:linear-gradient(135deg,var(--gold),var(--a2));color:var(--gold-ink)}
+.themed .team.turn{box-shadow:0 0 0 3px var(--gold)}
+/* savol-javob kartalari */
+.themed .qn{background:linear-gradient(180deg,rgba(var(--a-rgb),.08),var(--surface));font-family:var(--tfont)}
+.themed .qn:nth-child(5n+3){background:linear-gradient(180deg,rgba(var(--b-rgb),.14),var(--surface))}
+.themed .kflip .f{background:radial-gradient(circle at 50% 0,rgba(var(--a-rgb),.14),transparent 70%),var(--surface);border:3px solid var(--gold)}
+.themed .kflip .b{background:linear-gradient(135deg,var(--gold),var(--a2))}
+.themed .kflip .f .kq{font-family:var(--tfont)}
+/* amaliy topshiriq */
+.themed .tcard{border:1px solid rgba(var(--a-rgb),.22);border-left:.45rem solid var(--gold);background:linear-gradient(90deg,rgba(var(--a-rgb),.05),var(--surface) 30%)}
+.themed .tcard h3 span{background:linear-gradient(135deg,var(--gold),var(--a2));color:var(--gold-ink)}
+.themed .step .k{background:linear-gradient(135deg,var(--gold),var(--a2));color:var(--gold-ink)}
+.themed .answer{border-color:var(--gold);background:linear-gradient(135deg,rgba(var(--a-rgb),.12),rgba(var(--b-rgb),.1))}
+.themed .bucket.flash-ok{background:var(--up-soft)!important}.themed .bucket.flash-no{background:var(--down-soft)!important}
+.themed .sitem.ok{border-color:var(--up)!important;background:var(--up-soft)!important}.themed .sitem.no{border-color:var(--down)!important;background:var(--down-soft)!important}
+.themed .qn.ok{background:var(--up-soft)!important;border-color:var(--up)!important}.themed .qn.no{background:var(--down-soft)!important;border-color:var(--down)!important}
+.themed .qn.hl{background:var(--gold)!important;color:var(--gold-ink)!important}

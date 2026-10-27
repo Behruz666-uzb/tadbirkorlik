@@ -7,8 +7,8 @@
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# Admin panel alohida manzilda: https://SAYT/admin
+# Admin panel — alohida sayt: https://SAYT/admin/
 [[redirects]]
   from = "/admin"
-  to = "/admin.html"
-  status = 200
+  to = "/admin/"
+  status = 301

@@ -44,7 +44,7 @@ window.TB_CONFIG = {
 ## 3. Foydalanish
 
 - **Sayt**: `https://SAYT/` → **Google orqali kirish**. Faqat ruxsat berilgan emaillar kiradi, qolganlarga «Siz kira olmaysiz» sahifasi chiqadi.
-- **Admin panel**: `https://SAYT/admin` (yoki `admin.html`) → admin email va parolini kiriting. Asosiy saytda admin tugmasi ko‘rinmaydi.
+- **Admin panel** — darslik saytidan butunlay alohida sayt: `https://SAYT/admin/` → admin email va parolini kiriting. Darslik saytida admin tugmasi ham, admin sahifasi ham yo‘q. Xohlasangiz, admin panelni Netlify’da alohida sayt qilib ham joylashingiz mumkin (o‘sha repo, Publish directory `.`; manzili `…/admin/`).
 - **Admin panelda**: email qo‘shish (izoh bilan), qidirish, o‘chirish; har bir mavzuga YouTube havolasini biriktirish.
 - Ro‘yxatda yo‘q email bilan kirilsa — **«Siz kira olmaysiz»** sahifasi chiqadi.
 
@@ -54,12 +54,12 @@ Firebase Console → Authentication → Users → admin qatori → ⋮ → **Res
 ### Yangi admin qo‘shish
 Ikki joyda yozish kerak: `js/config.js` → `admins` ro‘yxati va `firestore.rules` → `isAdmin()` ichidagi ro‘yxat (rules’ni Firebase Console’da qayta Publish qiling). Keyin Authentication → Users’da unga akkaunt yarating.
 
-### admin.html haqida
-`admin.html` fayli `index.html` dan avtomatik yasaladi. `index.html` ni o‘zgartirsangiz, `python3 make-admin.py` ni ishga tushiring.
+### Admin panel fayllari
+`admin/index.html`, `admin/admin.js`, `admin/admin.css` — alohida ilova. U faqat `js/config.js` (Firebase sozlamalari) va umumiy dizayn fayllaridan (`css/`) foydalanadi.
 
 ## 4. Lokal sinash
 
-`index.html` ni brauzerda ochsangiz (Firebase sozlanmagan bo‘lsa) **DEMO rejim** ishlaydi: kirish taqlid qilinadi, ma’lumotlar brauzer xotirasida saqlanadi. `admin.html` demo rejimda ham email va parol so‘raydi (bu holatda tekshiruv brauzerda bo‘ladi — u faqat sinov uchun; haqiqiy himoya Firebase ulangach ishlaydi).
+`index.html` ni brauzerda ochsangiz (Firebase sozlanmagan bo‘lsa) **DEMO rejim** ishlaydi: kirish taqlid qilinadi, ma’lumotlar brauzer xotirasida saqlanadi. `admin/` demo rejimda ham email va parol so‘raydi (bu holatda tekshiruv brauzerda bo‘ladi — u faqat sinov uchun; haqiqiy himoya Firebase ulangach ishlaydi).
 
 ## Muhim eslatma
 
@@ -77,6 +77,8 @@ js/film.js            — multfilm dvigateli
 js/topics/t01–t30.js  — 30 mavzu kontenti (o‘zbekcha)
 js/topics/ru/t01–t30.js — ruscha tarjima
 js/i18n.js            — interfeys tarjimasi (UZ/RU)
-admin.html            — admin panel sahifasi (make-admin.py yasaydi)
+admin/                — admin panel (alohida sayt)
+js/themes.js, css/themes.css — har bir darsning o‘z uslubi (rang, shrift, naqsh, joylashuv)
+js/topics/extra-cards.js — qo‘shimcha savol-javob kartalari (har mavzuda 30 ta)
 firestore.rules       — Firestore xavfsizlik qoidalari
 ```
