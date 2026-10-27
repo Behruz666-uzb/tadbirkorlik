@@ -1,0 +1,15 @@
+{
+  "name": "tadbirkorlik-asoslari",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "11-sinf «Tadbirkorlik asoslari» — elektron doska uchun interaktiv darslik (UZ/RU) va admin panel",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node tests/api.test.mjs"
+  },
+  "dependencies": {
+    "@netlify/blobs": "11.1.2"
+  },
+  "engines": { "node": ">=18" }
+}

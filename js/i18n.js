@@ -8,6 +8,14 @@ var lang="uz";try{lang=localStorage.getItem("tb-lang")||"uz"}catch(e){}
 var qm=/[?&]lang=(uz|ru)/.exec(location.search);if(qm)lang=qm[1];
 if(lang!=="ru")lang="uz";
 var RU={
+/* --- kirish (email + kod) --- */
+"Saytga faqat administrator ruxsat bergan foydalanuvchilar kira oladi. Email va shaxsiy kirish kodingizni kiriting.":"На сайт могут войти только пользователи, которым администратор дал доступ. Введите email и личный код доступа.",
+"Kirish kodi":"Код доступа","Kirish kodini administratordan oling.":"Код доступа выдаёт администратор.","Kodni ko‘rsatish":"Показать код",
+"Bu email uchun saytdan foydalanishga ruxsat berilmagan. Ruxsat va kirish kodini olish uchun administratorga murojaat qiling.":"Для этого email доступ к сайту не открыт. Чтобы получить доступ и код, обратитесь к администратору.",
+"Boshqa email bilan kirish":"Войти с другим email","Server topilmadi":"Сервер не найден","Sayt Netlify’da ishga tushirilganda kirish tizimi avtomatik ishlaydi. Yo‘riqnoma README.md faylida.":"Система входа заработает автоматически, когда сайт будет запущен на Netlify. Инструкция — в README.md.",
+"Hozircha saytni demo rejimda ko‘rib chiqishingiz mumkin:":"Пока можно посмотреть сайт в демо-режиме:","Kirish kodi noto‘g‘ri":"Неверный код доступа","Juda ko‘p urinish. 15 daqiqadan keyin qayta urining.":"Слишком много попыток. Повторите через 15 минут.",
+"Email va kirish kodini kiriting":"Введите email и код доступа","Server bilan bog‘lanib bo‘lmadi. Internetni tekshiring.":"Не удалось связаться с сервером. Проверьте интернет.","Sessiya tugadi. Qayta kiring.":"Сеанс истёк. Войдите снова.","DEMO rejim · server ulanmagan":"ДЕМО-режим · сервер не подключён",
+
 /* --- admin kirish --- */
 "Admin panelga kirish":"Вход в админ-панель","Administrator email va parolini kiriting.":"Введите email и пароль администратора.","Email":"Email","Parol":"Пароль","Kirish":"Войти","← Saytga qaytish":"← Вернуться на сайт","Parolni ko‘rsatish":"Показать пароль",
 "Email yoki parol noto‘g‘ri":"Неверный email или пароль","Juda ko‘p urinish. Birozdan keyin qayta urining.":"Слишком много попыток. Повторите позже.","Firebase’da Email/Password kirish usuli yoqilmagan.":"В Firebase не включён вход по Email/Password.","Bu akkaunt administrator emas":"Этот аккаунт не является администратором","Brauzer parolni tekshira olmadi":"Браузер не смог проверить пароль","Admin panel · Tadbirkorlik asoslari":"Админ-панель · Основы предпринимательства",

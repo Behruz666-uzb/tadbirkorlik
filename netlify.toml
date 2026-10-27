@@ -1,14 +1,22 @@
 [build]
-  publish = "."
+  command = "node build.mjs"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[functions]
+  node_bundler = "esbuild"
 
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# Admin panel — alohida sayt: https://SAYT/admin/
-[[redirects]]
-  from = "/admin"
-  to = "/admin/"
-  status = 301
+[[headers]]
+  for = "/js/topics/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"

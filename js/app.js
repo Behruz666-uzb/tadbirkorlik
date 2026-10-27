@@ -465,7 +465,7 @@ var booted=false;
 TB.start=function(user){TB.user=user;if(booted)return;booted=true;
  ["gLoading","gLogin","gDenied","gSetup"].forEach(function(id){var g=$("#"+id);if(g)g.hidden=true});
  $("#app").hidden=false;$("#fab").hidden=false;$("#dock").hidden=false;
- if(user.demo){var d=document.createElement("div");d.className="demo-banner";d.textContent=""+tr("DEMO rejim · Firebase sozlanmagan")+"";document.body.appendChild(d)}
+ if(user.demo){var d=document.createElement("div");d.className="demo-banner";d.textContent=""+tr("DEMO rejim · server ulanmagan")+"";document.body.appendChild(d)}
  buildOverlays();ticker();setupTools();setupFab();setupDock();
  var go=function(){addEventListener("hashchange",route);route()};
  if(window.TBAuth&&TBAuth.getVideos)TBAuth.getVideos().then(function(v){TB.videos=v||{}}).catch(function(){}).then(go);else go()};

@@ -38,8 +38,8 @@
 <div class="gate" id="aSetup" hidden>
   <div class="gate-card">
     <div class="deny-ic adm-ic"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16v.01"/></svg></div>
-    <h1 data-t="Firebase sozlanmagan">Firebase sozlanmagan</h1>
-    <p data-t="js/config.js fayliga Firebase ma’lumotlarini kiriting (README.md).">js/config.js fayliga Firebase ma’lumotlarini kiriting (README.md).</p>
+    <h1 data-t="Server topilmadi">Server topilmadi</h1>
+    <p data-t="Admin panel Netlify’da ishga tushirilganda ishlaydi (README.md).">Admin panel Netlify’da ishga tushirilganda ishlaydi (README.md).</p>
   </div>
 </div>
 
@@ -54,7 +54,8 @@
     </div>
   </header>
   <main class="adm-main">
-    <div class="adm-banner" id="aDemo" hidden data-t="DEMO rejim: Firebase ulanmagan, o‘zgarishlar faqat shu brauzerda saqlanadi.">DEMO rejim: Firebase ulanmagan, o‘zgarishlar faqat shu brauzerda saqlanadi.</div>
+    <div class="adm-banner" id="aDemo" hidden data-t="DEMO rejim: server ulanmagan, o‘zgarishlar faqat shu brauzerda saqlanadi.">DEMO rejim: server ulanmagan, o‘zgarishlar faqat shu brauzerda saqlanadi.</div>
+    <div class="adm-banner warn" id="aDefPw" hidden><span data-t="Siz boshlang‘ich paroldan foydalanyapsiz. Xavfsizlik uchun uni pastdagi «Xavfsizlik» bo‘limida almashtiring.">Siz boshlang‘ich paroldan foydalanyapsiz. Xavfsizlik uchun uni pastdagi «Xavfsizlik» bo‘limida almashtiring.</span></div>
     <div class="adm-stats">
       <div class="stat"><span data-t="Ruxsat berilganlar">Ruxsat berilganlar</span><b id="sUsers">0</b></div>
       <div class="stat"><span data-t="Video biriktirilgan mavzular">Video biriktirilgan mavzular</span><b id="sVids">0 / 30</b></div>
@@ -63,7 +64,7 @@
     <div class="adm">
       <section class="panel">
         <h3><svg class="i" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M3 21v-2a6 6 0 0112 0v2"/><path d="M16 3.1a4 4 0 010 7.8M21 21v-2a6 6 0 00-4-5.6"/></svg><span data-t="Ruxsat berilgan emaillar">Ruxsat berilgan emaillar</span></h3>
-        <p class="note" style="margin-top:0" data-t="Ro‘yxatdagi emaillar Google akkaunti bilan saytga kira oladi, qolganlarga «Siz kira olmaysiz» sahifasi chiqadi.">Ro‘yxatdagi emaillar Google akkaunti bilan saytga kira oladi, qolganlarga «Siz kira olmaysiz» sahifasi chiqadi.</p>
+        <p class="note" style="margin-top:0" data-t="Email qo‘shganingizda unga shaxsiy kirish kodi yaratiladi. Kodni o‘qituvchiga bering: u saytga email va shu kod bilan kiradi. Ro‘yxatda yo‘q emaillarga «Siz kira olmaysiz» sahifasi chiqadi.">Email qo‘shganingizda unga shaxsiy kirish kodi yaratiladi. Kodni o‘qituvchiga bering: u saytga email va shu kod bilan kiradi. Ro‘yxatda yo‘q emaillarga «Siz kira olmaysiz» sahifasi chiqadi.</p>
         <form class="addf" id="addF"><input id="addE" type="email" required placeholder="email@gmail.com" autocomplete="off"><input id="addN" type="text"><button class="btn gold" type="submit" data-t="Qo‘shish">Qo‘shish</button></form>
         <div class="lib-search" style="margin-bottom:.8rem"><svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg><input id="eQ" type="search"></div>
         <div class="elist" id="eList"><div class="spinner" style="margin:1rem auto"></div></div>
@@ -74,7 +75,28 @@
         <div id="vList"></div>
       </section>
     </div>
+    <section class="panel adm-sec">
+      <h3><svg class="i" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg><span data-t="Xavfsizlik: admin parolini almashtirish">Xavfsizlik: admin parolini almashtirish</span></h3>
+      <form class="pwf" id="pwF">
+        <input id="pwOld" type="password" required autocomplete="current-password">
+        <input id="pwNew" type="password" required minlength="8" autocomplete="new-password">
+        <input id="pwNew2" type="password" required minlength="8" autocomplete="new-password">
+        <button class="btn gold" type="submit" data-t="Parolni almashtirish">Parolni almashtirish</button>
+      </form>
+    </section>
   </main>
+</div>
+
+<div class="modal" id="codeM" hidden>
+  <div class="mbox code-box">
+    <button class="xbtn" id="codeX" aria-label="Yopish"><svg class="i" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div class="eyebrow" data-t="Kirish kodi">Kirish kodi</div>
+    <h3 id="codeEmail"></h3>
+    <div class="code-val" id="codeVal"></div>
+    <p class="note" data-t="Bu kodni o‘qituvchiga bering. Kod faqat hozir ko‘rsatiladi — keyin uni qayta ko‘rib bo‘lmaydi, faqat yangisini yaratish mumkin.">Bu kodni o‘qituvchiga bering. Kod faqat hozir ko‘rsatiladi — keyin uni qayta ko‘rib bo‘lmaydi, faqat yangisini yaratish mumkin.</p>
+    <div class="code-msg" id="codeMsg"></div>
+    <div class="center-row"><button class="btn gold" id="codeCopy" data-t="Nusxa olish">Nusxa olish</button><button class="btn" id="codeOk" data-t="Tayyor">Tayyor</button></div>
+  </div>
 </div>
 
 <script src="../js/config.js"></script>

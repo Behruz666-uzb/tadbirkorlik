@@ -1,84 +1,67 @@
 # Tadbirkorlik asoslari — elektron doska uchun interaktiv darslik
 
-11-sinf «Tadbirkorlik asoslari» (U. G‘afurov, Q. Sharipov, 2018) darsligining **30 mavzusi** bitta saytda.
-Har bir mavzuda: slaydlar · multfilm · video dars · lug‘at · saralash o‘yini · jamoaviy viktorina · savol-javob kartalari · amaliy topshiriq.
+11-sinf «Tadbirkorlik asoslari» (U. G‘afurov, Q. Sharipov, 2018) darsligining **30 mavzusi**, o‘zbek va rus tilida.
+Har bir mavzuda: slaydlar · multfilm · video dars · lug‘at · saralash o‘yini · jamoaviy viktorina · 30 ta savol-javob kartasi · amaliy topshiriq. Har bir darsning o‘z uslubi (rang, shrift, naqsh, joylashuv) bor.
 
-Sayt faqat **ruxsat berilgan emaillar** uchun ochiladi. Admin panel orqali emaillarni qo‘shish va o‘chirish, har bir mavzuga YouTube video biriktirish mumkin.
+Ikki sayt, bitta repo:
+
+| Sayt | Kim uchun | Kirish |
+|---|---|---|
+| **Darslik sayti** | o‘qituvchi va o‘quvchilar | email + shaxsiy kirish kodi (kodni admin beradi) |
+| **Admin sayti** | faqat administrator | admin email + parol |
+
+Server: **Netlify Functions** (`netlify/core.mjs`), ma’lumotlar: **Netlify Blobs**. Firebase yoki boshqa tashqi xizmat kerak emas — Netlify’ga ulash kifoya.
 
 ---
 
-## 1. Firebase loyihasini yaratish (bir marta, ~10 daqiqa)
+## Netlify’ga joylash (5 daqiqa)
 
-1. <https://console.firebase.google.com> → **Add project** (masalan, `tadbirkorlik-asoslari`). Google Analytics shart emas.
-2. **Build → Authentication → Get started → Sign-in method**:
-   - **Google → Enable** (o‘quvchi va o‘qituvchilar shu orqali kiradi). Support email sifatida o‘z emailingizni tanlang → Save.
-   - **Email/Password → Enable** (faqat admin panel uchun).
-   - **Authentication → Users → Add user**: email `dilfuzamavlanova446@gmail.com` va o‘zingiz tanlagan admin parolini kiriting. Parol faqat Firebase’da saqlanadi, kodda yo‘q.
-   - **Authentication → Settings → User actions**: «Enable create (sign-up)» belgisini olib tashlang — shunda saytda hech kim o‘zi akkaunt ocha olmaydi.
-3. **Authentication → Settings → Authorized domains → Add domain**: Netlify manzilingizni qo‘shing (masalan, `tadbirkorlik.netlify.app`). Keyinroq o‘z domeningiz bo‘lsa, uni ham qo‘shing.
-4. **Build → Firestore Database → Create database** → Location: `eur3` (yoki yaqinroq) → **Start in production mode**.
-5. **Firestore → Rules** bo‘limiga `firestore.rules` faylidagi matnni to‘liq qo‘yib, **Publish** bosing.
-6. **Project settings (⚙️) → General → Your apps → Web (`</>`)** → ilova nomini yozing → **Register app**. Chiqqan `firebaseConfig` dan 4 ta qiymatni oling.
-7. `js/config.js` faylini oching va qiymatlarni qo‘ying:
+### 1. Darslik sayti
+1. <https://app.netlify.com> → **Add new site → Import an existing project → GitHub** → `tadbirkorlik-asoslari` reposini tanlang.
+2. Sozlamalar `netlify.toml` dan avtomatik olinadi (Build command: `node build.mjs`, Publish: `dist`). **Deploy** ni bosing.
+3. **Site configuration → Change site name**: masalan `tadbirkorlik-asoslari` → manzil `https://tadbirkorlik-asoslari.netlify.app`.
 
-```js
-window.TB_CONFIG = {
-  firebase: {
-    apiKey: "AIza...",
-    authDomain: "tadbirkorlik-asoslari.firebaseapp.com",
-    projectId: "tadbirkorlik-asoslari",
-    appId: "1:123...:web:abc..."
-  },
-  admins: ["dilfuzamavlanova446@gmail.com"]
-};
-```
+### 2. Admin sayti (o‘sha repo’dan ikkinchi sayt)
+1. Yana **Add new site → Import an existing project → GitHub** → **o‘sha repo**.
+2. Deploy’dan keyin sayt nomini **darslik sayti nomi + `-admin`** qiling: masalan `tadbirkorlik-asoslari-admin`.
+3. **Deploys → Trigger deploy → Deploy site** (nom o‘zgargach bir marta qayta yig‘ish kerak).
 
-> Bu kalitlar maxfiy emas — Firebase web-kalitlari ochiq bo‘lishi uchun mo‘ljallangan. Himoyani `firestore.rules` ta’minlaydi.
+Nom `-admin` bilan tugagani uchun sayt o‘zi admin panel sifatida yig‘iladi va barcha so‘rovlarni darslik saytining serveriga uzatadi — ikkala sayt **bitta bazadan** foydalanadi. Boshqacha nom tanlasangiz, admin saytiga ikki muhit o‘zgaruvchisini qo‘shing: `TB_SITE=admin` va `TB_API_URL=https://<darslik-sayti>.netlify.app`.
 
-## 2. Netlify’ga joylash
+---
 
-1. <https://app.netlify.com> → **Add new site → Import an existing project → GitHub** → shu repozitoriyani tanlang.
-2. Build command: *bo‘sh*, Publish directory: `.` → **Deploy**.
-3. Sayt manzilini (masalan, `xxx.netlify.app`) Firebase **Authorized domains** ro‘yxatiga qo‘shishni unutmang (1-bo‘lim, 3-qadam).
+## Foydalanish
 
-## 3. Foydalanish
+1. Admin saytiga kiring: email `dilfuzamavlanova446@gmail.com` va boshlang‘ich parol (sizga alohida aytilgan).
+   **Birinchi kirishdayoq parolni «Xavfsizlik» bo‘limida almashtiring.**
+2. **Email qo‘shing** → sayt avtomatik **kirish kodi** yaratadi (masalan `K7P2-9QXM`). Kodni o‘qituvchiga bering. Kod faqat bir marta ko‘rsatiladi.
+3. O‘qituvchi darslik saytiga **email + kod** bilan kiradi. Ro‘yxatda yo‘q email bilan kirilsa — «Siz kira olmaysiz» sahifasi.
+4. Kod yo‘qolsa — **«Yangi kod»**: eski kod va u bilan ochilgan sessiyalar darhol bekor bo‘ladi.
+5. **O‘chirish** — foydalanuvchi darhol saytdan chiqariladi.
+6. **Mavzular videolari** — har mavzuga YouTube havolasi; u darslik saytidagi «Video dars» bo‘limida chiqadi.
 
-- **Sayt**: `https://SAYT/` → **Google orqali kirish**. Faqat ruxsat berilgan emaillar kiradi, qolganlarga «Siz kira olmaysiz» sahifasi chiqadi.
-- **Admin panel** — darslik saytidan butunlay alohida sayt: `https://SAYT/admin/` → admin email va parolini kiriting. Darslik saytida admin tugmasi ham, admin sahifasi ham yo‘q. Xohlasangiz, admin panelni Netlify’da alohida sayt qilib ham joylashingiz mumkin (o‘sha repo, Publish directory `.`; manzili `…/admin/`).
-- **Admin panelda**: email qo‘shish (izoh bilan), qidirish, o‘chirish; har bir mavzuga YouTube havolasini biriktirish.
-- Ro‘yxatda yo‘q email bilan kirilsa — **«Siz kira olmaysiz»** sahifasi chiqadi.
+### Xavfsizlik
+- Parol va kodlar serverda **scrypt** xeshi bilan saqlanadi; brauzerga hech qachon yuborilmaydi.
+- Sessiyalar imzolangan token bilan; foydalanuvchi o‘chirilsa yoki kod yangilansa, token darhol yaroqsiz.
+- 8 marta noto‘g‘ri urinishdan keyin 15 daqiqa bloklanadi.
+- Repo’ni **Private** qilish tavsiya etiladi.
+- Ixtiyoriy muhit o‘zgaruvchilari (darslik saytida): `TB_SECRET` — token imzosi uchun o‘z kalitingiz (bo‘lmasa avtomatik yaratiladi), `TB_ADMIN_EMAIL` — admin emailini almashtirish.
 
-### Admin parolini o‘zgartirish
-Firebase Console → Authentication → Users → admin qatori → ⋮ → **Reset password**.
+---
 
-### Yangi admin qo‘shish
-Ikki joyda yozish kerak: `js/config.js` → `admins` ro‘yxati va `firestore.rules` → `isAdmin()` ichidagi ro‘yxat (rules’ni Firebase Console’da qayta Publish qiling). Keyin Authentication → Users’da unga akkaunt yarating.
-
-### Admin panel fayllari
-`admin/index.html`, `admin/admin.js`, `admin/admin.css` — alohida ilova. U faqat `js/config.js` (Firebase sozlamalari) va umumiy dizayn fayllaridan (`css/`) foydalanadi.
-
-## 4. Lokal sinash
-
-`index.html` ni brauzerda ochsangiz (Firebase sozlanmagan bo‘lsa) **DEMO rejim** ishlaydi: kirish taqlid qilinadi, ma’lumotlar brauzer xotirasida saqlanadi. `admin/` demo rejimda ham email va parol so‘raydi (bu holatda tekshiruv brauzerda bo‘ladi — u faqat sinov uchun; haqiqiy himoya Firebase ulangach ishlaydi).
-
-## Muhim eslatma
-
-Kirish cheklovi saytning interfeysini himoya qiladi. Dars matnlari (`js/topics/*.js`) statik fayl bo‘lgani uchun, manzilini biladigan odam ularni to‘g‘ridan to‘g‘ri ochishi texnik jihatdan mumkin. Admin ro‘yxati va video havolalari esa Firestore’da qoidalar bilan himoyalangan.
+## Lokal sinash
+- `index.html` yoki `admin/index.html` ni to‘g‘ridan to‘g‘ri brauzerda ochsangiz — **DEMO rejim** (server yo‘q, ma’lumot faqat brauzerda).
+- Server testlari: `npm install && npm test`.
 
 ## Tuzilma
-
 ```
-index.html            — asosiy sahifa
-css/base.css, app.css — dizayn
-js/config.js          — Firebase sozlamalari va adminlar
-js/auth.js            — kirish, ruxsat tekshiruvi, admin funksiyalari
-js/app.js             — kutubxona (kitob javoni), dars bo‘limlari, admin panel, asboblar
-js/film.js            — multfilm dvigateli
-js/topics/t01–t30.js  — 30 mavzu kontenti (o‘zbekcha)
-js/topics/ru/t01–t30.js — ruscha tarjima
-js/i18n.js            — interfeys tarjimasi (UZ/RU)
-admin/                — admin panel (alohida sayt)
-js/themes.js, css/themes.css — har bir darsning o‘z uslubi (rang, shrift, naqsh, joylashuv)
-js/topics/extra-cards.js — qo‘shimcha savol-javob kartalari (har mavzuda 30 ta)
-firestore.rules       — Firestore xavfsizlik qoidalari
+index.html                 — darslik sayti
+admin/                     — admin sayti (index.html, admin.js, admin.css)
+css/  js/                  — dizayn va dvigatel (app.js, film.js, themes.js, i18n.js, auth.js)
+js/topics/t01–t30.js       — 30 mavzu (o‘zbekcha);  js/topics/ru/ — ruscha
+js/topics/extra-cards.js   — qo‘shimcha savol-javob kartalari
+netlify/core.mjs           — server mantig‘i (kirish, ruxsatlar, kodlar, videolar)
+netlify/functions/api.mjs  — Netlify Function (/api/*)
+build.mjs                  — dist/ ni yig‘adi (darslik yoki admin sayti)
+tests/api.test.mjs         — server testlari
 ```
