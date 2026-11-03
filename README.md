@@ -1,6 +1,12 @@
-# Tadbirkorlik asoslari — elektron doska uchun interaktiv darslik
+# Iqtisodiy darsliklar — elektron doska uchun interaktiv darsliklar
 
-11-sinf «Tadbirkorlik asoslari» (U. G‘afurov, Q. Sharipov, 2018) darsligining **30 mavzusi**, o‘zbek va rus tilida.
+Ikki sinf, har biri **30 mavzu**, o‘zbek va rus tilida:
+
+| Sinf | Darslik |
+|---|---|
+| **9-sinf** | «Iqtisodiy bilim asoslari» (E. Sariqov, B. Xaydarov, 2019) |
+| **11-sinf** | «Tadbirkorlik asoslari» (U. G‘afurov, Q. Sharipov, 2018) |
+
 Har bir mavzuda: slaydlar · multfilm · video dars · lug‘at · saralash o‘yini · jamoaviy viktorina · 30 ta savol-javob kartasi · amaliy topshiriq. Har bir darsning o‘z uslubi (rang, shrift, naqsh, joylashuv) bor.
 
 Ikki sayt, bitta repo:
@@ -38,7 +44,8 @@ Nom `-admin` bilan tugagani uchun sayt o‘zi admin panel sifatida yig‘iladi v
 3. O‘qituvchi darslik saytiga **email + kod** bilan kiradi. Ro‘yxatda yo‘q email bilan kirilsa — «Siz kira olmaysiz» sahifasi.
 4. Kod yo‘qolsa — **«Yangi kod»**: eski kod va u bilan ochilgan sessiyalar darhol bekor bo‘ladi.
 5. **O‘chirish** — foydalanuvchi darhol saytdan chiqariladi.
-6. **Mavzular videolari** — har mavzuga YouTube havolasi; u darslik saytidagi «Video dars» bo‘limida chiqadi.
+6. **Sinflarga ruxsat** — email qo‘shayotganda qaysi sinf(lar)ga ruxsat berilishini belgilang (9, 11 yoki ikkalasi). Keyin ro‘yxatdagi har bir foydalanuvchi qatoridagi sinf tugmalarini bosib ruxsatni o‘zgartirish mumkin (kamida bitta sinf qolishi shart). Eski foydalanuvchilarga avtomatik 11-sinf berilgan. O‘qituvchi faqat ruxsat berilgan sinflarni ko‘radi; ikkalasiga ruxsat bo‘lsa, kutubxona sahifasidagi sinf tugmalari bilan almashtiradi.
+7. **Mavzular videolari** — har sinf uchun alohida yorliq; har mavzuga YouTube havolasi darslik saytidagi «Video dars» bo‘limida chiqadi.
 
 ### Xavfsizlik
 - Parol va kodlar serverda **scrypt** xeshi bilan saqlanadi; brauzerga hech qachon yuborilmaydi.
@@ -58,8 +65,10 @@ Nom `-admin` bilan tugagani uchun sayt o‘zi admin panel sifatida yig‘iladi v
 index.html                 — darslik sayti
 admin/                     — admin sayti (index.html, admin.js, admin.css)
 css/  js/                  — dizayn va dvigatel (app.js, film.js, themes.js, i18n.js, auth.js)
-js/topics/t01–t30.js       — 30 mavzu (o‘zbekcha);  js/topics/ru/ — ruscha
-js/topics/extra-cards.js   — qo‘shimcha savol-javob kartalari
+js/grades.js               — sinflar sozlamalari (bo‘limlar, ranglar, nomlar)
+js/topics/t01–t30.js       — 11-sinf, 30 mavzu (o‘zbekcha);  js/topics/ru/ — ruscha
+js/topics/extra-cards.js   — 11-sinf qo‘shimcha savol-javob kartalari
+js/g9/t01–t30.js           — 9-sinf, 30 mavzu (o‘zbekcha);  js/g9/ru/ — ruscha
 netlify/core.mjs           — server mantig‘i (kirish, ruxsatlar, kodlar, videolar)
 netlify/functions/api.mjs  — Netlify Function (/api/*)
 build.mjs                  — dist/ ni yig‘adi (darslik yoki admin sayti)
