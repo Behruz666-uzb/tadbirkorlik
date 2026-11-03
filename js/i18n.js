@@ -25,7 +25,7 @@ var RU={
 "Kim javob beradi?":"Кто отвечает?","Tanlash":"Выбрать","O‘quvchilar soni (jurnal raqami)":"Число учеников (номер в журнале)",
 "yoki ismlar (har biri yangi qatorda)":"или имена (каждое с новой строки)","Kartani aylantirish":"Перевернуть карточку",
 "Bosing: javobni ko‘rish":"Нажмите, чтобы увидеть ответ","Javob":"Ответ","‹ Oldingi":"‹ Назад","✗ Bilmadi":"✗ Не знал","✓ Bildi":"✓ Знал","Keyingi ›":"Далее ›",
-"Menyu":"Меню","11-sinf":"11 класс","Tadbirkorlik asoslari":"Основы предпринимательства",
+"Menyu":"Меню","9–11-sinflar · Interaktiv darsliklar":"9–11 классы · Интерактивные учебники","Iqtisodiy bilim va tadbirkorlik":"Экономические знания и предпринимательство","11-sinf":"11 класс","Tadbirkorlik asoslari":"Основы предпринимательства",
 "Rang":"Цвет","Qalinlik":"Толщина","O‘chirg‘ich":"Ластик","Tozalash":"Очистить",
 /* --- boblar va bo‘limlar --- */
 "Tadbirkorlik, uning turlari va shakllari":"Предпринимательство, его виды и формы",
@@ -130,6 +130,6 @@ function applyStatic(root){if(lang!=="ru")return;root=root||document.body;
  var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null),nodes=[],n;while((n=w.nextNode()))nodes.push(n);
  nodes.forEach(function(t){var s=t.nodeValue.trim();if(s&&RU[s]!==undefined)t.nodeValue=t.nodeValue.replace(s,RU[s])});
  Array.prototype.forEach.call(root.querySelectorAll("[aria-label],[placeholder],[title]"),function(e){["aria-label","placeholder","title"].forEach(function(a){var v=e.getAttribute(a);if(v&&RU[v]!==undefined)e.setAttribute(a,RU[v])})});
- document.documentElement.lang="ru";document.title="Основы предпринимательства · 11 класс"}
+ document.documentElement.lang="ru";document.title="Экономические учебники · 9–11 классы"}
 window.TBL={lang:lang,tr:tr,F:F,setLang:setLang,applyStatic:applyStatic,RU:RU};
 })();

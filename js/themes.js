@@ -19,7 +19,7 @@ var PATS=["dots","grid","diag","rings","confetti","waves"];
 var LAYS=["card","split","poster"];
 var TRS=["slide","zoom","rise","flip"];
 function rgb(h){h=h.replace("#","");return [parseInt(h.substr(0,2),16),parseInt(h.substr(2,2),16),parseInt(h.substr(4,2),16)].join(",")}
-function themeOf(n){var i=(n-1)%30,p=P[i];
+function themeOf(n){var i=(n-1+((window.TB_G&&TB_G.themeShift)||0))%30,p=P[i];
  return {n:n,a:p[0],b:p[1],ink:p[2],font:FONTS[(n*5+1)%6],pat:PATS[(n*7+2)%6],lay:LAYS[n%3],tr:TRS[(n*3+1)%4]}}
 var CLS=[];
 function apply(n){var el=document.body,th=themeOf(n);clear();

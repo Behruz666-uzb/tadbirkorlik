@@ -1,10 +1,12 @@
-import { handle } from "../netlify/core.mjs";
+import { handle, scrypt } from "../netlify/core.mjs";
 const mem = new Map();
 const store = { async get(k,o){const v=mem.get(k);if(v==null)return null;return o&&o.type==="json"?JSON.parse(v):v}, async set(k,v){mem.set(k,String(v))}, async setJSON(k,v){mem.set(k,JSON.stringify(v))}, async delete(k){mem.delete(k)} };
 const call = async (method, path, body, token) => { const r = await handle(new Request("https://x.netlify.app/api"+path,{method,headers:{"content-type":"application/json",...(token?{authorization:"Bearer "+token}:{})},body:body?JSON.stringify(body):undefined}), store); return [r.status, await r.json()]; };
-const ok=(c,m)=>console.log((c?"OK  ":"FAIL")+" "+m);
+let fails=0;const ok=(c,m)=>{if(!c)fails++;console.log((c?"OK  ":"FAIL")+" "+m)};
+/* testlar haqiqiy admin parolidan foydalanmaydi: omborga test paroli xeshi yoziladi */
+const PW="test-admin-pass-1";{const salt="00112233445566778899aabbccddeeff";mem.set("admin",JSON.stringify({salt,hash:scrypt(PW,salt),v:0}))}
 let [s,r]=await call("POST","/admin/login",{email:"dilfuzamavlanova446@gmail.com",password:"wrong"}); ok(s===401,"admin wrong pw 401");
-[s,r]=await call("POST","/admin/login",{email:"Dilfuzamavlanova446@gmail.com",password:"b2009019"}); ok(s===200&&r.token&&r.defaultPassword,"admin login"); const at=r.token;
+[s,r]=await call("POST","/admin/login",{email:"Dilfuzamavlanova446@gmail.com",password:PW}); ok(s===200&&r.token&&r.defaultPassword,"admin login"); const at=r.token;
 [s,r]=await call("GET","/admin/users",null,"bad.token"); ok(s===401,"bad token 401");
 [s,r]=await call("POST","/admin/users",{email:"teacher@gmail.com",note:"11-A"},at); ok(s===201&&/^[A-Z0-9]{4}-[A-Z0-9]{4}$/.test(r.code),"add user code "+r.code); const code=r.code;
 [s,r]=await call("POST","/admin/users",{email:"teacher@gmail.com"},at); ok(s===409,"dup 409");
@@ -19,13 +21,30 @@ let [s,r]=await call("POST","/admin/login",{email:"dilfuzamavlanova446@gmail.com
 [s,r]=await call("GET","/videos",null,ut); ok(s===200&&r.t03,"user gets videos");
 [s,r]=await call("POST","/admin/users/reset",{email:"teacher@gmail.com"},at); ok(s===200&&r.code!==code,"reset code");
 [s,r]=await call("GET","/me",null,ut); ok(s===401,"old token revoked after reset");
-[s,r]=await call("POST","/login",{email:"dilfuzamavlanova446@gmail.com",code:"b2009019"}); ok(s===200&&r.role==="admin","admin can enter site");
+[s,r]=await call("POST","/login",{email:"dilfuzamavlanova446@gmail.com",code:PW}); ok(s===200&&r.role==="admin","admin can enter site");
+/* ---- sinflar ---- */
+[s,r]=await call("POST","/admin/users",{email:"t9@gmail.com",note:"9-B",grades:["9"]},at); ok(s===201&&r.grades.join()==="9","add user with grade 9"); const c9=r.code;
+[s,r]=await call("POST","/admin/users",{email:"none@gmail.com",grades:[]},at); ok(s===400&&r.error==="no_grades","empty grades rejected");
+[s,r]=await call("POST","/admin/users",{email:"junk@gmail.com",grades:["7","x"]},at); ok(s===400,"unknown grades rejected");
+[s,r]=await call("POST","/login",{email:"t9@gmail.com",code:c9}); ok(s===200&&r.grades.join()==="9","login returns grades"); const t9=r.token;
+[s,r]=await call("PUT","/admin/videos",{key:"g9-t05",url:"https://youtu.be/aaaaaaaaaaa"},at); ok(s===200&&r["g9-t05"],"set grade-9 video");
+[s,r]=await call("GET","/videos",null,t9); ok(s===200&&r["g9-t05"]&&!r.t03,"user sees only own grade videos");
+[s,r]=await call("PUT","/admin/users/grades",{email:"t9@gmail.com",grades:["11","9","9"]},at); ok(s===200&&r.grades.join()==="9,11","update grades (dedupe+order)");
+[s,r]=await call("GET","/me",null,t9); ok(s===200&&r.grades.join()==="9,11","me reflects new grades without re-login");
+[s,r]=await call("GET","/videos",null,t9); ok(r.t03&&r["g9-t05"],"videos for both grades");
+[s,r]=await call("PUT","/admin/users/grades",{email:"t9@gmail.com",grades:[]},at); ok(s===400,"cannot clear all grades");
+[s,r]=await call("PUT","/admin/users/grades",{email:"t9@gmail.com",grades:["9"]},t9); ok(s===401,"user cannot change grades");
+[s,r]=await call("GET","/admin/users",null,at); ok(r.find(x=>x.email==="teacher@gmail.com").grades.join()==="11","default grade 11");
+mem.set("users",JSON.stringify(Object.assign(JSON.parse(mem.get("users")),{"old@gmail.com":{note:"",salt:"aa",hash:"bb",v:0}})));
+[s,r]=await call("GET","/admin/users",null,at); ok(r.find(x=>x.email==="old@gmail.com").grades.join()==="11","legacy user without grades → 11");
+[s,r]=await call("POST","/login",{email:"dilfuzamavlanova446@gmail.com",code:PW}); ok(r.grades&&r.grades.length===2,"admin gets all grades");
 [s,r]=await call("DELETE","/admin/users?email=teacher@gmail.com",null,at); ok(s===200,"delete");
-[s,r]=await call("POST","/admin/password",{old:"b2009019",new:"short"},at); ok(s===400,"weak pw");
-[s,r]=await call("POST","/admin/password",{old:"b2009019",new:"NewPass12345"},at); ok(s===200&&r.token,"change pw"); const at2=r.token;
+[s,r]=await call("POST","/admin/password",{old:PW,new:"short"},at); ok(s===400,"weak pw");
+[s,r]=await call("POST","/admin/password",{old:PW,new:"NewPass12345"},at); ok(s===200&&r.token,"change pw"); const at2=r.token;
 [s,r]=await call("GET","/admin/users",null,at); ok(s===401,"old admin token revoked");
 [s,r]=await call("GET","/admin/me",null,at2); ok(s===200&&r.defaultPassword===false,"new admin token, not default");
-[s,r]=await call("POST","/admin/login",{email:"dilfuzamavlanova446@gmail.com",password:"b2009019"}); ok(s===401,"old pw rejected");
+[s,r]=await call("POST","/admin/login",{email:"dilfuzamavlanova446@gmail.com",password:PW}); ok(s===401,"old pw rejected");
 for(let i=0;i<9;i++)await call("POST","/login",{email:"x@gmail.com",code:"AAAA-BBBB"});
 [s,r]=await call("POST","/login",{email:"x@gmail.com",code:"AAAA-BBBB"}); ok(s===429,"rate limit");
 [s,r]=await call("GET","/health"); ok(s===200,"health");
+console.log(fails?fails+" FAILED":"ALL PASSED");if(fails)process.exit(1);

@@ -1,8 +1,8 @@
 /* =========================================================
    Tadbirkorlik asoslari — server (Netlify Functions + Netlify Blobs)
    Ma’lumotlar (Blobs, "tb" ombori):
-     users   → { "email": { note, salt, hash, v, addedAt, lastLogin } }
-     videos  → { t01: "https://youtu.be/…", … }
+     users   → { "email": { note, grades:["9","11"], salt, hash, v, addedAt, lastLogin } }
+     videos  → { t01: "https://youtu.be/…" (11-sinf), "g9-t01": … (9-sinf) }
      admin   → { salt, hash, v }            (parol o‘zgartirilgach)
      secret  → tasodifiy kalit (sessiya tokenlarini imzolash uchun)
      fail:*  → noto‘g‘ri urinishlar hisobi
@@ -16,7 +16,13 @@ const ADMIN_DEFAULT = { salt: "188ab5ea07f68cf16dba8c1bc0a43137", hash: "697fb15
 const CODE_ABC = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
 const USER_TTL = 30 * 24 * 3600, ADMIN_TTL = 12 * 3600;
 const MAX_FAIL = 8, LOCK_MS = 15 * 60 * 1000;
-const VIDEO_KEY = /^t(0[1-9]|[12]\d|30)$/;
+const VIDEO_KEY = /^(g9-)?t(0[1-9]|[12]\d|30)$/;
+export const GRADES = ["9", "11"];
+const DEFAULT_GRADES = ["11"]; // sinflar joriy qilinishidan oldin qo‘shilganlar 11-sinfga ega edi
+/* ruxsat berilgan sinflar ro‘yxatini tozalash: faqat ma’lum sinflar, takrorsiz, tartibli */
+function normGrades(g) { const a = Array.isArray(g) ? g.map(String) : []; return GRADES.filter((x) => a.includes(x)); }
+function gradesOf(u) { return u && Array.isArray(u.grades) ? normGrades(u.grades) : DEFAULT_GRADES.slice(); }
+function videoGrade(key) { return key.startsWith("g9-") ? "9" : "11"; }
 
 const json = (status, data) => new Response(JSON.stringify(data), { status, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" } });
 const err = (status, code, message) => json(status, { error: code, message });
@@ -63,13 +69,13 @@ async function auth(req, store, env, need) {
     if (p.e !== adminEmail) return null;
     const a = await readJSON(store, "admin", ADMIN_DEFAULT);
     if ((a.v || 0) !== p.v) return null;
-    return { email: p.e, role: "admin" };
+    return { email: p.e, role: "admin", grades: GRADES.slice() };
   }
   if (need === "admin") return null;
   const users = await readJSON(store, "users", {});
   const u = users[p.e];
   if (!u || (u.v || 0) !== p.v) return null;
-  return { email: p.e, role: "user" };
+  return { email: p.e, role: "user", grades: gradesOf(u) };
 }
 
 export async function handle(req, store, env = {}) {
@@ -88,7 +94,7 @@ export async function handle(req, store, env = {}) {
       const secret = await getSecret(store, env);
       if (email === adminEmail) { // admin saytga o‘z paroli bilan ham kira oladi
         const a = await readJSON(store, "admin", ADMIN_DEFAULT);
-        if (check(b.code, a)) { await clearFail(store, email); return json(200, { token: sign({ e: email, r: "admin", v: a.v || 0, x: Math.floor(Date.now() / 1000) + ADMIN_TTL }, secret), email, role: "admin" }); }
+        if (check(b.code, a)) { await clearFail(store, email); return json(200, { token: sign({ e: email, r: "admin", v: a.v || 0, x: Math.floor(Date.now() / 1000) + ADMIN_TTL }, secret), email, role: "admin", grades: GRADES.slice() }); }
       }
       const users = await readJSON(store, "users", {});
       const u = users[email];
@@ -96,10 +102,14 @@ export async function handle(req, store, env = {}) {
       if (!check(code, u)) { await failed(store, email); return err(401, "bad_code", "Kod noto‘g‘ri"); }
       await clearFail(store, email);
       u.lastLogin = new Date().toISOString(); users[email] = u; await store.setJSON("users", users);
-      return json(200, { token: sign({ e: email, r: "user", v: u.v || 0, x: Math.floor(Date.now() / 1000) + USER_TTL }, secret), email, role: "user" });
+      const grades = gradesOf(u);
+      if (!grades.length) return err(403, "not_allowed", "Bu email uchun birorta sinf ochilmagan");
+      return json(200, { token: sign({ e: email, r: "user", v: u.v || 0, x: Math.floor(Date.now() / 1000) + USER_TTL }, secret), email, role: "user", grades });
     }
     if (path === "/me" && m === "GET") { const who = await auth(req, store, env); return who ? json(200, who) : err(401, "unauthorized", "Qayta kiring"); }
-    if (path === "/videos" && m === "GET") { const who = await auth(req, store, env); if (!who) return err(401, "unauthorized", "Qayta kiring"); return json(200, await readJSON(store, "videos", {})); }
+    if (path === "/videos" && m === "GET") { const who = await auth(req, store, env); if (!who) return err(401, "unauthorized", "Qayta kiring"); const v = await readJSON(store, "videos", {}), out = {};
+      for (const k of Object.keys(v)) if (who.grades.includes(videoGrade(k))) out[k] = v[k];
+      return json(200, out); }
 
     /* ---- admin ---- */
     if (path === "/admin/login" && m === "POST") {
@@ -116,20 +126,22 @@ export async function handle(req, store, env = {}) {
       if (path === "/admin/me" && m === "GET") { const a = await readJSON(store, "admin", ADMIN_DEFAULT); return json(200, { email: who.email, defaultPassword: !a.changed }); }
       if (path === "/admin/users" && m === "GET") {
         const users = await readJSON(store, "users", {});
-        const list = Object.keys(users).map((e) => ({ email: e, note: users[e].note || "", addedAt: users[e].addedAt || "", lastLogin: users[e].lastLogin || "" }));
+        const list = Object.keys(users).map((e) => ({ email: e, note: users[e].note || "", grades: gradesOf(users[e]), addedAt: users[e].addedAt || "", lastLogin: users[e].lastLogin || "" }));
         list.sort((x, y) => (y.addedAt || "").localeCompare(x.addedAt || ""));
         return json(200, list);
       }
       if (path === "/admin/users" && m === "POST") {
         const b = await body(req), email = normEmail(b.email), note = String(b.note || "").slice(0, 120);
+        const grades = b.grades === undefined ? DEFAULT_GRADES.slice() : normGrades(b.grades);
         if (!okEmail(email)) return err(400, "bad_email", "Email noto‘g‘ri");
+        if (!grades.length) return err(400, "no_grades", "Kamida bitta sinfni belgilang");
         if (email === adminEmail) return err(400, "is_admin", "Bu administrator emaili");
         const users = await readJSON(store, "users", {});
         if (users[email]) return err(409, "exists", "Bu email ro‘yxatda bor");
         const code = genCode(), sec = newSecret(normCode(code));
-        users[email] = { note, salt: sec.salt, hash: sec.hash, v: 0, addedAt: new Date().toISOString() };
+        users[email] = { note, grades, salt: sec.salt, hash: sec.hash, v: 0, addedAt: new Date().toISOString() };
         await store.setJSON("users", users);
-        return json(201, { email, note, code, addedAt: users[email].addedAt });
+        return json(201, { email, note, grades, code, addedAt: users[email].addedAt });
       }
       if (path === "/admin/users/reset" && m === "POST") {
         const b = await body(req), email = normEmail(b.email), users = await readJSON(store, "users", {});
@@ -138,6 +150,14 @@ export async function handle(req, store, env = {}) {
         users[email] = Object.assign(users[email], { salt: sec.salt, hash: sec.hash, v: (users[email].v || 0) + 1 });
         await store.setJSON("users", users); await clearFail(store, email);
         return json(200, { email, code });
+      }
+      if (path === "/admin/users/grades" && m === "PUT") {
+        const b = await body(req), email = normEmail(b.email), users = await readJSON(store, "users", {});
+        if (!users[email]) return err(404, "not_found", "Topilmadi");
+        const grades = normGrades(b.grades);
+        if (!grades.length) return err(400, "no_grades", "Kamida bitta sinfni belgilang");
+        users[email].grades = grades; await store.setJSON("users", users);
+        return json(200, { email, grades });
       }
       if (path === "/admin/users" && m === "DELETE") {
         const email = normEmail(url.searchParams.get("email")), users = await readJSON(store, "users", {});

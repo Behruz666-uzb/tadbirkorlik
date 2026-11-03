@@ -31,7 +31,11 @@ window.TBAuth={
  getVideos:function(){return api("/videos")},
  signOut:function(){ls("tb-token",null);location.reload()}
 };
-function enter(me){TB.gate("gLoading");TB.start({email:me.email,name:"",isAdmin:me.role==="admin"})}
+function enter(me){var gs=me.grades||[],G=window.TBGrade;
+ /* joriy sinf ruxsat etilmagan bo‘lsa — ruxsat berilgan birinchi sinfga o‘tamiz */
+ if(me.role!=="admin"&&G&&gs.length&&gs.indexOf(G.cur)<0){var ord=window.TB_GRADE_ORDER||gs,first=ord.filter(function(g){return gs.indexOf(g)>=0})[0]||gs[0];if(G.set(first))return}
+ if(me.role!=="admin"&&!gs.length){TB.gate("gDenied",me.email);return}
+ TB.gate("gLoading");TB.start({email:me.email,name:"",isAdmin:me.role==="admin",grades:gs})}
 function showLogin(err){TB.gate("gLogin",err||"");setTimeout(function(){var e=$("lgE");if(e&&!e.value)try{e.focus()}catch(x){}},50)}
 
 var form=$("lgF");

@@ -388,3 +388,13 @@
  .ch2 .spine.lean{margin-left:.35rem}
 }
 @media (max-width:760px){.ch2 .spine.lean{transform:rotate(4deg);margin-left:.25rem;margin-right:.45rem}}
+
+/* sinf tanlagich (bir nechta sinfga ruxsat bo‘lsa) */
+.grade-sw{display:inline-flex;gap:.4rem;padding:.3rem;margin:0 0 .9rem;border-radius:1.1rem;background:var(--surface-2);border:1px solid var(--line)}
+.grade-sw button{display:flex;flex-direction:column;align-items:flex-start;gap:.05rem;padding:.5rem .95rem;border-radius:.85rem;color:var(--fg);text-align:left;transition:background .2s,color .2s,transform .2s}
+.grade-sw button b{font-family:var(--display);font-size:1.05rem;line-height:1.1}
+.grade-sw button small{font-size:.72rem;color:var(--muted);font-weight:600;white-space:nowrap}
+.grade-sw button:hover{background:rgba(255,255,255,.06)}
+.grade-sw button.on{background:var(--gold);color:var(--gold-ink)}
+.grade-sw button.on small{color:var(--gold-ink);opacity:.75}
+.gate-book{font-size:2.2rem!important;letter-spacing:-.02em}
