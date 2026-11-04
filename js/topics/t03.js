@@ -1,5 +1,5 @@
 TB.add({
-n:3,page:14,title:"Yakka tartibdagi tadbirkorlik",
+n:3,page:14,title:"Yakka tartibdagi tadbirkorlik",video:"https://youtu.be/sPZrueaNcBQ",
 sum:"Yuridik shaxs tashkil etmasdan tadbirkorlik qilish: jismoniy va yuridik shaxs farqi, afzallik va kamchiliklar, qat’iy belgilangan soliq.",
 learn:["Yakka tartibdagi tadbirkorlik","Jismoniy va yuridik shaxs","Afzalliklar va kamchiliklar","Eng kam ish haqi","Qat’iy belgilangan soliq","Xodim va shogird yollash"],
 hook:{q:"Sartarosh, tikuvchi, taksi haydovchisi, repetitor — ular o‘z ishini korxona ochmasdan yolg‘iz o‘zi yuritishi mumkinmi? Kimlar yakka tartibdagi tadbirkor bo‘la oladi?",a:"Ha. Bu kabi oddiy faoliyatlarni yakka tartibdagi tadbirkor sifatida, yuridik shaxs tashkil etmasdan yuritish mumkin. Buning uchun davlat ro‘yxatidan «yakka tartibdagi tadbirkor» sifatida o‘tish kifoya."},

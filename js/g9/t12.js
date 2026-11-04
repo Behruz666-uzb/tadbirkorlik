@@ -1,5 +1,5 @@
 TB.add({
-n:12,page:60,title:"Davlat budjeti",
+n:12,page:60,title:"Davlat budjeti",video:"https://youtu.be/WxCwLyPl8Bo",
 sum:"Davlat budjeti tushunchasi va maqsadi, daromad manbalari va boj, xarajat yo‘nalishlari va transfert to‘lovlari, budjet kamomadi va profitsiti, ichki va tashqi davlat qarzi, O‘zbekistonning 2019-yilgi budjeti.",
 learn:["Davlat budjeti","Daromad manbalari","Davlat boji","Xarajatlar va transfertlar","Kamomad va profitsit","Davlat qarzi"],
 hook:{q:"Davlat maktab quradi, shifokorlarga maosh beradi, pensiya to‘laydi. Buning uchun pulni qayerdan oladi va qanday rejalashtiradi?",a:"Davlat asosan <b>soliqlardan</b> pul yig‘adi va uni bir yillik moliyaviy reja — <b>davlat budjeti</b> asosida sarflaydi. Budjetni hukumat tuzadi, <b>Oliy Majlis</b> tasdiqlaydi, yil oxirida esa hukumat uning ijrosi bo‘yicha hisobot beradi."},

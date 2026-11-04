@@ -1,5 +1,5 @@
 TB.add({
-n:27,page:124,title:"Innovatsion faoliyat",
+n:27,page:124,title:"Innovatsion faoliyat",video:"https://youtu.be/-h7YBbW6980",
 sum:"Innovatsiya tushunchasi, Shumpeterning 5 jihati, korxonaning innovatsion faoliyati, innovatsiya turlari va innovatsiya g‘oyalari manbalari.",
 learn:["Innovatsiya nima?","Shumpeterning 5 jihati","Innovatsion faoliyat","Innovatsion menejment","Innovatsiya turlari","G‘oyalar manbalari"],
 hook:{q:"Quyosh panelli sumka, o‘z-o‘zidan tozalanuvchi kiyim, aqlli soat… Bu mahsulotlarni odatdagilardan nima ajratib turadi?",a:"Ularda yangi texnologiya yoki yangi xususiyat bor — ya’ni innovatsiya. Innovatsiya mahsulotni foydaliroq qiladi va tadbirkorga raqobatda ustunlik beradi."},

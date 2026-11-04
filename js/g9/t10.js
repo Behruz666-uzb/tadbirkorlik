@@ -1,5 +1,5 @@
 TB.add({
-n:10,page:45,title:"Ishlab chiqarish va ekologiya",
+n:10,page:45,title:"Ishlab chiqarish va ekologiya",video:"https://youtu.be/CxzM7IJFhuM",
 sum:"Ekologiya fani, ishlab chiqarish rivoji bilan paydo bo‘lgan ekologik muammolar, ozon qatlami, davlat va jamoat tashkilotlarining tabiatni muhofaza qilishi, O‘zbekistondagi muammolar — Orol, yechimlar va har bir fuqaroning burchi.",
 learn:["Ekologiya nima?","Ekologik muammolar","Ozon qatlami","Davlat va «Greenpeace»","Orol fojiasi","Yechimlar va burchimiz"],
 hook:{q:"Zavod ish o‘rni, mahsulot va soliq beradi, lekin havoni ifloslantiradi. Nega uni yopib qo‘ymaymiz? Muammoni qanday yechish mumkin?",a:"Zavod jamiyatga zarur mahsulot va daromad beradi — uni yopish iqtisodiyotga zarar. Yechim — <b>ishlab chiqarishni to‘xtatish emas</b>, uni tozalash: mo‘rilarga filtr o‘rnatish, oqava suvni tozalash, toza texnologiyalarga o‘tish. Buni asosan <b>davlat qonunlar orqali</b> nazorat qiladi."},

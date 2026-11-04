@@ -1,5 +1,5 @@
 TB.add({
-n:5,page:25,title:"Firma mablag‘lari va xarajatlari",
+n:5,page:25,title:"Firma mablag‘lari va xarajatlari",video:"https://youtu.be/hoL6Y-DPW0Y",
 sum:"Asosiy va aylanma mablag‘lar, mablag‘lar aylanishi, amortizatsiya, ichki va tashqi moliyalashtirish manbalari, doimiy, o‘zgaruvchan, umumiy va o‘rtacha xarajatlar.",
 learn:["Asosiy mablag‘","Aylanma mablag‘","Amortizatsiya","Moliyalashtirish manbalari","TC = FC + VC","O‘rtacha xarajat (tannarx)"],
 hook:{q:"Fermerning traktori va urug‘i — ikkalasi ham uning mablag‘i. Ular nimasi bilan farq qiladi?",a:"Traktor ko‘p yil, qayta-qayta ishlatiladi — bu <b>asosiy mablag‘</b>. Urug‘ esa bir mavsumda ishlatilib, hosil sotilgach pul bo‘lib qaytadi — bu <b>aylanma mablag‘</b>. Traktor ham asta eskiradi va uning narxi bo‘lib-bo‘lib hosil narxiga o‘tadi — bu <b>amortizatsiya</b>."},

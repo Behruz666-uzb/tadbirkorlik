@@ -1,5 +1,5 @@
 TB.add({
-n:30,page:150,title:"Jahon moliyaviy-iqtisodiy inqirozi",
+n:30,page:150,title:"Jahon moliyaviy-iqtisodiy inqirozi",video:"https://youtu.be/HXJE7tgBefE",
 sum:"2008-yilgi jahon moliyaviy-iqtisodiy inqirozi: AQSH ipoteka tizimidan boshlanishi, tarqalish zanjiri, Buyuk depressiya bilan taqqoslash, mamlakatlarga ta’siri, O‘zbekistonning o‘sha davrdagi holati va bugungi islohotlar — inqirozlarga chidamli iqtisodiyot.",
 learn:["Inqiroz belgilari","Ipoteka inqirozi","Tarqalish zanjiri","Buyuk depressiya","O‘zbekistonga ta’siri","Chidamli iqtisodiyot"],
 hook:{q:"2009-yilda jahon YaIMi 2,3% ga kamaydi, jahon savdosi 11,89% ga qulab tushdi. O‘sha yili O‘zbekiston YaIMi esa 8% ga o‘sdi. Nega shunday katta farq?",a:"O‘sha paytda O‘zbekiston iqtisodiyoti jahon iqtisodiyotiga <b>kam bog‘langan</b> — bir qadar «yopiq» edi: chet el investitsiyalari kam, valuta erkin almashtirilmas, jahon moliya bozorida deyarli qatnashmas edi. Shuning uchun inqiroz to‘g‘ridan to‘g‘ri kam ta’sir qildi, lekin eksport narxlari tushishi orqali baribir sezildi."},

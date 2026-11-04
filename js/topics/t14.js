@@ -1,5 +1,5 @@
 TB.add({
-n:14,page:66,title:"Tadbirkorlarni davlat ro‘yxatidan o‘tkazish",
+n:14,page:66,title:"Tadbirkorlarni davlat ro‘yxatidan o‘tkazish",video:"https://youtu.be/K1xXhsxbR9w",
 sum:"Tadbirkorlik faoliyatini davlat ro‘yxatidan o‘tkazish, «Yagona darcha» tamoyili va markazi, an’anaviy va onlayn murojaat hamda onlayn ro‘yxatdan o‘tishning afzalliklari.",
 learn:["Nega ro‘yxatdan o‘tish kerak?","«Yagona darcha» tamoyili","«Yagona darcha» markazi","An’anaviy murojaat","Onlayn murojaat","Onlayn afzalliklari"],
 hook:{q:"Tasavvur qiling: korxona ochish uchun 10 ta idoraga birma-bir borib, har birida navbat kutish kerak. Buni qanday soddalashtirish mumkin?",a:"Barcha xizmatlarni bitta joyda — «Yagona darcha» markazida ko‘rsatish yoki uydan turib Internet orqali ro‘yxatdan o‘tish. 2017-yildan O‘zbekistonda aynan shu tartib amal qilmoqda."},

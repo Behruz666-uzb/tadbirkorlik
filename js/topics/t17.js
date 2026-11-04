@@ -1,5 +1,5 @@
 TB.add({
-n:17,page:80,title:"Bank kreditlari",
+n:17,page:80,title:"Bank kreditlari",video:"https://youtu.be/TaIc7nYCCEI",
 sum:"Bank krediti va uning 5 tamoyili, kredit turlari, foiz stavkasi, kamayib boruvchi qarz tamoyilida foiz hisoblash, kredit ta’minoti va kredit olish layoqatini baholash.",
 learn:["Bank krediti","Kredit tamoyillari","Kredit turlari","Foiz stavkasi","Kredit jadvali","Ta’minot va layoqat"],
 hook:{q:"Rasmda soat va kalkulator tasvirlangan. Ular kredit bilan qanday bog‘liq?",a:"Soat — kreditning muddatliligini (vaqtida qaytarish) bildiradi. Kalkulator — foizlar va to‘lovlarni oldindan hisoblash zarurligini. Kredit — bepul pul emas, muddatli va to‘lovli qarz."},

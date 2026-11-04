@@ -1,5 +1,5 @@
 TB.add({
-n:6,page:29,title:"Yalpi daromad, foyda va zarar",
+n:6,page:29,title:"Yalpi daromad, foyda va zarar",video:"https://youtu.be/z7neKSWuaWs",
 sum:"Yalpi daromad (TR = p·q), foyda (P = TR − TC) va zarar, foydaning firma uchun ahamiyati — mukofot, «termometr» va yo‘naltiruvchi, foydani maksimallashtirish yo‘llari va foydaning taqsimlanishi.",
 learn:["Yalpi daromad","Foyda","Zarar","Foyda — «termometr»","Foydani ko‘paytirish","Foyda qayerga sarflanadi?"],
 hook:{q:"Anvar aka: «Qandolat sexining daromadi ko‘p, lekin xarajati ham ko‘p». Jamila opa: «Go‘zallik salonining xarajati kam, foydasi yaxshi». Qaysi biri yaxshiroq biznes?",a:"Muhimi <b>daromad emas, foyda</b>: daromaddan xarajat ayrilgandan keyin nima qoladi. Daromadi katta, ammo xarajati undan ham katta biznes zarar ko‘radi. Xarajati kam, foydasi yaxshi biznes esa ko‘pincha afzalroq."},

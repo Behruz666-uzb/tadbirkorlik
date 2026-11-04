@@ -1,5 +1,5 @@
 TB.add({
-n:28,page:128,title:"Tadbirkorlik risklarini baholash",
+n:28,page:128,title:"Tadbirkorlik risklarini baholash",video:"https://youtu.be/fJhuK8epyHs",
 sum:"Tadbirkorlik riski tushunchasi, ishlab chiqarish, moliyaviy va investitsion risklar, riskni baholash usullari, kutiladigan miqdor, insonlarning riskka munosabati va riskni pasaytirish yo‘llari.",
 learn:["Risk nima?","Risk turlari","Baholash usullari","Kutiladigan miqdor E(X)","Riskka munosabat","Diversifikatsiya va sug‘urta"],
 hook:{q:"Bankka pul qo‘yib, kafolatlangan 20% olasizmi yoki biznesga tikib, 40% yoki atigi 10% olish imkoniyatini tanlaysizmi?",a:"Bu tavakkalchilik — riskka munosabat. Hisoblash mumkin: kutiladigan daromadni topib, kafolatlangan natija bilan solishtiriladi. Qaror esa insonning riskka moyilligiga bog‘liq."},

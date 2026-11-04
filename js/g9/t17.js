@@ -1,5 +1,5 @@
 TB.add({
-n:17,page:86,title:"Yer solig‘i",
+n:17,page:86,title:"Yer solig‘i",video:"https://youtu.be/vYsLEpIVujY",
 sum:"Yer solig‘i — mahalliy va qat’iy soliq; maqsadi, to‘lovchilari, yer solig‘i va yagona yer solig‘i, stavkalarni kim belgilaydi, imtiyozlar, soliqdan ozod yerlar, soliq obyektlari va foydalanilmagan yer uchun oshirilgan soliq.",
 learn:["Yer solig‘ining xususiyati","Maqsadi","To‘lovchilar (subyektlar)","Yagona yer solig‘i","Ozod qilingan yerlar","Soliq obyektlari"],
 hook:{q:"Fermerning yeri bu yil hosil bermadi. U baribir yer solig‘i to‘lashi kerakmi? Nega?",a:"Ha. Yer solig‘i — <b>qat’iy to‘lov</b>: yer egasi qancha foyda ko‘rganidan qat’i nazar to‘laydi. Maqsad — yerdan <b>oqilona foydalanish</b>, uni avaylash va bo‘sh tashlab qo‘ymaslik. Hatto yerdan ikki yil foydalanmagan jismoniy shaxs <b>uch baravar</b> soliq to‘laydi."},

@@ -1,5 +1,5 @@
 TB.add({
-n:23,page:107,title:"Tovarlarni sotish va reklama",
+n:23,page:107,title:"Tovarlarni sotish va reklama",video:"https://youtu.be/krpNCPv56Uc",
 sum:"Oddiy va murakkab tovarlarni sotish shakllari, tovarni sotish bosqichlari va reklamaning vazifalari.",
 learn:["Sotish — asosiy muammo","Oddiy tovarlarni sotish","Murakkab tovarlarni sotish","Sotish bosqichlari","E’tirozga javob","Reklama vazifalari"],
 hook:{q:"Supermarketda non va sutni o‘zingiz tanlaysiz, lekin muzlatgich yoki kompyuter olishda maslahatchi kerak bo‘ladi. Nega?",a:"Oddiy tovarlarni xaridor o‘zi tanlay oladi (o‘ziga o‘zi xizmat). Murakkab tovarlarga esa mutaxassis maslahati, namoyish va yakka xizmat kerak. Har bir tovar uchun mos sotish shaklini tanlash — savdo muvaffaqiyatining kaliti."},

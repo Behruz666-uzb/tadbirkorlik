@@ -1,5 +1,5 @@
 TB.add({
-n:1,page:8,title:"Tadbirkorlik",
+n:1,page:8,title:"Tadbirkorlik",video:"https://youtu.be/A-zvGoOAEbY",
 sum:"Tadbirkorlik nima, tadbirkorlik layoqati bor kishi qanday bo‘ladi, biznes-g‘oya va biznes-reja, tadbirkorlikning ishlab chiqarish, tijorat, moliyaviy va sug‘urta turlari.",
 learn:["Tadbirkorlik va tadbirkor","Tadbirkorlik layoqati","Biznes-g‘oya va biznes-reja","Ishlab chiqarish tadbirkorligi","Tijorat va moliyaviy tadbirkorlik","Sug‘urta"],
 hook:{q:"Atrofingizdagi do‘kondor, novvoy, sartarosh va bank xodimi — ularning qaysi biri tadbirkor? Ularni nima birlashtiradi?",a:"Do‘kondor, novvoy va sartarosh o‘z mablag‘ini tavakkal qilib ishga solib, foyda olish uchun mahsulot yoki xizmat yaratadi — ular tadbirkor. Bank xodimi esa yollanma ishchi, lekin bankning egasi — moliyaviy tadbirkor. Hammasini birlashtiradigan narsa: <b>foyda olish maqsadi, tavakkalchilik va mas’uliyat</b>."},

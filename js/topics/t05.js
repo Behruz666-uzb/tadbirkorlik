@@ -1,5 +1,5 @@
 TB.add({
-n:5,page:25,title:"Mikrofirma va kichik korxona",
+n:5,page:25,title:"Mikrofirma va kichik korxona",video:"https://youtu.be/7oUrno-E5Ts",
 sum:"Kichik tadbirkorlik subyektlari: asosiy faoliyat turi, mikrofirma va kichik korxonada xodimlar soni chegaralari, o‘rtacha yillik xodimlar sonini hisoblash.",
 learn:["Kichik tadbirkorlik mezonlari","Asosiy faoliyat turi","Mikrofirma chegaralari","Kichik korxona chegaralari","O‘rtacha oylik xodimlar soni","O‘rtacha yillik xodimlar soni"],
 hook:{q:"Kitob do‘koni, mebel sexi, kichik sartaroshxona, IT-studiya — bularning qaysi birini mikrofirma, qaysi birini kichik korxona deb atash mumkin? Nimaga qarab ajratamiz?",a:"Ajratishda asosiy mezon — faoliyat turi va unda ishlovchilarning o‘rtacha yillik soni. Masalan, 3 sotuvchili kitob do‘koni — mikrofirma (savdoda chegara 5 nafar)."},

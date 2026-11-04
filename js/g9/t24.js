@@ -1,5 +1,5 @@
 TB.add({
-n:24,page:122,title:"Ishchi kuchi bozori va ishsizlik",
+n:24,page:122,title:"Ishchi kuchi bozori va ishsizlik",video:"https://youtu.be/4FpWze_6qc4",
 sum:"Ishchi kuchi bozori, unga talab va taklif, ish haqining bozor narxi, maoshlar farqining to‘rt sababi, mehnat bozoridagi muvozanat buzilishi, ishsizlikning to‘rt turi — friksion, mavsumiy, tarkibiy, davriy, ishchi kuchi resurslari va ishsizlik darajasi.",
 learn:["Ishchi kuchi bozori","Talab va taklif","Ish haqi qanday belgilanadi?","Maoshlar nega har xil?","Ishsizlik turlari","Ishsizlik darajasi"],
 hook:{q:"Bank xodimi, olim va sartarosh — kimning maoshi ko‘proq? Nega maoshlar har xil?",a:"Maosh <b>ishchi kuchiga talab va taklif</b>ga bog‘liq: ish qanchalik ko‘p bilim va malaka talab qilsa, ish beruvchiga qanchalik ko‘p foyda keltirsa, qanchalik og‘ir va xavfli bo‘lsa — shunchalik qimmat turadi. Kam uchraydigan mutaxassislar ko‘proq maosh oladi."},

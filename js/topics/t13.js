@@ -1,5 +1,5 @@
 TB.add({
-n:13,page:61,title:"Korxona ta’sis hujjatlari",
+n:13,page:61,title:"Korxona ta’sis hujjatlari",video:"https://youtu.be/leiwAwRbj1Y",
 sum:"Ta’sis hujjatlari: korxona ustavi, ustav fondi, ta’sis shartnomasi; logotip, firma belgisi, tovar belgisi, brend, slogan va ® / TM belgilari.",
 learn:["Ta’sis hujjatlari","Korxona ustavi","Ustav fondi","Ta’sis shartnomasi","Logotip va tovar belgisi","Brend va slogan"],
 hook:{q:"Do‘konda ikkita bir xil sharbat turibdi: biri tanish belgili, ikkinchisida hech qanday nom yo‘q. Qaysi birini olasiz va nega?",a:"Ko‘pchilik tanish belgilisini oladi — chunki belgi sifat va ishonchni eslatadi. Shuning uchun korxonalar logotip, tovar belgisi va sloganni ishlab chiqib, ularni ® yoki TM bilan himoya qiladi."},

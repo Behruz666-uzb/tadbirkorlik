@@ -1,5 +1,5 @@
 TB.add({
-n:1,page:3,title:"Tadbirkorlikning mazmuni va ahamiyati",
+n:1,page:3,title:"Tadbirkorlikning mazmuni va ahamiyati",video:"https://youtu.be/9-I3idsUrn4",
 sum:"Tadbirkorlik nima, tadbirkor kim, uning asosiy jihatlari, jamiyat uchun ahamiyati va tadbirkorlikni boshlash uchun nimalar zarurligi.",
 learn:["Tadbirkorlik tushunchasi","Tadbirkor kim?","Asosiy 4 jihat","Tadbirkorlikning ahamiyati","Kim tadbirkor bo‘la oladi?","Boshlash uchun nimalar kerak?"],
 hook:{q:"AQSH, Madagaskar va Malayziya: qaysi mamlakatda tadbirkorlik ko‘proq rivojlangan deb o‘ylaysiz? Atrof-muhit va shart-sharoit tadbirkorlik rivojiga qanday ta’sir qiladi?",a:"Tadbirkorlik erkin, qonunlar tadbirkorni himoya qiladigan, infratuzilma (yo‘l, bank, internet) rivojlangan mamlakatlarda tezroq o‘sadi. Shu sababli bunday davlatlarda odamlarning turmush darajasi ham yuqori bo‘ladi: tadbirkorlik daromad, ish o‘rni va soliq tushumlarini yaratadi."},

@@ -1,5 +1,5 @@
 TB.add({
-n:19,page:98,title:"Asosiy makroiqtisodiy ko‘rsatkichlar",
+n:19,page:98,title:"Asosiy makroiqtisodiy ko‘rsatkichlar",video:"https://youtu.be/K5w9ZrsROKI",
 sum:"Yalpi ichki mahsulot (YaIM), pirovard va oraliq mahsulot, yalpi milliy mahsulot (YaMM), sof ichki va sof milliy mahsulot, milliy daromad, aholi jon boshiga YaIM va O‘zbekistonning 2018-yilgi ko‘rsatkichlari.",
 learn:["YaIM","Pirovard va oraliq mahsulot","YaMM","SIM va SMM","Milliy daromad","Jon boshiga YaIM"],
 hook:{q:"AQSH, Germaniya, Yaponiya «boy», ba’zi Afrika mamlakatlari «kambag‘al» deyiladi. Mamlakat boyligi qanday o‘lchanadi?",a:"Asosiy o‘lchov — <b>yalpi ichki mahsulot (YaIM)</b>: mamlakatda bir yilda yaratilgan barcha pirovard tovar va xizmatlar qiymati. Odamlar qanchalik farovon yashashini esa <b>aholi jon boshiga YaIM</b> ko‘rsatadi — YaIM aholi soniga bo‘linadi."},

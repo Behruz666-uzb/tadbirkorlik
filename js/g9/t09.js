@@ -1,5 +1,5 @@
 TB.add({
-n:9,page:41,title:"Marketing",
+n:9,page:41,title:"Marketing",video:"https://youtu.be/cwnrchkwW2g",
 sum:"Marketing va marketolog, marketing tadqiqotining to‘rt bosqichi — mahsulotni o‘rganish, narxlash, reklama, bozorda o‘rnashish; PUSH va PULL strategiyalari, ulgurji va chakana savdo, brend va blokcheyn.",
 learn:["Marketing va marketolog","Tadqiqotning 4 bosqichi","Reklama maqsadlari","PUSH-strategiya","PULL-strategiya va brend","Blokcheyn"],
 hook:{q:"Siz yangi sharbat ishlab chiqardingiz. Uni bozorda sotish uchun nima qilasiz? Qaysi ishni ishlab chiqarishdan <b>oldin</b>, qaysisini <b>keyin</b> qilish kerak?",a:"Avval — <b>bozorni o‘rganish</b>: kim qanday sharbat istaydi, qancha to‘lashga tayyor. Keyin narx belgilanadi, reklama qilinadi va sotuv joyi tanlanadi. Avval ishlab chiqarib, keyin xaridor qidirish — xavfli yo‘l."},

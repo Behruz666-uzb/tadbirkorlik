@@ -1,5 +1,5 @@
 TB.add({
-n:14,page:68,title:"Davlatning iqtisodiyotdagi roli",
+n:14,page:68,title:"Davlatning iqtisodiyotdagi roli",video:"https://youtu.be/qeAvJqZEekI",
 sum:"Davlatning budjet-soliq (fiskal) va pul-kredit (monetar) siyosati, yalpi talab va yalpi taklif, soliq va xarajatlar o‘zgarishining oqibatlari, kamomadni kamaytirish yo‘llari, pul emissiyasi, foiz stavkasi va zaxira normasi.",
 learn:["Fiskal siyosat","Yalpi talab va taklif","Soliq o‘zgarsa nima bo‘ladi?","Kamomad me’yori","Monetar siyosat","Foiz stavkasi va zaxira normasi"],
 hook:{q:"Davlat soliqlarni oshirdi. Odamlar, firmalar, ishlab chiqarish va ish o‘rinlari bilan nima bo‘ladi? Soliq kamaytirilsa-chi?",a:"Soliq oshsa: odamlar va firmalarda pul <b>kamayadi</b> → tovarlarga talab kamayadi → ishlab chiqarish qisqaradi → ish o‘rinlari kamayadi. Soliq kamaysa — aksincha: pul ko‘payadi, talab va ishlab chiqarish o‘sadi, <b>bandlik oshadi</b>."},

@@ -1,5 +1,5 @@
 TB.add({
-n:8,page:38,title:"Aksiyadorlik jamiyati",
+n:8,page:38,title:"Aksiyadorlik jamiyati",video:"https://youtu.be/KCEt8GcV3gY",
 sum:"AJ tushunchasi, ochiq va yopiq turlari, tashkil etish, aksiya va aksiyador, oddiy va imtiyozli aksiyalar, afzallik va kamchiliklar, dividend.",
 learn:["AJ tushunchasi","Ochiq va yopiq turlari","Tashkil etish","Aksiya va aksiyador","Oddiy va imtiyozli aksiya","Afzallik va kamchiliklar","Dividend"],
 hook:{q:"Do‘stingiz somsaxona ochmoqchi, lekin puli yetmayapti. Siz unga 20 000 so‘m bersangiz, evaziga nima so‘ragan bo‘lardingiz?",a:"Qarz qilib qaytarishni so‘rash mumkin (bu <b>kredit</b>). Yoki biznesning bir bo‘lagiga egalik qilib, har yili foydadan ulush olish mumkin. Ana shu bo‘lak <b>aksiya</b>, foydadan ulush esa <b>dividend</b> deyiladi."},

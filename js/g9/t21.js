@@ -1,5 +1,5 @@
 TB.add({
-n:21,page:106,title:"O‘zbekiston Respublikasining iqtisodiy salohiyati",
+n:21,page:106,title:"O‘zbekiston Respublikasining iqtisodiy salohiyati",video:"https://youtu.be/L6wSDL5kO-0",
 sum:"O‘zbekistonning maydoni, aholisi va mehnat resurslari, tabiiy boyliklari (oltin, mis, uran, gaz, neft, ko‘mir), sanoati va avtomobilsozlik, energetika va atom elektr stansiyasi, qishloq xo‘jaligi, geografik joylashuv va 2017–2018-yillar o‘sish sur’atlari.",
 learn:["Maydon va aholi","Tabiiy boyliklar","Sanoat","Energetika va AES","Qishloq xo‘jaligi","O‘sish sur’atlari"],
 hook:{q:"Dunyoda faqat ikki mamlakat aholisi okeanga chiqish uchun <b>kamida ikki davlat chegarasini</b> kesib o‘tishi kerak. Ular qaysilar? Bu iqtisodiyotga qanday ta’sir qiladi?",a:"<b>Lixtenshteyn va O‘zbekiston</b> — «ikki marta dengizga chiqa olmaydigan» mamlakatlar. Bu yuk tashishni qimmatlashtiradi, eksport-importni qiyinlashtiradi. Shuning uchun temir yo‘llar, xalqaro transport yo‘laklari va qo‘shnilar bilan hamkorlik juda muhim."},

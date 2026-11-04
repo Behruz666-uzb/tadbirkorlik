@@ -1,5 +1,5 @@
 TB.add({
-n:25,page:115,title:"Mahsulotni eksportga chiqarish",
+n:25,page:115,title:"Mahsulotni eksportga chiqarish",video:"https://youtu.be/OFj4hxTvUI0",
 sum:"Tashqi bozor va korxonaning tashqi iqtisodiy faoliyati, tashqi savdo, eksport va import, raqobatbardoshlikni baholash, eksportga tayyorlash, eksport narxi, bojxona va cheklovlar.",
 learn:["Tashqi bozor","Tashqi iqtisodiy faoliyat","Eksport va import","Raqobatbardoshlik","Eksport narxi","Bojxona, litsenziya, kvota"],
 hook:{q:"Andijon gilosi Dubay do‘konida sotilsa, bu O‘zbekistonga qanday foyda keltiradi?",a:"Fermer ko‘proq daromad oladi, mamlakatga valyuta kiradi, yangi ish o‘rinlari paydo bo‘ladi va «o‘zbek brendi» dunyoga tanilib boradi. Lekin buning uchun sifat, sertifikat va puxta tayyorgarlik kerak."},

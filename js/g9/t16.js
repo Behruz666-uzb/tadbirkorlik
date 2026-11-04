@@ -1,5 +1,5 @@
 TB.add({
-n:16,page:82,title:"Mol-mulk solig‘i",
+n:16,page:82,title:"Mol-mulk solig‘i",video:"https://youtu.be/RZ1sNE5xvNE",
 sum:"Mol-mulk solig‘i obyektlari va subyektlari, inventarizatsiya va kadastr qiymati, jismoniy shaxslar uchun stavkalar (0,2–0,35%), minimal kadastr qiymati, to‘lash tartibi, yuridik shaxslar uchun 2% stavka va imtiyozlar.",
 learn:["Nimadan to‘lanadi?","Kadastr qiymati","Jismoniy shaxslar stavkalari","To‘lash tartibi","Yuridik shaxslar — 2%","Imtiyozlar"],
 hook:{q:"Uy, garaj, dala hovli, maktab binosi, park — ulardan qaysilariga mol-mulk solig‘i solinadi? Uy egasiga daromad keltirmasa ham soliq to‘lanadimi?",a:"Uy, xonadon, garaj, dala hovli va boshqa imoratlardan soliq to‘lanadi — <b>ular daromad keltirmasa ham</b>, chunki soliq mulkning <b>qiymatidan</b> olinadi. Maktab, park kabi davlat va jamoat obyektlari esa mol-mulk solig‘iga tortilmaydi."},

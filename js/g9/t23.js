@@ -1,5 +1,5 @@
 TB.add({
-n:23,page:118,title:"Inflatsiya oqibatlari",
+n:23,page:118,title:"Inflatsiya oqibatlari",video:"https://youtu.be/UYCq9PWcr9Y",
 sum:"Inflatsiya darajasini hisoblash, kim ko‘proq zarar ko‘radi, sudraluvchi, yuguruvchi va giperinflatsiya, giperinflatsiyaning oqibatlari va tarixiy misollari, davlatning inflatsiyaga qarshi choralari, O‘zbekistondagi inflatsiya dinamikasi.",
 learn:["Inflatsiya darajasi","Kim zarar ko‘radi?","Uch daraja","Giperinflatsiya oqibatlari","Tarixiy misollar","Davlat choralari"],
 hook:{q:"Davlat o‘qituvchi va shifokorlar maoshini oshirmoqda. Bu inflatsiya bilan qanday bog‘liq?",a:"Inflatsiyada narxlar oshadi, belgilangan maosh esa o‘zgarmay qolsa, uning <b>xarid quvvati</b> kamayadi. Budjetdan maosh oladiganlar — o‘qituvchilar, shifokorlar, harbiylar, pensionerlar — eng ko‘p zarar ko‘radi. Maoshlarni oshirish ularning real daromadini <b>inflatsiyadan himoya qilish</b> uchun kerak."},

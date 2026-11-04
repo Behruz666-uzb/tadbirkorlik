@@ -1,5 +1,5 @@
 TB.add({
-n:29,page:146,title:"Jahon iqtisodiyoti muammolari",
+n:29,page:146,title:"Jahon iqtisodiyoti muammolari",video:"https://youtu.be/ig21071Dro4",
 sum:"Global iqtisodiy muammolar: tinchlik va harbiy xarajatlar, ekologiya va Parij kelishuvi, tabiiy resurslar va energiya tanqisligi, boy va kambag‘al mamlakatlar o‘rtasidagi tafovut, oziq-ovqat tanqisligi va qashshoqlik, Maltus nazariyasi, jahon inqirozlari.",
 learn:["Tinchlik va urush","Ekologik tahdid","Energiya tanqisligi","Boylik tafovuti","Ochlik va qashshoqlik","Jahon inqirozlari"],
 hook:{q:"Dunyoda har kuni milliardlab dollar harbiy maqsadlarga sarflanadi, shu bilan birga har sakkiz kishidan biri och yashaydi. Bu pullar boshqacha ishlatilsa nima bo‘lardi?",a:"Harbiy xarajatlar tinchlik maqsadlariga — oziq-ovqat, ta’lim, tibbiyot, toza energiyaga yo‘naltirilsa, ko‘plab global muammolar yengillashardi. <b>Yaponiya, Shvetsiya, Norvegiya</b> harbiy xarajatlarga kam sarflab, iqtisodiy rivojlanishda oldingi o‘rinlarga chiqqan. Lekin bunday muammolarni faqat <b>barcha davlatlar birgalikda</b> hal qila oladi."},

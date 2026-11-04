@@ -51,3 +51,5 @@ body.admin-site{overflow:auto;height:auto;min-height:100%}
 .vtabs button{font:inherit;font-weight:700;padding:.45rem 1rem;border-radius:.8rem;border:2px solid var(--line);background:var(--surface-2);color:var(--fg);cursor:pointer}
 .vtabs button.on{background:var(--gold);border-color:var(--gold);color:var(--gold-ink)}
 @media (max-width:860px){.addf{grid-template-columns:1fr}}
+
+.vnote{margin:.4rem 0 .9rem;font-size:.9rem;opacity:.75;line-height:1.45}

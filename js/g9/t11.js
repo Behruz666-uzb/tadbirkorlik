@@ -1,5 +1,5 @@
 TB.add({
-n:11,page:56,title:"Davlatning iqtisodiy vazifalari",
+n:11,page:56,title:"Davlatning iqtisodiy vazifalari",video:"https://youtu.be/AfSv9Uq71kU",
 sum:"Davlatning besh iqtisodiy maqsadi, bozor hal qila olmaydigan muammolar, ijtimoiy ne’matlar va ularning xususiyatlari, qo‘shimcha tashqi ta’sirlar va davlatning olti iqtisodiy vazifasi.",
 learn:["Davlatning 5 maqsadi","Bozor nimani hal qila olmaydi?","Ijtimoiy ne’matlar","Tashqi ta’sirlar","Davlatning 6 vazifasi","Davlat rolini baholash"],
 hook:{q:"Maktabingiz qanday mablag‘ hisobiga qurilgan? O‘qituvchilarga maoshni kim to‘laydi? Ko‘chadagi chiroqlar-chi?",a:"Ularni <b>davlat</b> soliqlardan yig‘ilgan budjet hisobiga moliyalaydi. Bu — <b>ijtimoiy ne’matlar</b>: ulardan hamma birgalikda foydalanadi va haq to‘lamaganlarni ham cheklab bo‘lmaydi. Shuning uchun ularni tadbirkor emas, davlat yaratadi."},

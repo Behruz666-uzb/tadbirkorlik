@@ -1,5 +1,5 @@
 TB.add({
-n:2,page:9,title:"Tadbirkorlik turlari va shakllari",
+n:2,page:9,title:"Tadbirkorlik turlari va shakllari",video:"https://youtu.be/nEg3WAJVcbo",
 sum:"Ishlab chiqarish, tijorat, moliyaviy tadbirkorlik va sug‘urta faoliyati, ularni taqqoslash hamda tadbirkorlikning asosiy shakllari.",
 learn:["Tadbirkorlik turi nima?","Ishlab chiqarish tadbirkorligi","Tijorat tadbirkorligi","Moliyaviy tadbirkorlik","Sug‘urta faoliyati","Tadbirkorlik shakllari"],
 hook:{q:"Non yopuvchi, do‘kondor, bank xodimi va sug‘urta agenti — ularning hammasi tadbirkormi? Bir odam bir vaqtda bir necha turdagi tadbirkorlik bilan shug‘ullana oladimi?",a:"Ha, hammasi tadbirkorlikning turli turlari: ishlab chiqarish, tijorat, moliyaviy va sug‘urta. Bir kishi bir vaqtda bir necha tur bilan shug‘ullanishi mumkin: masalan, novvoy o‘zi yopgan nonini (ishlab chiqarish) va boshqa ishlab chiqaruvchilar mahsulotini (tijorat) sotishi mumkin."},

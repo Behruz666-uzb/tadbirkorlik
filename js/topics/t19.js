@@ -1,5 +1,5 @@
 TB.add({
-n:19,page:89,title:"Mahsulot tannarxi",
+n:19,page:89,title:"Mahsulot tannarxi",video:"https://youtu.be/g6ujSqd9U58",
 sum:"Tannarx tushunchasi va turlari (ishlab chiqarish, to‘la, chegaraviy), kalkulatsiya va uning moddalari, tannarxni pasaytirish imkoniyatlari.",
 learn:["Tannarx nima?","Ishlab chiqarish tannarxi","To‘la tannarx","Chegaraviy tannarx","Kalkulatsiya moddalari","Tannarxni pasaytirish"],
 hook:{q:"Siz shkaf yasab, 1 mln so‘mga sotdingiz. Foyda ko‘rdingizmi yoki zarar? Buni bilish uchun nima kerak?",a:"Shkaf sizga qanchaga tushganini — tannarxini bilish kerak: yog‘och, qulf, elektr, ish haqi, tashish… Tannarxni bilmay turib, foydani ham, to‘g‘ri narxni ham aniqlab bo‘lmaydi."},

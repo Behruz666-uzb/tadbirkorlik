@@ -1,5 +1,5 @@
 TB.add({
-n:13,page:64,title:"Bank tizimi",
+n:13,page:64,title:"Bank tizimi",video:"https://youtu.be/xuIUtuZihIE",
 sum:"Bankning kelib chiqishi va vazifalari, ikki pog‘onali bank tizimi — Markaziy bank va tijorat banklari, muddatli va joriy depozitlar, kredit, yillik foiz stavkasi, oddiy va murakkab foizlar.",
 learn:["Bank tarixi","Bank vazifalari","Markaziy bank","Tijorat banklari","Depozit turlari","Kredit va foizlar"],
 hook:{q:"Bir kishida pul bor, lekin g‘oyasi yo‘q. Boshqasida zo‘r biznes-g‘oya bor, lekin puli yo‘q. Ularni kim uchrashtiradi?",a:"<b>Bank!</b> Omonatchi pulini bankka qo‘yib foiz oladi, bank bu pulni tadbirkorga foizga qarzga beradi. Tadbirkor ishlab chiqarishni yo‘lga qo‘yadi. Shu tariqa bank «ishlamay yotgan» pulni <b>ishlashga majbur qiladi</b>."},

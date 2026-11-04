@@ -1,5 +1,5 @@
 TB.add({
-n:28,page:142,title:"Valuta kursi",
+n:28,page:142,title:"Valuta kursi",video:"https://youtu.be/w8B_SqKyaFs",
 sum:"Milliy valuta va valuta almashtirish zarurati, ayirboshlov kursi, sotib olish va sotish kurslari, valutaga talab va taklif, kursni kim belgilaydi, kurs o‘zgarishi sabablari va oqibatlari, kriptovaluta va bitkoin.",
 learn:["Valuta va kurs","Sotib olish va sotish kursi","Konvertatsiya","Talab va taklif","Davlat va kurs","Kriptovaluta"],
 hook:{q:"Tadbirkor Yevropaga safarga ketyapti. Bankda yevro <b>9 660</b> so‘mdan sotib olinadi, <b>9 840</b> so‘mdan sotiladi. U 20 mln so‘mga qancha yevro oladi? Qaytib, 200 yevroni topshirsa-chi?",a:"Bank yevroni o‘ziga qimmatroq — <b>sotish kursida</b> sotadi: 20 000 000 ÷ 9 840 ≈ <b>2 032 €</b>. Qaytganda bank yevroni arzonroq — <b>sotib olish kursida</b> oladi: 200 × 9 660 = <b>1 932 000 so‘m</b>. Ikki kurs orasidagi farq — bankning daromadi."},

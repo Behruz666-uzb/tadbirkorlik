@@ -1,5 +1,5 @@
 TB.add({
-n:4,page:21,title:"Firma tashkil qilish",
+n:4,page:21,title:"Firma tashkil qilish",video:"https://youtu.be/leiwAwRbj1Y",
 sum:"Firma ochish tartibi: nizom va ta’sis shartnomasi, davlat ro‘yxatidan o‘tish, muhr va bank hisobi, Davlat xizmatlari markazi va my.gov.uz, firma nomi va tovar belgisi, tadbirkorlikning huquqiy asoslari.",
 learn:["Firma ochish bosqichlari","Firma nizomi","Ta’sis shartnomasi","Davlat ro‘yxatidan o‘tish","Tovar belgisi","Konstitutsiya, 53-modda"],
 hook:{q:"Firma bor, lekin uning hech qanday hujjati yo‘q. Bu nimaga olib kelishi mumkin?",a:"Hujjatsiz firma qonun oldida mavjud emas: u shartnoma tuza olmaydi, bank hisobi ocha olmaydi, soliq to‘lamaydi va jarimaga tortiladi. Sheriklar o‘rtasida nizo chiqsa, hech kim o‘z haqini isbotlay olmaydi. Shuning uchun firma <b>nizom, ta’sis shartnomasi va davlat ro‘yxati</b> bilan rasmiylashtiriladi."},

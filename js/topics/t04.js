@@ -1,5 +1,5 @@
 TB.add({
-n:4,page:20,title:"Oilaviy tadbirkorlik",
+n:4,page:20,title:"Oilaviy tadbirkorlik",video:"https://youtu.be/yz1FoGaDL2I",
 sum:"Oila a’zolari birgalikda yuritadigan tadbirkorlik: oilaviy tadbirkor va oilaviy korxona, ularning afzalliklari, kamchiliklari va xususiyatlari.",
 learn:["Oilaviy tadbirkorlik nima?","Oilaviy tadbirkor (OT)","Oilaviy korxona (OK)","Afzallik va kamchiliklar","Ishtirokchilar va ustav fondi","Taqiqlangan faoliyatlar"],
 hook:{q:"Sizning oilangizda birgalikdagi biznes uchun qanday resurslar bor: uy, hovli, tikuv mashinasi, avtomobil, ota-onaning tajribasi? Ulardan qanday biznes ochish mumkin?",a:"Deyarli har bir oilada resurs bor: hovlida issiqxona, uyda tikuvchilik yoki pishiriqlar sexi, avtomobil bilan yetkazib berish. Oilaviy tadbirkorlik aynan shu resurslarni ishonch asosida birlashtiradi."},

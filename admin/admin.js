@@ -26,7 +26,7 @@ var RU={"Boshqaruv":"Управление","Admin panelga kirish":"Вход в �
  "Izoh (masalan: 11-A sinf o‘qituvchisi)":"Примечание (например: учитель 11-А)","Ro‘yxatdan qidirish…":"Поиск по списку…","Administrator":"Администратор","O‘chirish":"Удалить","Bekor":"Отмена","Yangi kod":"Новый код",
  "Hali hech kim qo‘shilmagan. Yuqoridagi formadan email qo‘shing.":"Пока никого нет. Добавьте email через форму выше.","qo‘shilgan":"добавлен","oxirgi kirish":"последний вход","hali kirmagan":"ещё не входил","o‘chirildi":"удалён",
  "Email noto‘g‘ri":"Неверный email","Bu email ro‘yxatda bor":"Этот email уже в списке","Xato: ":"Ошибка: ","Ro‘yxatni yuklab bo‘lmadi: ":"Не удалось загрузить список: ",
- "Saqlash":"Сохранить","Saqlandi":"Сохранено","YouTube havolasi tanilmadi":"Ссылка YouTube не распознана","https://youtu.be/… havolasi":"ссылка https://youtu.be/…",
+ "Saqlash":"Сохранить","Har bir mavzuda o‘zbekcha va ruscha standart video allaqachon bor. Bu yerga havola kiritsangiz, u ikkala til uchun standart videoni almashtiradi; bo‘sh qoldirsangiz, standart video ko‘rsatiladi.":"В каждой теме уже есть стандартное видео на узбекском и русском. Если указать здесь ссылку, она заменит стандартное видео для обоих языков; если оставить пусто — показывается стандартное.","Saqlandi":"Сохранено","YouTube havolasi tanilmadi":"Ссылка YouTube не распознана","https://youtu.be/… havolasi":"ссылка https://youtu.be/…",
  "Email yoki parol noto‘g‘ri":"Неверный email или пароль","Juda ko‘p urinish. 15 daqiqadan keyin qayta urining.":"Слишком много попыток. Повторите через 15 минут.",
  "Server bilan bog‘lanib bo‘lmadi.":"Не удалось связаться с сервером.","Sessiya tugadi. Qayta kiring.":"Сеанс истёк. Войдите снова.",
  "Parolni ko‘rsatish":"Показать пароль","Kirish kodi":"Код доступа","Nusxa olish":"Копировать","Nusxa olindi":"Скопировано","Tayyor":"Готово",
@@ -137,6 +137,7 @@ function draw(){var q=($("#eQ").value||"").toLowerCase(),all=S.list||[];
  $$("[data-del]").forEach(function(b){b.onclick=function(){var em=b.dataset.del;b.disabled=true;A.remove(em).then(function(){S.list=S.list.filter(function(x){return x.email!==em});S.confirm=null;draw();toast(em+" "+t("o‘chirildi"))}).catch(function(e){toast(t("Xato: ")+(e&&e.message||e),1);b.disabled=false})}})}
 function vkey(i){return (S.vg==="11"?"":"g"+S.vg+"-")+"t"+pad(i+1)}
 function drawVideos(){var TT=(window.ADM_TITLES||{})[S.vg]||{},T=TT[lang]||TT.uz||[],n=0;
+ $("#vNote").textContent=t("Har bir mavzuda o‘zbekcha va ruscha standart video allaqachon bor. Bu yerga havola kiritsangiz, u ikkala til uchun standart videoni almashtiradi; bo‘sh qoldirsangiz, standart video ko‘rsatiladi.");
  $("#vTabs").innerHTML=GR.map(function(g){return '<button role="tab" class="'+(g.id===S.vg?"on":"")+'" data-vg="'+g.id+'">'+esc(gName(g.id))+'</button>'}).join("");
  $$("[data-vg]").forEach(function(b){b.onclick=function(){S.vg=b.dataset.vg;drawVideos()}});
  $("#vList").innerHTML=T.map(function(title,i){var key=vkey(i),v=S.videos[key]||"";if(v)n++;return '<div class="vrow"><span class="vn'+(v?" has":"")+'">'+(i+1)+'</span><div><label for="vi-'+key+'">'+esc(title)+'</label><div class="vin"><input id="vi-'+key+'" data-vk="'+key+'" value="'+esc(v)+'" placeholder="'+esc(t("https://youtu.be/… havolasi"))+'"><button data-vs="'+key+'">'+t("Saqlash")+'</button></div></div></div>'}).join("");

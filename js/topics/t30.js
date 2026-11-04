@@ -1,5 +1,5 @@
 TB.add({
-n:30,page:137,title:"Raqobatdoshlikni ta’minlash",
+n:30,page:137,title:"Raqobatdoshlikni ta’minlash",video:"https://youtu.be/rc_Ip7FkyCs",
 sum:"Raqobat va uning vazifalari, raqobat shakllari (erkin raqobat, sof monopoliya, monopolistik raqobat, oligopoliya), narxli va narxsiz raqobat, insofsiz raqobat, raqobatdoshlik darajalari va oshirish yo‘llari.",
 learn:["Raqobat va vazifalari","4 raqobat shakli","Narxli va narxsiz raqobat","Insofsiz raqobat","Raqobatdoshlik darajalari","Raqobatdoshlikni oshirish"],
 hook:{q:"Bozorda 100 ta dehqon pomidor sotsa va shaharda faqat bitta elektr tarmog‘i kompaniyasi bo‘lsa — qaysi birida narxni sotuvchi o‘zi belgilay oladi?",a:"Pomidor bozorida — erkin raqobat: narxni bitta sotuvchi belgilay olmaydi. Elektr tarmog‘i — monopoliya: yagona ishlab chiqaruvchi narx ustidan to‘liq nazoratga ega (shuning uchun davlat uni tartibga soladi)."},

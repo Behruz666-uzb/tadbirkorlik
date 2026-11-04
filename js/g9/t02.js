@@ -1,5 +1,5 @@
 TB.add({
-n:2,page:12,title:"Firma va uning turlari",
+n:2,page:12,title:"Firma va uning turlari",video:"https://youtu.be/7oUrno-E5Ts",
 sum:"Korxona va firma tushunchalari, davlat, xususiy va aralash korxonalar, xususiy firma, shirkat, sherikchilik firmasi, mas’uliyati cheklangan va cheklanmagan jamiyatlar.",
 learn:["Korxona va firma","Davlat va xususiy korxona","Xususiy firma","Shirkat","Sherikchilik firmasi","Mas’uliyati cheklangan jamiyat"],
 hook:{q:"Do‘kon, kichik novvoyxona, katta qandolat sexi va un zavodi — qaysi birini bir kishi o‘zi ochishi oson, qaysi biriga sherik kerak?",a:"Do‘kon yoki kichik novvoyxonani bir kishi o‘z mablag‘i bilan ochishi mumkin (xususiy firma). Katta sex va zavod ko‘p mablag‘ talab qiladi — buning uchun bir necha kishi mablag‘ini birlashtirib <b>sherikchilik firmasi</b>, ko‘pincha <b>mas’uliyati cheklangan jamiyat</b> tuzadi."},

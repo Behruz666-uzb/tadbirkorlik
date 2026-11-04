@@ -1,5 +1,5 @@
 TB.add({
-n:27,page:138,title:"Xalqaro iqtisodiy munosabatlar",
+n:27,page:138,title:"Xalqaro iqtisodiy munosabatlar",video:"https://youtu.be/ewwTf3cVMcU",
 sum:"Globallashuv va transmilliy korporatsiyalar, O‘zbekiston–Koreya hamkorligi, tashqi savdo to‘siqlari — tariflar, kvotalar, litsenziyalar, proteksionizm va savdo urushlari, savdoni erkinlashtirish, GATT, Butunjahon savdo tashkiloti, Yevropa Ittifoqi va ASEAN.",
 learn:["Globallashuv","Savdo to‘siqlari","Tarif, kvota, litsenziya","Proteksionizm","Erkinlashtirish va GATT","Xalqaro tashkilotlar"],
 hook:{q:"O‘zbekiston va Koreya 500 mln dollarlik loyihalar — texnopark, bolalar tibbiy markazi, biznes markaz haqida kelishdi. Bundan har ikki mamlakat qanday manfaat ko‘radi?",a:"O‘zbekiston <b>investitsiya, zamonaviy texnologiya, ish o‘rinlari</b> va malakali kadrlarga ega bo‘ladi. Koreya esa <b>yangi bozor</b>, kredit foizi, o‘z kompaniyalari uchun buyurtmalar va madaniy ta’sirga ega bo‘ladi. Bu — <b>o‘zaro manfaatli</b> xalqaro iqtisodiy munosabatlar."},

@@ -1,5 +1,5 @@
 TB.add({
-n:20,page:93,title:"Korxonaning moliyaviy natijalari",
+n:20,page:93,title:"Korxonaning moliyaviy natijalari",video:"https://youtu.be/z7neKSWuaWs",
 sum:"Yalpi daromad va foyda, zarar, foydaning taqsimlanishi, iqtisodiy va buxgalteriya foydasi, rentabellik, zararsizlik nuqtasi va bankrotlik.",
 learn:["Yalpi daromad: TR = P × Q","Foyda va zarar","Foydaning taqsimlanishi","Iqtisodiy va buxgalteriya foydasi","Rentabellik","Zararsizlik nuqtasi"],
 hook:{q:"Ikki do‘kon bir oyda 100 mln so‘mdan tushum oldi. Birinchisining xarajati 60 mln, ikkinchisiniki 110 mln. Qaysi biri yaxshi ishlagan?",a:"Tushum bir xil, lekin natija har xil: birinchisi 40 mln foyda, ikkinchisi 10 mln zarar ko‘rdi. Tushum emas, aynan foyda va rentabellik samaradorlikni ko‘rsatadi."},

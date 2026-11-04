@@ -1,5 +1,5 @@
 TB.add({
-n:24,page:111,title:"Korxonani boshqarish",
+n:24,page:111,title:"Korxonani boshqarish",video:"https://youtu.be/eQadEX7EPkM",
 sum:"Menejment tushunchasi, maqsad va vazifalari, subyekt va obyekti, 5 boshqaruv funksiyasi, boshqaruvning tarkibiy qismlari va usullari.",
 learn:["Menejment nima?","Maqsad va vazifalar","Subyekt va obyekt","5 boshqaruv funksiyasi","Tarkibiy qismlar","Boshqaruv usullari"],
 hook:{q:"Futbol jamoasida eng yaxshi o‘yinchilar bo‘lsa-yu, murabbiy bo‘lmasa, jamoa yutadimi?",a:"Qiyin! Murabbiy rejani tuzadi, rollarni taqsimlaydi, o‘yinchilarni ruhlantiradi va natijani nazorat qiladi. Korxonada bu ishni menejment bajaradi."},

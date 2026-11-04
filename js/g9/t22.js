@@ -1,5 +1,5 @@
 TB.add({
-n:22,page:114,title:"Inflatsiya va uning turlari",
+n:22,page:114,title:"Inflatsiya va uning turlari",video:"https://youtu.be/i4LLjz5LIew",
 sum:"Pul massasi va pulning aylanish tezligi, Fisher tenglamasi (M·V = P·Q), inflatsiya va deflatsiya, pulning qadrsizlanishi, inflatsiyaning ikki sababi, giperinflatsiya, iste’mol narxlari indeksi va «iste’mol savati».",
 learn:["Pul aylanishi","Fisher tenglamasi","Inflatsiya va deflatsiya","Inflatsiya sabablari","Giperinflatsiya","Iste’mol narxlari indeksi"],
 hook:{q:"Sa’dullayevlar oilasi oyiga 3 030 000 so‘m sarflaydi, shundan 1 200 000 so‘mi oziq-ovqatga. Oziq-ovqat 20% qimmatlashsa, oila xarajati qanchaga oshadi? Daromad o‘zgarmasa, oila nima qiladi?",a:"Oziq-ovqatga 240 000 so‘m ko‘proq ketadi: jami <b>3 270 000 so‘m</b> (+7,9%). Daromad o‘zgarmasa, oila kiyim-kechak, madaniy va maishiy xarajatlarni <b>qisqartirishga majbur</b> bo‘ladi. Narxlarning bunday umumiy oshishi — <b>inflatsiya</b>."},

@@ -1,5 +1,5 @@
 TB.add({
-n:6,page:30,title:"Xususiy korxona",
+n:6,page:30,title:"Xususiy korxona",video:"https://youtu.be/8hifJyLVQKY",
 sum:"Yagona jismoniy shaxs tuzadigan va boshqaradigan tijoratchi tashkilot: ustav fondi, mulkdor huquqlari, afzallik va kamchiliklar.",
 learn:["Xususiy korxona tushunchasi","Yagona mulkdor","Ustav fondi va nizom","Mulkdorning huquqlari","Afzalliklar","Kamchiliklar"],
 hook:{q:"Ba’zi tadbirkorlar uchun eng muhimi — hech kim aralashmasdan, mustaqil qaror qabul qilish. Siz biznesingizni yolg‘iz o‘zingiz boshqarishni xohlarmidingiz? Nimasi yaxshi, nimasi xavfli?",a:"Yolg‘iz boshqarish qarorlarni tez qabul qilish va mustaqillik beradi. Lekin barcha mas’uliyat ham bir kishida: korxona mol-mulki yetmasa, mulkdor o‘z mol-mulki bilan javob beradi. Bu xususiy korxona shakli."},

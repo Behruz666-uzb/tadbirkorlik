@@ -1,5 +1,5 @@
 TB.add({
-n:7,page:34,title:"Mas’uliyati cheklangan jamiyat",
+n:7,page:34,title:"Mas’uliyati cheklangan jamiyat",video:"https://youtu.be/a3IbIQjaRfI",
 sum:"MChJ: ishtirokchilar faqat o‘z ulushi doirasida javob beradi. Ustav fondi, ishtirokchilar soni, afzallik va kamchiliklar, dividendga soliq.",
 learn:["MChJ tushunchasi","Cheklangan mas’uliyat","Ustav fondi: 40 EKIH","Ko‘pi bilan 50 ishtirokchi","Afzallik va kamchiliklar","Dividendga 10% soliq"],
 hook:{q:"«Coca-Cola Ichimligi MChJ» — nomidan keyin yozilgan MChJ (inglizcha LTD) nimani anglatadi? Bunday korxona zarar ko‘rsa, uning egalari uyini sotib qarzni to‘laydimi?",a:"MChJ — mas’uliyati cheklangan jamiyat. Uning ishtirokchilari jamiyat qarzlari uchun faqat o‘zlari qo‘shgan ulush doirasida javob beradi, shaxsiy uy va mol-mulki bilan emas."},

@@ -1,5 +1,5 @@
 TB.add({
-n:22,page:103,title:"Tadbirkorlikda marketing",
+n:22,page:103,title:"Tadbirkorlikda marketing",video:"https://youtu.be/wRdQDjdM3LM",
 sum:"Marketing tushunchasi, zamonaviy konsepsiyasi, maqsad va vazifalari; marketing tadqiqoti va uni o‘tkazishning 5 bosqichi.",
 learn:["Marketing nima?","Zamonaviy konsepsiya","Maqsad va vazifalar","Marketing tadqiqoti","5 bosqich","Birlamchi va ikkilamchi axborot"],
 hook:{q:"Maktab yonida tez tayyorlanadigan ovqat do‘koni ochsangiz, katta foyda bo‘ladimi? Buni do‘kon ochmasdan oldin qanday bilish mumkin?",a:"Ochib ko‘rib bilish — zarar ko‘rish xavfi katta. Ishonchli va yagona yo‘l — marketing tadqiqoti: o‘quvchilardan so‘rov, raqobatchilarni kuzatish, xarajatni hisoblash."},

@@ -1,5 +1,5 @@
 TB.add({
-n:3,page:16,title:"Aksiyadorlik jamiyati",
+n:3,page:16,title:"Aksiyadorlik jamiyati",video:"https://youtu.be/FM-LYFEtPOI",
 sum:"Aksiyadorlik jamiyati, ochiq va yopiq turlari, aksiya, oddiy va imtiyozli aksiyalar, nazorat paketi, nominal qiymat, aksiya kursi, dividend va fond bozori indekslari.",
 learn:["Aksiyadorlik jamiyati","Ochiq va yopiq AJ","Oddiy va imtiyozli aksiya","Nazorat paketi","Nominal qiymat va kurs","Fond indekslari"],
 hook:{q:"Televizorda «Nyu-York birjasida Dou-Jons indeksi ko‘tarildi» degan xabarni eshitganmisiz? Aksiya nima va u nega qimmatlashadi yoki arzonlashadi?",a:"Aksiya — kompaniyaning bir bo‘lagiga egalik qilishni tasdiqlovchi qimmatli qog‘oz. Kompaniya yaxshi ishlab, ko‘p foyda (dividend) bersa, aksiyani xohlovchilar ko‘payadi va uning <b>kursi</b> oshadi. Indeks esa ko‘p kompaniyalar aksiyalari narxining umumiy o‘zgarishini ko‘rsatadi."},

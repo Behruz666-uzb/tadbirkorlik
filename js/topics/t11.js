@@ -1,5 +1,5 @@
 TB.add({
-n:11,page:53,title:"Biznes-reja ishlab chiqish",
+n:11,page:53,title:"Biznes-reja ishlab chiqish",video:"https://youtu.be/_y9jS1W9xP8",
 sum:"Biznesni rejalashtirish, biznes-reja tushunchasi, uning ahamiyati, uch asosiy vazifasi va tarkibiy qismlari.",
 learn:["Biznesni rejalashtirish","Biznes-reja nima?","Nega biznes-reja kerak?","Biznes-rejaning 3 vazifasi","Tarkibiy qismlar","Kim yordam beradi?"],
 hook:{q:"Siz uzoq safarga xaritasiz chiqarmidingiz? Bankdan kredit olib, uskuna sotib olishdan oldin tadbirkor nimani o‘ylab ko‘rishi kerak?",a:"Xaritasiz safar adashishga olib keladi. Tadbirkorlikda xarita — biznes-reja: unda maqsad, xarajat, kutilayotgan foyda va bosqichlar oldindan hisoblab chiqiladi. Shundagina kredit va resurslar to‘g‘ri sarflanadi."},

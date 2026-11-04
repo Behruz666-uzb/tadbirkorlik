@@ -1,5 +1,5 @@
 TB.add({
-n:7,page:33,title:"Iqtisodiy faoliyat tahlili",
+n:7,page:33,title:"Iqtisodiy faoliyat tahlili",video:"https://youtu.be/h4R4Rww-rq4",
 sum:"Nominal va real foyda, narxlar o‘zgarish indeksi, firma faoliyatining samaradorligi (rentabellik), aylanma mablag‘lar aylanishi, bankrotlik va firmani tugatish tartibi.",
 learn:["Nominal va real foyda","Narxlar indeksi","Samaradorlik (rentabellik)","Aylanma mablag‘ tezligi","Bankrotlik","Firmani tugatish"],
 hook:{q:"Poyabzal sexi 2012-yilda 20 mln, 2015-yilda 23 mln so‘m foyda oldi. Lekin narxlar 18% ga oshgan. Sexning foydasi haqiqatan ko‘paydimi?",a:"Yo‘q! 23 mln ÷ 1,18 ≈ <b>19,5 mln</b> so‘m — bu 2012-yil narxlarida 20 mln dan ham kam. Ya’ni nominal foyda o‘sgan, <b>real foyda kamaygan</b>. 2018-yilda esa 30 mln ÷ 1,30 ≈ 23 mln — real foyda haqiqatan o‘sgan."},

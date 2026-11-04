@@ -1,5 +1,5 @@
 TB.add({
-n:18,page:90,title:"Aksiz va qo‘shilgan qiymat solig‘i",
+n:18,page:90,title:"Aksiz va qo‘shilgan qiymat solig‘i",video:"https://youtu.be/zW2OtVK33ck",
 sum:"Bilvosita soliqlar: aksiz solig‘i — obyektlari, stavkalari va 2019-yil o‘zgarishlari (yonilg‘i, import tovarlari); qo‘shilgan qiymat solig‘i — to‘lovchilari, obyekti, 20% stavka, soddalashtirilgan tartib va hisoblash formulasi.",
 learn:["Bilvosita soliq","Aksiz obyektlari","Aksiz stavkalari","Importga aksiz","QQS nima?","QQS hisoblash"],
 hook:{q:"Sigaret, aroq, benzin va zargarlik buyumlari narxiga qo‘shimcha soliq — aksiz qo‘shiladi. Nega aynan shu tovarlarga?",a:"Bu tovarlar ko‘pincha <b>salomatlikka zararli</b> (tamaki, spirtli ichimlik), <b>hashamat</b> buyumi (oltin) yoki <b>katta foyda</b> keltiradigan (yonilg‘i) tovarlar. Aksiz ularning iste’molini jilovlaydi va budjetga katta daromad keltiradi. Aksizni oxir-oqibat <b>xaridor</b> narx ichida to‘laydi — shuning uchun u bilvosita soliq."},

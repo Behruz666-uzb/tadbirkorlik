@@ -1,5 +1,5 @@
 TB.add({
-n:21,page:99,title:"Tadbirkorlikni soliqqa tortish",
+n:21,page:99,title:"Tadbirkorlikni soliqqa tortish",video:"https://youtu.be/CU19rN9mZoY",
 sum:"Soliqlar va boshqa majburiy to‘lovlar, soliq solishning umumbelgilangan va soddalashtirilgan tartibi, umumbelgilangan soliqlar va majburiy to‘lovlar turlari, soddalashtirilgan soliqlar.",
 learn:["Soliq nima?","Boshqa majburiy to‘lovlar","Umumbelgilangan tartib","Soddalashtirilgan tartib","Umumbelgilangan soliqlar","Yagona soliq to‘lovi"],
 hook:{q:"Maktablar, kasalxonalar, yo‘llar va pensiyalar qaysi pul hisobidan moliyalashtiriladi?",a:"Asosan davlat budjeti hisobidan, budjetning asosiy manbai esa soliqlar. Shuning uchun soliq to‘lash — tadbirkorning qonuniy majburiyati va jamiyat oldidagi burchi."},

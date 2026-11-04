@@ -1,5 +1,5 @@
 TB.add({
-n:8,page:37,title:"Firmani boshqarish — menejment",
+n:8,page:37,title:"Firmani boshqarish — menejment",video:"https://youtu.be/SFBLzAMK4bo",
 sum:"Menejment va menejer, boshqaruvning to‘rt vazifasi (rejalashtirish, tashkil qilish, rahbarlik, nazorat), menejer sifatlari, sodda va murakkab tashkiliy tizimlar, avtokratik, byurokratik va demokratik uslublar.",
 learn:["Menejment nima?","Menejer kim?","4 ta vazifa","Menejer sifatlari","Tashkiliy tizimlar","Boshqaruv uslublari"],
 hook:{q:"Qandolat sexida 6 ishchi, bankda 35, to‘qimachilik fabrikasida 300, zavodda 2 000 ishchi bor. Ular bir xil boshqariladimi?",a:"Yo‘q. 6 kishilik sexni egasining o‘zi boshqara oladi. 2 000 kishilik zavodda esa bo‘limlar, bo‘lim boshliqlari, menejerlar bo‘ladi — <b>boshqaruv tizimi</b> korxona qanchalik katta va ko‘p tarmoqli bo‘lsa, shunchalik murakkab."},

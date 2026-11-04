@@ -1,5 +1,5 @@
 TB.add({
-n:18,page:85,title:"Korxona xarajatlari",
+n:18,page:85,title:"Korxona xarajatlari",video:"https://youtu.be/HVWkZgRNOcs",
 sum:"Ishlab chiqarish va muomala xarajatlari, ichki va tashqi (buxgalteriya) xarajatlar, doimiy, o‘zgaruvchan va yalpi xarajatlar, o‘rtacha va chegaraviy xarajat.",
 learn:["Ishlab chiqarish xarajatlari","Muomala xarajatlari","Ichki va tashqi xarajatlar","Doimiy va o‘zgaruvchan","O‘rtacha xarajatlar","Chegaraviy xarajat"],
 hook:{q:"Somsa sotadigan oshxona 0 ta somsa pishirsa ham qanday xarajatlarni to‘laydi? Qaysi xarajatlar somsa soni bilan birga oshadi?",a:"Ijara, qorovul maoshi, soliqlar — hatto bitta somsa pishirilmasa ham to‘lanadi (doimiy xarajatlar). Go‘sht, xamir, gaz esa somsa ko‘paygan sari oshadi (o‘zgaruvchan xarajatlar)."},

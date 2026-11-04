@@ -1,5 +1,5 @@
 TB.add({
-n:26,page:120,title:"Investitsiya faoliyati",
+n:26,page:120,title:"Investitsiya faoliyati",video:"https://youtu.be/dZuvL9RW-fI",
 sum:"Investitsiya faoliyati, modernizatsiya va diversifikatsiya, real va moliyaviy investitsiyalar, ichki va tashqi manbalar, investitsiya riski, loyihasi va uning tahlili.",
 learn:["Investitsiya faoliyati","Modernizatsiya","Diversifikatsiya","Real va moliyaviy investitsiya","Ichki va tashqi manbalar","Risk va loyiha tahlili"],
 hook:{q:"Faqat non pishiradigan korxona va non, tort hamda pechenye ishlab chiqaradigan korxona — bozor o‘zgarsa, qaysi biri xavfsizroq?",a:"Ikkinchisi: bir mahsulotga talab kamaysa, boshqalari daromad keltiradi. Bu diversifikatsiya — investitsiya kiritishning muhim yo‘nalishi."},

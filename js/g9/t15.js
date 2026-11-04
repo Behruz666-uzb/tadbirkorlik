@@ -1,5 +1,5 @@
 TB.add({
-n:15,page:78,title:"Daromad solig‘i",
+n:15,page:78,title:"Daromad solig‘i",video:"https://youtu.be/xlE9C5vGrvc",
 sum:"Soliq — qarz ham, farz ham; jismoniy shaxslar daromad solig‘i, yillik daromad tarkibi, 2019-yil islohoti: 12% yagona stavka, dividend va foizlarga 5%, patent, soliqni hisoblash, yuridik shaxslarning foyda solig‘i.",
 learn:["Soliq nimaga kerak?","Daromad tarkibi","12% yagona stavka","Dividend va foizlar — 5%","Soliqni hisoblash","Yuridik shaxslar foyda solig‘i"],
 hook:{q:"«Kim ko‘p daromad qilsa, o‘sha ko‘proq soliq to‘lashi kerak» — bu fikrga qo‘shilasizmi?",a:"Ha — <b>yagona 12% stavkada</b> ham ko‘p topgan ko‘proq to‘laydi: 2 mln dan 240 ming, 10 mln dan 1,2 mln so‘m. Ilgari esa pog‘onali tizim bo‘lgan: daromad oshgan sari stavka ham 22,5% gacha oshgan. Soliqlar bizga ta’lim, tibbiyot, pensiya va xavfsizlik ko‘rinishida qaytadi."},

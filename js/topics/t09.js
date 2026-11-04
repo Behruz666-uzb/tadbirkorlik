@@ -1,5 +1,5 @@
 TB.add({
-n:9,page:43,title:"Qishloq joylarda tadbirkorlik",
+n:9,page:43,title:"Qishloq joylarda tadbirkorlik",video:"https://youtu.be/wJ0-Dl62Css",
 sum:"Shaxsiy yordamchi xo‘jalik, dehqon xo‘jaligi, fermer xo‘jaligi va agrofirma: qishloqdagi tadbirkorlik shakllari va ularning farqlari.",
 learn:["Shaxsiy yordamchi xo‘jalik","Tomorqa","Dehqon xo‘jaligi","Fermer xo‘jaligi","Agrofirma","Qishloqda daromad imkoniyatlari"],
 hook:{q:"Aholining yarmidan ko‘pi qishloqda yashaydi, lekin qishloq xo‘jaligining YaIMdagi ulushi 17% dan oshmaydi, mahsulotni qayta ishlash esa 10% ga yetmaydi. Rivojlangan davlatlarda bu 50% dan ortiq. Qishloqda daromadni qanday oshirish mumkin?",a:"Tomorqadan unumli foydalanish, ortiqcha mahsulotni bozorda sotish, dehqon yoki fermer xo‘jaligi ochish, eng muhimi — mahsulotni qayta ishlash (agrofirma): quritish, konserva, sharbat. Qayta ishlangan mahsulot ancha qimmat sotiladi."},

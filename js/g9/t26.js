@@ -1,5 +1,5 @@
 TB.add({
-n:26,page:134,title:"Xalqaro savdo",
+n:26,page:134,title:"Xalqaro savdo",video:"https://youtu.be/H_CxVf1sD1c",
 sum:"Jahon bozori va uning tarkibi, resurslarning notekis taqsimlanishi, Adam Smitning mutlaq ustunlik va David Rikardoning nisbiy ustunlik nazariyalari, muqobil qiymat, eksport, import, tashqi savdo hajmi va savdo balansi.",
 learn:["Jahon bozori","Mutlaq ustunlik","Nisbiy ustunlik","Muqobil qiymat","Eksport va import","Tashqi savdo balansi"],
 hook:{q:"1-mamlakatda 1 litr sharbat 2 000, fotoapparat 16 000 birlik turadi. 2-mamlakatda sharbat 2 000, fotoapparat 20 000. Har bir mamlakat nimani ishlab chiqarishi kerak?",a:"Muqobil qiymatni solishtiramiz: 1-mamlakatda 1 fotoapparat = <b>8 litr</b> sharbat, 2-mamlakatda = <b>10 litr</b>. Demak, fotoapparat 1-mamlakatda «arzonroq» — u <b>fotoapparatga</b>, 2-mamlakat esa <b>sharbatga</b> ixtisoslashsa va ular savdo qilsa, ikkalasi ham yutadi."},

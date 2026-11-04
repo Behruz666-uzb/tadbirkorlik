@@ -1,5 +1,5 @@
 TB.add({
-n:15,page:70,title:"Tadbirkorlik mas’uliyati",
+n:15,page:70,title:"Tadbirkorlik mas’uliyati",video:"https://youtu.be/TwKk19brsNM",
 sum:"Tadbirkorning huquqlari va majburiyatlari: shartnomalar, to‘lovlar, qonun talablari, halol raqobat, to‘g‘ri hisob yuritish; tadbirkorning javobgarligi va uning turlari.",
 learn:["Tadbirkorning huquqi","Tadbirkorning majburiyati","Shartnoma va to‘lovlar","Qonun va halol raqobat","To‘g‘ri hisob yuritish","Javobgarlik turlari"],
 hook:{q:"Non zavodi do‘konlarga bir hafta non yetkazib bermasa, nima bo‘ladi? Bir tadbirkorning majburiyatini bajarmasligi qanchalik ko‘p odamga ta’sir qiladi?",a:"Do‘konlar bo‘shaydi, narx oshadi, odamlar qiynaladi. Xomashyo kelmasa — ishlab chiqarish to‘xtaydi, ishsizlik paydo bo‘ladi. Shuning uchun tadbirkorlik — bu nafaqat foyda, balki katta mas’uliyat."},

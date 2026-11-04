@@ -1,5 +1,5 @@
 TB.add({
-n:25,page:126,title:"Ijtimoiy himoya vositalari",
+n:25,page:126,title:"Ijtimoiy himoya vositalari",video:"https://youtu.be/PiOSDobl-AM",
 sum:"Davriy ishsizlikning zarari va mustaqillik yillari boshidagi vaziyat, mehnat birjasi va ishsizlik nafaqasi, kasaba uyushmalari maqsad va vazifalari, to‘la bandlik va tabiiy ishsizlik, davlatning ishsizlikka qarshi choralari.",
 learn:["Davriy ishsizlik zarari","Mehnat birjasi","Kasaba uyushmalari","To‘la bandlik","Tabiiy ishsizlik","Davlat choralari"],
 hook:{q:"Korxona: «Tovar qimmatlashyapti, yangi texnologiya olib, ishchilarning bir qismini bo‘shatamiz». Ishchilar: «Maoshni oshiring, ish vaqtini qisqartiring, hech kimni bo‘shatmang». Bu nizoni kim va qanday hal qiladi?",a:"Ishchilar manfaatini <b>kasaba uyushmasi</b> himoya qiladi va ish beruvchi bilan muzokara olib boradi. <b>Davlat</b> esa qonunlar orqali hakam bo‘ladi: noqonuniy bo‘shatishni taqiqlaydi, ishsiz qolganlarni mehnat birjasi orqali qayta o‘qitadi va ishga joylashtiradi. Yechim — ikki tomon manfaatini muvozanatlash."},

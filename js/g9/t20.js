@@ -1,5 +1,5 @@
 TB.add({
-n:20,page:102,title:"Iqtisodiy o‘sish va rivojlanish",
+n:20,page:102,title:"Iqtisodiy o‘sish va rivojlanish",video:"https://youtu.be/Vw_Z1_eooNE",
 sum:"Nominal va real YaIM, iqtisodiy davr — o‘sish, cho‘qqi, pasayish va eng quyi nuqta, iqtisodiy o‘sish va uni o‘lchash, ekstensiv va intensiv o‘sish, rivojlangan va rivojlanayotgan mamlakatlar, turmush darajasi ko‘rsatkichlari.",
 learn:["Nominal va real YaIM","Iqtisodiy davr","Iqtisodiy o‘sish","Ekstensiv va intensiv","Mamlakatlar guruhlari","Turmush darajasi"],
 hook:{q:"Mamlakat YaIMi 3 yilda 19,35 dan 36,84 trln ga oshdi — deyarli 2 baravar! Lekin narxlar ham 1,5 baravar qimmatlashdi. Iqtisodiyot haqiqatan qancha o‘sdi?",a:"Real YaIM ni topish uchun nominal qiymat narxlar indeksiga bo‘linadi: 36,84 ÷ 1,5 = <b>24,56 trln</b>. 24,56 ÷ 19,35 ≈ <b>1,27</b> — iqtisodiyot haqiqatan <b>27%</b> ga o‘sgan, 90% ga emas."},

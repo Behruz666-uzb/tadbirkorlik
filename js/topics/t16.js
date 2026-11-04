@@ -1,5 +1,5 @@
 TB.add({
-n:16,page:74,title:"Korxona mablag‘lari va ulardan foydalanish samaradorligi",
+n:16,page:74,title:"Korxona mablag‘lari va ulardan foydalanish samaradorligi",video:"https://youtu.be/hoL6Y-DPW0Y",
 sum:"Korxona mablag‘lari va shakllari, doiraviy aylanish, asosiy va aylanma mablag‘lar, eskirish va amortizatsiya, asosiy mablag‘ samaradorligi va sig‘imi.",
 learn:["Korxona va mablag‘lari","Pul → resurs → tovar → pul","Asosiy va aylanma mablag‘","Eskirish va amortizatsiya","Amortizatsiya me’yori","Samaradorlik va sig‘im"],
 hook:{q:"Tadbirkordan qarz so‘rasangiz, ko‘pincha «pullarim aylanishda» deb javob beradi. Bu nimani anglatadi?",a:"Uning puli doim harakatda: avval xomashyo va uskunaga, so‘ng tovarga aylanadi, tovar sotilgach yana pul bo‘lib qaytadi — va yana aylanishga kiradi. Bu korxona mablag‘larining doiraviy aylanishi."},

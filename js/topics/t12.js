@@ -1,5 +1,5 @@
 TB.add({
-n:12,page:57,title:"Biznes loyiha va startaplar",
+n:12,page:57,title:"Biznes loyiha va startaplar",video:"https://youtu.be/Q_KaDE8muFM",
 sum:"Biznes loyiha va uning biznes-rejadan farqi, startap tushunchasi, moliyalashtirish manbalari, investor qidirish va rivojlanish bosqichlari.",
 learn:["Biznes loyiha","Biznes loyiha va biznes-reja","Startap nima?","Biznes-angel va venchur fond","Networking","Startap bosqichlari"],
 hook:{q:"Hewlett-Packard, Microsoft, Apple, Google — bu kompaniyalarning umumiy jihati nima? Ular qanday boshlangan?",a:"Hammasi startap sifatida — 2 nafar do‘stning innovatsion g‘oyasidan boshlangan: Xyulett va Pakkard, Geyts va Allen, Jobs va Voznyak, Peyj va Brin. Kichik g‘oya to‘g‘ri moliyalashtirilib, dunyo gigantiga aylangan."},

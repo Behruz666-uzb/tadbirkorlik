@@ -1,5 +1,5 @@
 TB.add({
-n:10,page:49,title:"Yoshlar tadbirkorligi",
+n:10,page:49,title:"Yoshlar tadbirkorligi",video:"https://youtu.be/sbskAjkG1Rs",
 sum:"18–35 yoshdagi yoshlar tadbirkorligi, uni qo‘llab-quvvatlash choralari, yoshlar tadbirkorligi klasterlari va biznes-inkubatorlar.",
 learn:["Yoshlar tadbirkorligi","Nega yoshlar muhim?","Davlat choralari","Klaster nima?","Yoshlar klasterlari","Biznes-inkubator"],
 hook:{q:"Tadbirkorning yoshi uning faoliyatiga qanday ta’sir qiladi? Davlat yosh tadbirkorlarga alohida g‘amxo‘rlik qilishi kerakmi?",a:"Yoshlar harakatchan, yangilikni tez o‘zlashtiradi, tavakkal qilishga tayyor, lekin ularda tajriba va boshlang‘ich kapital kam. Shuning uchun davlat ularni o‘qitish, joy berish va moliyalashtirish orqali qo‘llab-quvvatlaydi."},

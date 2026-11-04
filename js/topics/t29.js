@@ -1,5 +1,5 @@
 TB.add({
-n:29,page:133,title:"Korxonada mehnat resurslari",
+n:29,page:133,title:"Korxonada mehnat resurslari",video:"https://youtu.be/SrXX5wlXC8I",
 sum:"Mehnat resurslari, mehnat shartnomasi, ish haqi, nominal va real ish haqi, tarif tizimi va yagona tarif setkasi, mehnat unumdorligi va uni o‘stirish omillari.",
 learn:["Mehnat resurslari","Mehnat shartnomasi","Ish haqi","Nominal va real ish haqi","Tarif tizimi","Mehnat unumdorligi"],
 hook:{q:"Oylik maoshingiz o‘zgarmadi, lekin narxlar 20% oshdi. Siz boyidingizmi yoki kambag‘allashdingizmi?",a:"Kambag‘allashdingiz! Pul miqdori (nominal ish haqi) bir xil, lekin unga olinadigan tovarlar (real ish haqi) kamaydi. Real ish haqi = nominal ÷ narx darajasi."},
