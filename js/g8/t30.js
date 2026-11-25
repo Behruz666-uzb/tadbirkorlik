@@ -1,5 +1,5 @@
 TB.add({
-n:30,page:144,title:"Soliq to‘lovchilarning huquqlari va majburiyatlari",
+n:30,page:144,title:"Soliq to‘lovchilarning huquqlari va majburiyatlari",video:"https://youtu.be/wQuFh5cas64",
 sum:"Soliq to‘lovchilar huquqlari va ularning davlat tomonidan kafolatlanishi, soliq to‘lovchining majburiyatlari, soliqqa oid huquqbuzarliklar turlari va javobgarlik, 16 yoshdan javobgarlik, Alisher Navoiy va Amir Temurning soliq haqidagi fikrlari.",
 learn:["Huquqlar kafolati","6 ta asosiy huquq","6 ta majburiyat","Huquqbuzarlik turlari","Javobgarlik","Navoiy va Temur"],
 hook:{q:"Tadbirkor soliqni kerakligidan ortiq to‘lab yubordi. Pul «kuydimi»?",a:"Yo‘q! Soliq to‘lovchining huquqi bor: <b>ortiqcha to‘langan soliqni qaytarish</b> uchun soliq organiga murojaat qiladi. Huquqlarini bilgan to‘lovchi o‘z manfaatini himoya qila oladi — majburiyatlarini bilgani esa uni noxush vaziyatlardan saqlaydi."},

@@ -1,5 +1,5 @@
 TB.add({
-n:16,page:80,title:"Iste’molchilarning huquqlari va majburiyatlari",
+n:16,page:80,title:"Iste’molchilarning huquqlari va majburiyatlari",video:"https://youtu.be/Kexummvyk2k",
 sum:"«Iste’molchilarning huquqlarini himoya qilish to‘g‘risida»gi qonun: axborot olish, xavfsiz tovar, nuqsonli tovarni almashtirish huquqlari, muddatlar va chek, sudga murojaat, iste’molchi majburiyatlari, reklamaning afzallik va kamchiliklari, shtrix kod va QR-kod.",
 learn:["Iste’molchi huquqlari qonuni","Axborot va xavfsizlik","Nuqsonli tovar","Muddatlar va chek","Iste’molchi majburiyatlari","Reklama, shtrix va QR-kod"],
 hook:{q:"Do‘konda «Sotilgan tovar qaytarib olinmaydi» degan yozuv osilgan. Siz sifatsiz tovar olgan bo‘lsangiz, sotuvchi haqmi?",a:"Yo‘q! Qonunga ko‘ra, <b>nuqsonli tovar</b> sotib olgan iste’molchi uni almashtirish, narxni kamaytirish, bepul tuzattirish yoki pulini qaytarib olishni talab qilishga haqli. Buning uchun <b>kassa cheki</b> yoki tovar hujjatini saqlash kerak."},

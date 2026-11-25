@@ -1,5 +1,5 @@
 TB.add({
-n:2,page:12,title:"Cheklanganlik muammosi",
+n:2,page:12,title:"Cheklanganlik muammosi",video:"https://youtu.be/r0uuu8TSXEc",
 sum:"Ehtiyoj va uning turlari (shaxsiy, ijtimoiy), erkin va iqtisodiy ne’matlar, resurslar — tabiiy, mehnat va kapital, tiklanadigan va tiklanmaydigan resurslar, cheklanganlik muammosi — iqtisodiyotning asosiy muammosi.",
 learn:["Ehtiyoj nima?","Shaxsiy va ijtimoiy ehtiyoj","Erkin va iqtisodiy ne’matlar","Resurslar turlari","Tiklanadigan va tiklanmaydigan","Cheklanganlik muammosi"],
 hook:{q:"3 daqiqa ichida o‘z ehtiyojlaringiz ro‘yxatini tuzing. Vaqt ko‘p bo‘lsa, ro‘yxat qachon tugaydi? Dunyodagi eng boy odamning ehtiyoji bormi?",a:"Ro‘yxat hech qachon tugamaydi! Ayiqning qorni to‘ysa, iniga kirib uxlaydi, inson esa erishgan narsasi bilan qanoatlanmaydi — yaxshiroq yashashga intiladi. Shuning uchun <b>inson ehtiyojlarining poyoni va cheki yo‘q</b>. Eng boy odamning ham ehtiyojlari bor."},

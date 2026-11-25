@@ -1,5 +1,5 @@
 TB.add({
-n:19,page:96,title:"Taklif va taklif qonuni",
+n:19,page:96,title:"Taklif va taklif qonuni",video:"https://youtu.be/lj2OGSuiiOs",
 sum:"Taklif va taklif miqdori, shaxsiy va umumiy taklif, taklif jadvali va taklif chizig‘i (S), taklif qonuni — narx va taklif miqdorining to‘g‘ri bog‘liqligi, Adam Smitning «ko‘rinmas qo‘l» g‘oyasi va raqobat orqali bozorning o‘zini tartibga solishi.",
 learn:["Taklif nima?","Taklif miqdori","Taklif chizig‘i (S)","Taklif qonuni","«Ko‘rinmas qo‘l»","Raqobat va jamiyat manfaati"],
 hook:{q:"Andijon bozorida guruch 8 600 so‘m, Farg‘ona bozorida 7 200 so‘m. Dehqonlar guruchni qaysi bozorga olib borishni xohlaydi?",a:"Albatta, <b>Andijonga</b> — narx yuqori, foyda ko‘p. Narx qancha baland bo‘lsa, sotuvchilar shuncha ko‘p tovar olib chiqishni xohlaydi — bu <b>taklif qonuni</b>."},

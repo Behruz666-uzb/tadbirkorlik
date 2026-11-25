@@ -1,5 +1,5 @@
 TB.add({
-n:15,page:76,title:"Iqtisodiy qaror qabul qilish",
+n:15,page:76,title:"Iqtisodiy qaror qabul qilish",video:"https://youtu.be/8PrUhOoA_x0",
 sum:"Qaror qabul qilish jadvali, qarorning besh bosqichi, «Bo‘ston» fermer xo‘jaligi misoli, qarorning xususiy va ijtimoiy qadr-qimmati, ratsionallik va maksimallik, paxta tolasini to‘liq qayta ishlash haqidagi davlat qarori.",
 learn:["Qaror qabul qilish jadvali","Besh bosqich","Fermer Abdullayevning qarori","Xususiy va ijtimoiy qiymat","Ratsionallik va maksimallik","Davlat qarori"],
 hook:{q:"Tug‘ilgan kuningizda 800 000 so‘m berishdi: velosiped, kostyum, audiopleyer, 6 oy karate yoki 3 oy ingliz tili kursi. Qanday qilib to‘g‘ri tanlaysiz?",a:"Har bir variantni <b>mezonlar</b> bo‘yicha baholang: pul yetadimi, ehtiyoj bormi, sog‘liqqa va bilimga foydasi, uydagilarga ma’qulmi. Har katakka «+», «−», «0» yoki «?» qo‘ying. Eng ko‘p «+» olgan variant — sizning <b>oqilona qaroringiz</b>."},

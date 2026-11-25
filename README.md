@@ -4,6 +4,7 @@ Ikki sinf, har biri **30 mavzu**, o‘zbek va rus tilida:
 
 | Sinf | Darslik |
 |---|---|
+| **8-sinf** | «Iqtisodiy bilim asoslari» (E. Sariqov, B. Xaydarov, 2019) |
 | **9-sinf** | «Iqtisodiy bilim asoslari» (E. Sariqov, B. Xaydarov, 2019) |
 | **11-sinf** | «Tadbirkorlik asoslari» (U. G‘afurov, Q. Sharipov, 2018) |
 
@@ -44,7 +45,7 @@ Nom `-admin` bilan tugagani uchun sayt o‘zi admin panel sifatida yig‘iladi v
 3. O‘qituvchi darslik saytiga **email + kod** bilan kiradi. Ro‘yxatda yo‘q email bilan kirilsa — «Siz kira olmaysiz» sahifasi.
 4. Kod yo‘qolsa — **«Yangi kod»**: eski kod va u bilan ochilgan sessiyalar darhol bekor bo‘ladi.
 5. **O‘chirish** — foydalanuvchi darhol saytdan chiqariladi.
-6. **Sinflarga ruxsat** — email qo‘shayotganda qaysi sinf(lar)ga ruxsat berilishini belgilang (9, 11 yoki ikkalasi). Keyin ro‘yxatdagi har bir foydalanuvchi qatoridagi sinf tugmalarini bosib ruxsatni o‘zgartirish mumkin (kamida bitta sinf qolishi shart). Eski foydalanuvchilarga avtomatik 11-sinf berilgan. O‘qituvchi faqat ruxsat berilgan sinflarni ko‘radi; ikkalasiga ruxsat bo‘lsa, kutubxona sahifasidagi sinf tugmalari bilan almashtiradi.
+6. **Sinflarga ruxsat** — email qo‘shayotganda qaysi sinf(lar)ga ruxsat berilishini belgilang (8, 9, 11 — bittasi yoki bir nechtasi). Keyin ro‘yxatdagi har bir foydalanuvchi qatoridagi sinf tugmalarini bosib ruxsatni o‘zgartirish mumkin (kamida bitta sinf qolishi shart). Eski foydalanuvchilarga avtomatik 11-sinf berilgan. O‘qituvchi faqat ruxsat berilgan sinflarni ko‘radi; bir nechtasiga ruxsat bo‘lsa, kutubxona sahifasidagi sinf tugmalari bilan almashtiradi.
 7. **Mavzular videolari** — har sinf uchun alohida yorliq; har mavzuga YouTube havolasi darslik saytidagi «Video dars» bo‘limida chiqadi.
 
 ### Xavfsizlik
@@ -68,6 +69,7 @@ css/  js/                  — dizayn va dvigatel (app.js, film.js, themes.js, i
 js/grades.js               — sinflar sozlamalari (bo‘limlar, ranglar, nomlar)
 js/topics/t01–t30.js       — 11-sinf, 30 mavzu (o‘zbekcha);  js/topics/ru/ — ruscha
 js/topics/extra-cards.js   — 11-sinf qo‘shimcha savol-javob kartalari
+js/g8/t01–t30.js           — 8-sinf, 30 mavzu (o‘zbekcha);  js/g8/ru/ — ruscha
 js/g9/t01–t30.js           — 9-sinf, 30 mavzu (o‘zbekcha);  js/g9/ru/ — ruscha
 netlify/core.mjs           — server mantig‘i (kirish, ruxsatlar, kodlar, videolar)
 netlify/functions/api.mjs  — Netlify Function (/api/*)

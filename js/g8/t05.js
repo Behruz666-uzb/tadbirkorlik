@@ -1,5 +1,5 @@
 TB.add({
-n:5,page:24,title:"Mehnat taqsimoti va ixtisoslashuv",
+n:5,page:24,title:"Mehnat taqsimoti va ixtisoslashuv",video:"https://youtu.be/7_8t8SYMLdw",
 sum:"Mahsuldorlik, texnologiya, mehnat unumdorligi va uning formulasi (U = Q : T), unga ta’sir etuvchi omillar, mehnat taqsimotining ijobiy va salbiy tomonlari, korxonalar ixtisoslashuvi va tarmoq, hududiy ixtisoslashuv, ixtisoslashuvga to‘sqinlik qiluvchi omillar.",
 learn:["Mahsuldorlik","Mehnat unumdorligi","Mehnat taqsimoti","Ijobiy va salbiy tomonlar","Ixtisoslashuv va tarmoq","Hududiy ixtisoslashuv"],
 hook:{q:"Muzqaymoq tayyorlashda o‘nlab odam ishtirok etadi va har biri faqat bitta vazifani bajaradi. Buning qanday afzalligi bor?",a:"Har kim o‘z ishini yaxshiroq va tezroq bajarishni o‘rganadi, bir joydan ikkinchisiga yurib vaqt yo‘qotmaydi, mashinalardan foydalanish imkoniyati tug‘iladi. Natijada <b>arzonroq bahoda ko‘proq mahsulot</b> ishlab chiqariladi — bu <b>mehnat taqsimoti</b>ning kuchi."},

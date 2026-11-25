@@ -1,5 +1,5 @@
 TB.add({
-n:18,page:92,title:"Talabga ta’sir etuvchi boshqa omillar",
+n:18,page:92,title:"Talabga ta’sir etuvchi boshqa omillar",video:"https://youtu.be/3DGICTkUQL4",
 sum:"Narxdan tashqari talab omillari: did, mavsum va moda, iste’molchilar soni, daromad — normal va past tabaqali tovarlar, kelajakdagi kutilmalar, o‘zaro bog‘liq tovarlar — o‘rinbosar va to‘ldiruvchi; talab chizig‘ining o‘ngga va chapga surilishi.",
 learn:["Somsa va gumma","Did, mavsum, moda","Iste’molchilar soni","Normal va past tabaqali tovar","Kutilmalar","O‘rinbosar va to‘ldiruvchi"],
 hook:{q:"Oshxonada somsa narxi uch oy davomida 1 700 so‘m bo‘lib qoldi, lekin sotuvlar 4 000 dan 6 000 taga oshdi. Nega?",a:"Shu davrda <b>gumma</b> 1 500 dan 1 700 so‘mga qimmatladi. Somsa va gumma — <b>bir-birining o‘rnini bosuvchi</b> tovarlar: biri qimmatlasa, ikkinchisiga talab oshadi. Somsa narxi o‘zgarmasa ham, unga talab o‘zgardi!"},

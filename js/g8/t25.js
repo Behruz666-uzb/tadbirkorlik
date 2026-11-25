@@ -1,5 +1,5 @@
 TB.add({
-n:25,page:120,title:"Monopoliya va monopollashgan bozorlar",
+n:25,page:120,title:"Monopoliya va monopollashgan bozorlar",video:"https://youtu.be/P6gyOAKovuo",
 sum:"Sof raqobat bozori, monopoliya tushunchasi, bozorlarning monopollashish darajasi bo‘yicha to‘rt turi — sof raqobat, monopolistik raqobat, oligopoliya, sof monopoliya; tabiiy monopoliyalar, O‘zbekistondagi raqobat siyosati va «Monopol faoliyatni cheklash to‘g‘risida»gi qonun.",
 learn:["Sof raqobat bozori","Monopoliya","Monopolistik raqobat","Oligopoliya","Tabiiy monopoliya","Monopoliyaga qarshi kurash"],
 hook:{q:"Siz shahardagi barcha avtobus parklarini birlashtirib, yagona «Asilbek» firmasini tuzdingiz. Endi narxni xohlagancha ko‘tarsangiz bo‘ladimi? Xizmat sifati nima bo‘ladi?",a:"Raqib yo‘q — yo‘lovchilarning tanlovi yo‘q, ular siz belgilagan narxni to‘lashga majbur. Monopolchini sifat va yangi texnologiya o‘ylantirmaydi: avtobuslar kechikadi, xizmat yomonlashadi. Shuning uchun <b>monopoliya</b> iste’molchi va butun iqtisodiyot taraqqiyotiga to‘siq — davlat uni qonun bilan cheklaydi."},

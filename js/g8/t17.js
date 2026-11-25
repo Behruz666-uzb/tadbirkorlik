@@ -1,5 +1,5 @@
 TB.add({
-n:17,page:88,title:"Talab va talab qonuni",
+n:17,page:88,title:"Talab va talab qonuni",video:"https://youtu.be/WLJxwxCetsY",
 sum:"Talab va talab miqdori, talab jadvali va talab chizig‘i (D), talab qonuni — narx va talab miqdorining teskari bog‘liqligi, daromad va almashtirish omillari, axborotning roli, Giffen hodisasi, Alisher Navoiyning iqtisodiy qarashlari.",
 learn:["Talab nima?","Talab miqdori","Talab chizig‘i","Talab qonuni","Daromad va almashtirish omili","Giffen hodisasi"],
 hook:{q:"Bozorda uch sotuvchi bir xil guruchni 13 000, 13 500 va 14 000 so‘mdan sotmoqda. Qaysi biri ko‘proq sotadi?",a:"Boshqa sharoitlar bir xil bo‘lsa — <b>arzonroq</b> sotayotgan (13 000 so‘m). Xaridorlar arzon tovarni ko‘proq oladi — bu <b>talab qonuni</b>: narx qancha past bo‘lsa, talab miqdori shuncha ko‘p."},

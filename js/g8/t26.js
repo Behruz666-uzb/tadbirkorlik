@@ -1,5 +1,5 @@
 TB.add({
-n:26,page:124,title:"Bozor iqtisodiyoti",
+n:26,page:124,title:"Bozor iqtisodiyoti",video:"https://youtu.be/MviVlBpbhwI",
 sum:"Bozor iqtisodiyoti tushunchasi va oltita asosiy xususiyati: erkin iqtisodiy faoliyat, xususiy mulkchilik, erkin narxlar, foyda olishga intilish, raqobat, monopoliyani rad etish; bozor va rejali iqtisodiyot musobaqasi, bozor iqtisodiyotining kamchiliklari, aralash iqtisodiyot, Jon Meynard Keyns.",
 learn:["Bozor iqtisodiyoti","6 ta asosiy xususiyat","Bozor va reja musobaqasi","Bozorning kamchiliklari","Aralash iqtisodiyot","J. M. Keyns"],
 hook:{q:"Siz mebel fabrikasi direktorisiz. Rejali, bozor yoki aralash iqtisodiyot — qaysi birida ishlash osonroq, qaysi birida ishingizga qiziqish kuchliroq bo‘ladi?",a:"Rejali tizimda hammasini davlat aytadi — oson, lekin qiziqish past: foyda sizniki emas. Bozor iqtisodiyotida erkinlik va foyda bor, ammo raqobat va xavf ham katta. Aralash iqtisodiyotda erkinlik va foyda saqlanadi, davlat esa qoidalar va ijtimoiy himoyani ta’minlaydi — ko‘pchilik mamlakatlar aynan shuni tanlagan."},

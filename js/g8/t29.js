@@ -1,5 +1,5 @@
 TB.add({
-n:29,page:140,title:"Soliqqa tortish asoslari",
+n:29,page:140,title:"Soliqqa tortish asoslari",video:"https://youtu.be/5AFmou-_Xrg",
 sum:"Soliqqa tortishning olti tamoyili, soliq subyektlari (to‘lovchilar va undiruvchilar), soliq obyekti, soliq stavkasi — qat’iy va nisbiy, proporsional, progressiv va regressiv stavkalar, jismoniy va yuridik shaxslar soliqlari, Amir Temurning soliq siyosati.",
 learn:["Olti tamoyil","Soliq subyektlari","Soliq obyekti","Soliq stavkasi","Proporsional, progressiv, regressiv","Amir Temur tuzuklari"],
 hook:{q:"Biri oyiga 3 mln, ikkinchisi 30 mln so‘m topadi. Ikkalasi ham bir xil 12% soliq to‘lasa, bu adolatlimi? Biri 10%, ikkinchisi 25% to‘lasa-chi?",a:"Birinchi holat — <b>proporsional</b> stavka: ulush bir xil, summa daromadga mos (360 ming va 3,6 mln). Ikkinchi holat — <b>progressiv</b> stavka: daromad ortgani sari foiz ham oshadi. Qaysi biri adolatliroq — bu iqtisodchilar o‘rtasida ham bahs mavzusi. O‘zbekistonda 2019-yildan jismoniy shaxslar daromadiga yagona <b>12%</b> stavka qo‘llanadi."},

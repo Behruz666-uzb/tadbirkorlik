@@ -1,5 +1,5 @@
 TB.add({
-n:9,page:46,title:"Bozorlar va narxlar",
+n:9,page:46,title:"Bozorlar va narxlar",video:"https://youtu.be/BAQz-C7nsWU",
 sum:"Narx — tovar qiymatining puldagi ifodasi, narxlarni taqqoslash va uch asosiy savolga javob, narxning axborot berish, rag‘batlantirish va taqsimlash vazifalari, foyda va zarar — iqtisodiyotning yashil va qizil chiroqlari, Adam Smitning narx haqidagi qarashlari.",
 learn:["Narx nima?","Narx va uch savol","Axborot berish vazifasi","Rag‘batlantirish vazifasi","Taqsimlash vazifasi","Adam Smit va «ko‘rinmas qo‘l»"],
 hook:{q:"Supermarketga kirdingiz, lekin birorta tovarda narx yozilmagan. Xarid qilish oson bo‘ladimi?",a:"Juda qiyin! Narxni bilmay turib nima va qancha olishni hal qilib bo‘lmaydi. Narx — xaridor, sotuvchi va ishlab chiqaruvchi uchun eng muhim <b>axborot</b>. Shuning uchun biz biror narsa olishdan oldin boshqa sotuvchilardagi narxni ham surishtiramiz."},

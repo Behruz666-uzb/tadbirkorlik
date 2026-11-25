@@ -1,5 +1,5 @@
 TB.add({
-n:7,page:38,title:"Ayirboshlash va pul",
+n:7,page:38,title:"Ayirboshlash va pul",video:"https://youtu.be/MXRoHtSzPGo",
 sum:"Natural xo‘jalik, ayirboshlash va tovar, metall pul, tanga va qog‘oz pulning paydo bo‘lishi, pul tizimi elementlari, pul aylanishi, pulning xususiyatlari va funksiyalari, pul turlari, pul massasi va Keyns modeli.",
 learn:["Natural xo‘jalik va ayirboshlash","Pul qanday paydo bo‘lgan?","Pul tizimi","Pul aylanishi","Pulning xususiyatlari","Pulning funksiyalari"],
 hook:{q:"Etikdo‘zga non, novvoyga un, tegirmonchiga bug‘doy, dehqonga o‘roq, temirchiga etik kerak. Pul bo‘lmasa, etikdo‘z nonni qanday oladi?",a:"Etikdo‘z avval etikni temirchiga o‘roqqa, o‘roqni dehqonga bug‘doyga, bug‘doyni tegirmonchiga unga, unni novvoyga nonga almashtirishi kerak — <b>to‘rt marta</b> ayirboshlash! Hamma qabul qiladigan umumiy vosita — <b>pul</b> bu zanjirni bitta oldi-sotdiga aylantiradi."},

@@ -1,5 +1,5 @@
 TB.add({
-n:8,page:42,title:"Bozor va uning turlari",
+n:8,page:42,title:"Bozor va uning turlari",video:"https://youtu.be/FxbyMKpr9LA",
 sum:"Bozor tushunchasi va vazifalari, oldi-sotdi jarayoni, bozor — narxning xolis hakami, iste’mol tovarlari, ishlab chiqarish vositalari, mehnat, moliya va intellektual tovarlar bozori, birjalar, qimmatli qog‘ozlar, hududiy qamrov bo‘yicha bozorlar, Ibn Sinoning iqtisodiy qarashlari.",
 learn:["Bozor nima?","Bozorning vazifalari","Iste’mol tovarlari bozori","Ishlab chiqarish vositalari va mehnat bozori","Moliya va intellektual bozor","Birjalar"],
 hook:{q:"Internet-do‘kon yoki telefon orqali savdo ham bozormi? Bozor uchun maxsus joy shartmi?",a:"Ha, bu ham bozor! Bozor uchun ajratilgan joy <b>shart emas</b>: oldi-sotdi telefon va internet orqali ham bo‘ladi. Bozor — bu joy emas, balki <b>xaridor va sotuvchilar o‘rtasidagi oldi-sotdi munosabatlari</b>."},

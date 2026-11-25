@@ -1,5 +1,5 @@
 TB.add({
-n:22,page:108,title:"Talab va taklif qonunlariga doir amaliy mashg‘ulot",
+n:22,page:108,title:"Talab va taklif qonunlariga doir amaliy mashg‘ulot",video:"https://youtu.be/_3shzjAQd6I",
 sum:"Muvozanat narxni uch usulda aniqlash: talab va taklif jadvali orqali, talab va taklif chiziqlarini qurib, talab va taklif funksiyalari yordamida; qat’iy narxda taqchillik va ortiqchani hisoblash, mustaqil mashqlar.",
 learn:["1-usul: jadval","2-usul: grafik","3-usul: funksiya","Qat’iy narxda taqchillik","Qat’iy narxda ortiqcha","Mustaqil mashqlar"],
 hook:{q:"Talab qD = 400 − p, taklif qS = 2p + 100. Bozor narxini grafik chizmasdan topish mumkinmi?",a:"Ha! Muvozanatda talab = taklif: 400 − p = 2p + 100 ⇒ 3p = 300 ⇒ <b>p = 100</b>; q = 400 − 100 = <b>300</b>. Tenglama grafikning o‘zi — faqat raqamlarda."},

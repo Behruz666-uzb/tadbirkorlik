@@ -1,5 +1,5 @@
 TB.add({
-n:20,page:100,title:"Taklifga ta’sir etuvchi boshqa omillar",
+n:20,page:100,title:"Taklifga ta’sir etuvchi boshqa omillar",video:"https://youtu.be/4zbDkC8RvRc",
 sum:"Narxdan tashqari taklif omillari: resurslar narxi, texnologiya, soliqlar va imtiyozlar, narx kutilmasi, sotuvchilar soni, foydaning boshqa manbalari, boshqa tovarlar narxi; taklif chizig‘ining surilishi, bozorning talab o‘zgarishiga taklif bilan javob berishi (soyabon va ko‘zoynak), Bobur va iqtisodiyot.",
 learn:["Choynak bozori","Resurslar narxi va texnologiya","Soliq va imtiyozlar","Kutilma va sotuvchilar soni","Taklif chizig‘ining surilishi","Soyabon va ko‘zoynak"],
 hook:{q:"Chinni xom ashyosi endi O‘zbekistonning o‘zida ishlab chiqariladigan bo‘ldi. Bozorda choynaklar ko‘payadimi yoki kamayadimi?",a:"<b>Ko‘payadi.</b> Xom ashyo yaqinda va arzon — ishlab chiqaruvchilar xarajati kamayadi, bir xil pulga ko‘proq choynak ishlab chiqaradi. Choynak narxi o‘zgarmasa ham, <b>taklif chizig‘i o‘ngga suriladi</b>."},

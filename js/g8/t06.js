@@ -1,5 +1,5 @@
 TB.add({
-n:6,page:28,title:"Iqtisodiy tizimlar",
+n:6,page:28,title:"Iqtisodiy tizimlar",video:"https://youtu.be/EkooBHqHHOs",
 sum:"Iqtisodiyotning uchta asosiy savoli — Nima? Qanday? Kim uchun?, iqtisodiy tizim tushunchasi, an’anaviy, markazlashgan rejali, bozor va aralash iqtisodiyot, ularning farqlari va misollari, iqtisodiy klaster.",
 learn:["Uchta asosiy savol","Iqtisodiy tizim nima?","An’anaviy iqtisodiyot","Markazlashgan rejali","Bozor iqtisodiyoti","Aralash iqtisodiyot va klaster"],
 hook:{q:"A mamlakatda pul yo‘q, har oila hamma narsani o‘zi yetishtiradi. B mamlakatda narx va ish haqini davlat belgilaydi. D mamlakatda narx bozorda shakllanadi, tadbirkorlik erkin. Qayerda mahsulot sifatliroq bo‘ladi?",a:"Odatda <b>D</b> mamlakatda: tadbirkorlar xaridor uchun raqobat qiladi, shuning uchun sifat va xilma-xillik oshadi. A — an’anaviy (natural) xo‘jalik, B — markazlashgan rejali, D — bozor iqtisodiyoti. Bugun ko‘pchilik mamlakatlarda ularning qorishmasi — <b>aralash iqtisodiyot</b>."},

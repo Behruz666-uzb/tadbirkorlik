@@ -1,5 +1,5 @@
 TB.add({
-n:4,page:20,title:"Ishlab chiqarish va uning omillari",
+n:4,page:20,title:"Ishlab chiqarish va uning omillari",video:"https://youtu.be/UpCKq74Byuw",
 sum:"Ishlab chiqarish, ishlab chiqaruvchi va iste’molchi, iqtisodiyotning birlamchi, ikkilamchi va uchlamchi sohalari, ishlab chiqarish turlari, moddiy va nomoddiy soha, to‘rt omil — tabiiy, kapital, ishchi kuchi va tadbirkorlik layoqati.",
 learn:["Ishlab chiqarish nima?","Ishlab chiqaruvchi va iste’molchi","Uch soha","Ishlab chiqarish turlari","Moddiy va nomoddiy","To‘rt omil"],
 hook:{q:"Sement zavodini ochish uchun nimalar kerak? Faqat pulmi?",a:"Kerak: <b>tabiiy resurs</b> (yer va tog‘ jinsi), <b>ishchi kuchi</b> (odamlar), <b>kapital</b> (uskuna, bino) va ularni birlashtiradigan <b>tadbirkor</b>. Tadbirkor imkoniyatni hammadan oldin ko‘radi, tashabbusni qo‘lga oladi va tavakkal qiladi."},

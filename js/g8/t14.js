@@ -1,5 +1,5 @@
 TB.add({
-n:14,page:72,title:"Jamg‘arish va sug‘urta",
+n:14,page:72,title:"Jamg‘arish va sug‘urta",video:"https://youtu.be/TRBuLHn_Pfg",
 sum:"Jamg‘arma va boylikni jamg‘arish shakllari, pul saqlaydigan muassasalar, investitsiya va dividend, omonat va uning foydasini hisoblash, daromadlilik va ishonchlilik, inflatsiya — omonatning eng katta dushmani, jamg‘armaning iqtisodiyot uchun ahamiyati, sug‘urta va uning turlari.",
 learn:["Jamg‘arma nima?","Qayerda jamg‘arish mumkin?","Investitsiya","Omonat foydasini hisoblash","Inflatsiya xavfi","Sug‘urta"],
 hook:{q:"Sizda 2 000 000 so‘m bor. Uni hamyonda saqlaysizmi, bankka 18% ga qo‘yasizmi yoki aksiya olasizmi?",a:"Hamyonda pul hech qanday foyda keltirmaydi va inflatsiyadan qadrsizlanadi. Omonat <b>ishonchli</b>, foiz beradi. Aksiya ko‘proq daromad berishi mumkin, lekin <b>xavfli</b> — korxona yaxshi ishlamasa, mablag‘ yo‘qolishi mumkin. Tanlovda ikki mezon muhim: <b>daromadlilik va ishonchlilik</b>."},

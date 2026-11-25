@@ -1,5 +1,5 @@
 TB.add({
-n:13,page:68,title:"Daromad va boylik",
+n:13,page:68,title:"Daromad va boylik",video:"https://youtu.be/aVVev8bQdRI",
 sum:"Inson kapitali va ma’naviy boylik, Yaponiya misoli, moddiy kapital va boylik, mulkdan keladigan daromadlar — renta, omonat foizi, dividend va tadbirkorlik foydasi, daromadlar tengsizligi va uni tartibga solish, nominal va real daromad, iste’mol narxlari indeksi.",
 learn:["Inson kapitali","Moddiy kapital","Boylik nima?","Mulkdan daromadlar","Daromadlar tengsizligi","Nominal va real daromad"],
 hook:{q:"Tadbirkor Soliyeva 2017-yilda 5 500 ta kostyumni 50 000 so‘mdan, 2018-yilda yangi dizayndagi 6 200 ta kostyumni 80 000 so‘mdan sotdi. Daromadi qancha oshdi va nima hisobiga?",a:"2017: 5 500 × 50 000 = <b>275 mln</b>; 2018: 6 200 × 80 000 = <b>496 mln</b> so‘m — <b>221 mln</b> ko‘p. Asosiy sabab — <b>yangi dizayn</b>, ya’ni bilim, ijod va mahorat, boshqacha aytganda <b>inson kapitali</b>."},

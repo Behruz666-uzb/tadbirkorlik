@@ -1,5 +1,5 @@
 TB.add({
-n:11,page:60,title:"Iste’molchilarning daromadlari va xarajat turlari",
+n:11,page:60,title:"Iste’molchilarning daromadlari va xarajat turlari",video:"https://youtu.be/HVWkZgRNOcs",
 sum:"Iste’molchi va uy xo‘jaligi, daromad va uning manbalari, ish haqining turlari — ishbay, vaqtbay va oylik maosh, pensiya, stipendiya, nafaqa va ijtimoiy transfertlar, majburiy va erkin xarajatlar, iste’mol savati, oila budjeti va Engel qonuni.",
 learn:["Iste’molchi kim?","Daromad va ish haqi","Ishbay va vaqtbay","Ijtimoiy transfertlar","Majburiy va erkin xarajatlar","Oila budjeti va Engel qonuni"],
 hook:{q:"Oila daromadi oshsa, oziq-ovqatga sarflanadigan pulning <b>ulushi</b> oshadimi yoki kamayadimi?",a:"Kamayadi! Nemis iqtisodchisi <b>Ernest Engel</b> aniqlaganidek, daromad oshgan sari oziq-ovqatga ketadigan xarajatlar ulushi kamayadi, madaniy va nomoddiy xarajatlar (sayohat, ta’lim, sport) ulushi esa ortadi."},

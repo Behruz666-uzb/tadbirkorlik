@@ -1,5 +1,5 @@
 TB.add({
-n:28,page:136,title:"Soliqlar va ularning turlari",
+n:28,page:136,title:"Soliqlar va ularning turlari",video:"https://youtu.be/_vpNETF8tEk",
 sum:"Soliq — davlat budjetiga undiriladigan majburiy to‘lov, soliqlarni joriy etish maqsadlari, soliq mablag‘lari qayerga sarflanadi, Soliq kodeksi, soliq turlari va majburiy to‘lovlar, bevosita va bilvosita, davlat va mahalliy soliqlar, soliq deklaratsiyasi.",
 learn:["Soliq nima?","Soliq maqsadlari","Soliq qayerga ketadi?","Soliq kodeksi","Bevosita va bilvosita","Davlat va mahalliy soliqlar"],
 hook:{q:"Siz hech qachon soliq to‘lamagansiz deb o‘ylaysizmi? Do‘kondan sharbat sotib olganingizda-chi?",a:"Sharbat narxi ichida <b>qo‘shilgan qiymat solig‘i (QQS)</b> bor: siz uni sotuvchiga to‘laysiz, sotuvchi esa davlatga o‘tkazadi. Bu — <b>bilvosita soliq</b>. Demak, har bir xarid bilan biz ham davlat budjetiga hissa qo‘shamiz — maktab, kasalxona, yo‘llar uchun."},

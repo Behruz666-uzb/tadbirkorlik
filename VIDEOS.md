@@ -3,6 +3,41 @@
 Har bir mavzuga avtomatik qo‘yilgan YouTube videolari (hammasi 5 daqiqagacha, saytga joylash mumkinligi tekshirilgan). Admin panelda havola kiritilsa, u standart videoni ikkala til uchun almashtiradi.
 
 
+## 8-sinf
+
+| № | Mavzu | O‘zbekcha | Ruscha |
+|---|---|---|---|
+| 1 | Iqtisodiyot bilan tanishuv | https://youtu.be/yvCvWRYf8ko | https://youtu.be/Wr6dmM9llpg |
+| 2 | Cheklanganlik muammosi | https://youtu.be/r0uuu8TSXEc | https://youtu.be/70Qvds1fKGY |
+| 3 | Tanlov va uning muqobil qiymati | https://youtu.be/ekRSwAmw2WQ | https://youtu.be/M_72SW2_4Uc |
+| 4 | Ishlab chiqarish va uning omillari | https://youtu.be/UpCKq74Byuw | https://youtu.be/1hYetqlwfuo |
+| 5 | Mehnat taqsimoti va ixtisoslashuv | https://youtu.be/7_8t8SYMLdw | https://youtu.be/f-rxp9mOKIs |
+| 6 | Iqtisodiy tizimlar | https://youtu.be/EkooBHqHHOs | https://youtu.be/WLgZFva-K4I |
+| 7 | Ayirboshlash va pul | https://youtu.be/MXRoHtSzPGo | https://youtu.be/CK-KAjGtfTU |
+| 8 | Bozor va uning turlari | https://youtu.be/FxbyMKpr9LA | https://youtu.be/d3tx1MPsdZU |
+| 9 | Bozorlar va narxlar | https://youtu.be/BAQz-C7nsWU | https://youtu.be/hQndnYPafMU |
+| 10 | Bozor qatnashchilari | https://youtu.be/PvC7dYe8lSo | https://youtu.be/x7VmkFlJj5A |
+| 11 | Iste’molchilarning daromadlari va xarajat turlari | https://youtu.be/HVWkZgRNOcs | https://youtu.be/IDxP3Ro3Qio |
+| 12 | Mulk va xususiylashtirish | https://youtu.be/VozYDmBWCzM | https://youtu.be/xwb9DNU_lJI |
+| 13 | Daromad va boylik | https://youtu.be/aVVev8bQdRI | https://youtu.be/V-unFfxw8U0 |
+| 14 | Jamg‘arish va sug‘urta | https://youtu.be/TRBuLHn_Pfg | https://youtu.be/99KjROAwpZg |
+| 15 | Iqtisodiy qaror qabul qilish | https://youtu.be/8PrUhOoA_x0 | https://youtu.be/-YlN2OZP9A8 |
+| 16 | Iste’molchilarning huquqlari va majburiyatlari | https://youtu.be/Kexummvyk2k | https://youtu.be/YQ0wAuquN7k |
+| 17 | Talab va talab qonuni | https://youtu.be/WLJxwxCetsY | https://youtu.be/PVXlSlkN5uE |
+| 18 | Talabga ta’sir etuvchi boshqa omillar | https://youtu.be/3DGICTkUQL4 | https://youtu.be/qfdVsJ6tOw0 |
+| 19 | Taklif va taklif qonuni | https://youtu.be/lj2OGSuiiOs | https://youtu.be/W4zWZcDowz4 |
+| 20 | Taklifga ta’sir etuvchi boshqa omillar | https://youtu.be/4zbDkC8RvRc | https://youtu.be/Nf6tmzdNf6M |
+| 21 | Tovarning bozor narxi | https://youtu.be/kvrUOmiRGUU | https://youtu.be/3776dEzTWgA |
+| 22 | Talab va taklif qonunlariga doir amaliy mashg‘ulot | https://youtu.be/_3shzjAQd6I | https://youtu.be/BekOziSiors |
+| 23 | Talab va taklif o‘zgarishining bozor narxiga ta’siri | https://youtu.be/b6GheJ_CDEQ | https://youtu.be/2Ic6ojCAnZA |
+| 24 | Raqobat | https://youtu.be/k5l6LzViHP4 | https://youtu.be/7iacAxOvUXY |
+| 25 | Monopoliya va monopollashgan bozorlar | https://youtu.be/P6gyOAKovuo | https://youtu.be/3klaNtd3yP8 |
+| 26 | Bozor iqtisodiyoti | https://youtu.be/MviVlBpbhwI | https://youtu.be/s3dYqk1Pew0 |
+| 27 | O‘zbekiston bozor iqtisodiyoti sari | https://youtu.be/Hl0jLUh2wuM | https://youtu.be/OqfaXRCgT9M |
+| 28 | Soliqlar va ularning turlari | https://youtu.be/_vpNETF8tEk | https://youtu.be/wctkDQKeQk4 |
+| 29 | Soliqqa tortish asoslari | https://youtu.be/5AFmou-_Xrg | https://youtu.be/bIQA8Az0zJE |
+| 30 | Soliq to‘lovchilarning huquqlari va majburiyatlari | https://youtu.be/wQuFh5cas64 | https://youtu.be/TAaNUpsN5XE |
+
 ## 9-sinf
 
 | № | Mavzu | O‘zbekcha | Ruscha |

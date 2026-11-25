@@ -1,5 +1,5 @@
 TB.add({
-n:24,page:116,title:"Raqobat",
+n:24,page:116,title:"Raqobat",video:"https://youtu.be/k5l6LzViHP4",
 sum:"Raqobat — bozor ishtirokchilari manfaatlarining to‘qnashuvi, raqobat muhiti shartlari, sog‘lom va g‘irrom raqobat, narx vositasida va narx vositasisiz raqobat, sotuvchilar va xaridorlar o‘rtasidagi raqobat, Microsoft ishi, «kim oshdi» savdosi.",
 learn:["Raqobat nima?","Raqobat shartlari","Sog‘lom va g‘irrom raqobat","Narx va narxsiz raqobat","Sotuvchilar raqobati","Xaridorlar raqobati va auksion"],
 hook:{q:"Siz «Kafolat-servis» ustaxonasi egasisiz. Qo‘shni «Avtoservis» narxni 10% tushirdi, «Avto-Usta» televizorda reklama berdi, GM esa 6 oylik kafolatli yangi shoxobcha ochdi. Nima qilasiz?",a:"Variantlar: narxni tushirish (<b>narx vositasida raqobat</b>), sifatni oshirish, kafolat va qulay xizmat taklif qilish, reklama berish (<b>narx vositasisiz raqobat</b>). Raqobat sizni yaxshiroq ishlashga majbur qiladi — undan eng ko‘p <b>mijozlar</b> yutadi."},

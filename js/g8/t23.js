@@ -1,5 +1,5 @@
 TB.add({
-n:23,page:110,title:"Talab va taklif o‘zgarishining bozor narxiga ta’siri",
+n:23,page:110,title:"Talab va taklif o‘zgarishining bozor narxiga ta’siri",video:"https://youtu.be/b6GheJ_CDEQ",
 sum:"Narxdan tashqari omillar ta’sirida talab yoki taklif o‘zgarganda bozor narxi va muvozanat miqdorining o‘zgarishi: daromad oshishi (Spark), mavsum (palto), soliq oshishi, yangi texnologiya (Xiva gilamlari), mashqlar jadvali.",
 learn:["Talab oshsa","Talab kamaysa","Taklif kamaysa","Taklif oshsa","Ikki omil birga","Amaliy vaziyatlar"],
 hook:{q:"Aholi daromadi oshdi. «Spark» avtomobilining narxi va sotilish hajmi qanday o‘zgaradi?",a:"Daromad oshib, avtomobilga <b>talab oshadi</b> — talab chizig‘i o‘ngga suriladi. Yangi kesishish nuqtasida <b>narx ham, sotilgan miqdor ham oshadi</b>: P↑ Q↑."},

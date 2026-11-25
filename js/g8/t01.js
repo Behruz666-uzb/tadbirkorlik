@@ -1,5 +1,5 @@
 TB.add({
-n:1,page:8,title:"Iqtisodiyot bilan tanishuv",
+n:1,page:8,title:"Iqtisodiyot bilan tanishuv",video:"https://youtu.be/yvCvWRYf8ko",
 sum:"Iqtisodiyot nima, uning uch tarkibiy qismi, iqtisodiy jarayonning to‘rt bosqichi, «iqtisodiyot» so‘zining kelib chiqishi va Ksenofont, mikroiqtisodiyot va makroiqtisodiyot, iqtisodiy bilim nega har bir kishiga kerak.",
 learn:["Iqtisodiyot nima?","Uch tarkibiy qism","Iqtisodiy jarayon bosqichlari","«Ekonomika» so‘zining tarixi","Mikro- va makroiqtisodiyot","Iqtisodiy ta’lim nega kerak?"],
 hook:{q:"Tabiatda tayyor non, kiyim, uy-joy bormi? Unda ular qayerdan paydo bo‘ladi?",a:"Tabiatda tayyor holda non, kiyim-kechak, uy-joy <b>yo‘q</b>. Inson ehtiyoji uchun kerakli narsalarni o‘zi yaratishga majbur. Shu maqsadda u tabiat qo‘ynida <b>iqtisodiyot</b> deb atalmish ulkan xo‘jalikni barpo etgan."},

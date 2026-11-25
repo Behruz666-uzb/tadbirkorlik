@@ -1,5 +1,5 @@
 TB.add({
-n:3,page:16,title:"Tanlov va uning muqobil qiymati",
+n:3,page:16,title:"Tanlov va uning muqobil qiymati",video:"https://youtu.be/ekRSwAmw2WQ",
 sum:"Cheklanganlik tanlovni taqozo etadi: tanlov, muqobil imkoniyatlar, tanlovning muqobil qiymati, firma, fermer, hokimiyat va davlat oldidagi tanlovlar, murosali (aralash) tanlov va ishlab chiqarish imkoniyatlari sohasi.",
 learn:["Shohjahonning tanlovi","Tanlov nima?","Muqobil imkoniyatlar","Muqobil qiymat","Davlat va firma tanlovi","Murosali tanlov"],
 hook:{q:"Shohjahonga tug‘ilgan kunida 100 000 so‘m berildi. U krossovka, futbol to‘pi yoki futbol formasidan faqat bittasini ola oladi. Krossovkani tanlasa, u aslida nimani «yo‘qotadi»?",a:"Shohjahon uchun qoniqish tartibi: 1) krossovka, 2) to‘p, 3) forma. U krossovkani oldi — bu tanlov unga <b>futbol to‘pi</b> ola olmasligi bilan «qimmatga tushdi». Voz kechilganlar ichidagi eng qimmatlisi — <b>tanlovning muqobil qiymati</b>."},

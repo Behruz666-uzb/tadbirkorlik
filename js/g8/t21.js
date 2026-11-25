@@ -1,5 +1,5 @@
 TB.add({
-n:21,page:104,title:"Tovarning bozor narxi",
+n:21,page:104,title:"Tovarning bozor narxi",video:"https://youtu.be/kvrUOmiRGUU",
 sum:"Bozor narxi talab va taklif asosida shakllanishi, «Xislat» mahallasidagi sut bozorchasi, Marshall qaychisi, muvozanat narx, muvozanat miqdor va muvozanat nuqta, qat’iy narxlar, taqchil va to‘yingan bozor, Alfred Marshall.",
 learn:["Sut bozorchasi","Marshall qaychisi","Muvozanat narx","Muvozanat miqdor","Taqchil bozor","To‘yingan bozor"],
 hook:{q:"Davlat sut narxini qat’iy 4 000 so‘m qilib belgilasa, hammaga sut yetadimi? 4 400 so‘m qilib belgilasa-chi?",a:"4 000 so‘mda xaridorlar <b>36 litr</b> so‘raydi, sotuvchilar faqat <b>20 litr</b> olib keladi — 16 litr yetmaydi (<b>taqchillik</b>). 4 400 so‘mda esa 42 litr olib kelinadi, 18 litr sotiladi — 24 litr ortib qoladi (<b>to‘yinish</b>). Faqat <b>4 200 so‘mda</b> talab = taklif = 31 litr — bu bozor narxi."},

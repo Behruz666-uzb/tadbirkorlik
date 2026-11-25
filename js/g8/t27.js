@@ -1,5 +1,5 @@
 TB.add({
-n:27,page:128,title:"O‘zbekiston bozor iqtisodiyoti sari",
+n:27,page:128,title:"O‘zbekiston bozor iqtisodiyoti sari",video:"https://youtu.be/Hl0jLUh2wuM",
 sum:"1991-yildan keyin bozor iqtisodiyotiga o‘tish va uning besh tamoyili, mulkchilik, qishloq xo‘jaligi, moliya-kredit, tashqi aloqalar va ijtimoiy sohadagi islohotlar; 2017-yildan boshlangan tub islohotlar, 2017–2021-yillarga mo‘ljallangan Harakatlar strategiyasining 5 ustuvor yo‘nalishi va iqtisodiyotdagi asosiy vazifalar.",
 learn:["Mustaqillik va tanlov","Besh tamoyil","Dastlabki islohotlar","Tub islohotlar (2017–)","Harakatlar strategiyasi","Iqtisodiyot — poydevor"],
 hook:{q:"Uy qurishda avval poydevor quyiladi. Mamlakat rivojida «poydevor» vazifasini qaysi soha bajaradi va nega?",a:"<b>Iqtisodiyot.</b> Ta’lim, sog‘liqni saqlash, xavfsizlik, ijtimoiy yordam — hammasi katta mablag‘ talab qiladi. Shuning uchun Harakatlar strategiyasining III yo‘nalishi — <b>iqtisodiyotni rivojlantirish va liberallashtirish</b> — qolgan to‘rt yo‘nalish uchun negiz hisoblanadi."},

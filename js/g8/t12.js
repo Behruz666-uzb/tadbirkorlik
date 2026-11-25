@@ -1,5 +1,5 @@
 TB.add({
-n:12,page:64,title:"Mulk va xususiylashtirish",
+n:12,page:64,title:"Mulk va xususiylashtirish",video:"https://youtu.be/VozYDmBWCzM",
 sum:"Mulk va mulkdor, egalik, foydalanish va tasarruf etish huquqlari, mulk obyektlari va subyektlari, shaxsiy, jamoa, davlat va xususiy mulk, ashyolar, intellektual mulk, xususiylashtirish va milliylashtirish, O‘zbekistonda xususiylashtirish tamoyillari.",
 learn:["Mulk va mulkdor","Mulkning uch belgisi","Obyekt va subyekt","Mulk turlari","Intellektual mulk","Xususiylashtirish"],
 hook:{q:"Maktab rahbari maktab binosini to‘y uchun ijaraga bera oladimi?",a:"O‘zi hal qila olmaydi! Maktab mulki — <b>davlat mulki</b>: undan foydalanish huquqi maktab jamoasida, egalik huquqi tuman hokimligida, tasarruf etish huquqi esa Davlat aktivlarini boshqarish qo‘mitasida. Binodan ta’limdan boshqa maqsadda foydalanish uchun egasi — <b>hokimiyatdan ruxsat</b> olish kerak."},

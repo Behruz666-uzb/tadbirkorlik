@@ -1,5 +1,5 @@
 TB.add({
-n:10,page:50,title:"Bozor qatnashchilari",
+n:10,page:50,title:"Bozor qatnashchilari",video:"https://youtu.be/PvC7dYe8lSo",
 sum:"Uch bozor qatnashchisi — ishlab chiqaruvchilar, iste’molchilar (uy xo‘jaliklari) va davlat, ularning xaridor va sotuvchi sifatidagi roli, «sotuvchi — tovar — pul — xaridor» formulasi, resurslar va pulning aylanma harakati, bozor infratuzilmalari, plastik karta va mobil to‘lovlar.",
 learn:["Ishlab chiqaruvchilar","Iste’molchilar — uy xo‘jaliklari","Davlat","Bozor «hujayrasi»","Aylanma harakat","Infratuzilma va muqobil to‘lovlar"],
 hook:{q:"Davlat tibbiyoti «bepul». Haqiqatan ham bu xizmat uchun hech kim pul to‘lamaydimi?",a:"Bir qarashda bepul ko‘rinadi, lekin aslida bu xizmat uchun har birimiz daromadimizdan chegirib qolinadigan <b>soliq</b> ko‘rinishida haq to‘laymiz. Davlat ham bozor qatnashchisi: u soliq oladi va buning evaziga xizmat ko‘rsatadi."},
