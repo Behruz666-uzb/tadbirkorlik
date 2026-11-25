@@ -1,0 +1,50 @@
+TB.add({
+n:7,page:38,title:"Ayirboshlash va pul",
+sum:"Natural xo‘jalik, ayirboshlash va tovar, metall pul, tanga va qog‘oz pulning paydo bo‘lishi, pul tizimi elementlari, pul aylanishi, pulning xususiyatlari va funksiyalari, pul turlari, pul massasi va Keyns modeli.",
+learn:["Natural xo‘jalik va ayirboshlash","Pul qanday paydo bo‘lgan?","Pul tizimi","Pul aylanishi","Pulning xususiyatlari","Pulning funksiyalari"],
+hook:{q:"Etikdo‘zga non, novvoyga un, tegirmonchiga bug‘doy, dehqonga o‘roq, temirchiga etik kerak. Pul bo‘lmasa, etikdo‘z nonni qanday oladi?",a:"Etikdo‘z avval etikni temirchiga o‘roqqa, o‘roqni dehqonga bug‘doyga, bug‘doyni tegirmonchiga unga, unni novvoyga nonga almashtirishi kerak — <b>besh marta</b> ayirboshlash! Hamma qabul qiladigan umumiy vosita — <b>pul</b> bu zanjirni bitta oldi-sotdiga aylantiradi."},
+slides:[
+ {k:"def",tag:"BOSHLANISHI",h:"Natural xo‘jalikdan tovargacha",items:[["Natural xo‘jalik","har bir qabila kerakli mahsulotni o‘zi ishlab chiqarib, o‘zi iste’mol qiladigan dastlabki xo‘jalik shakli."],["Ayirboshlash","bir mahsulotni sotish, sotib olish yoki boshqasiga almashtirish."],["Tovar","ayirboshlash maqsadida ishlab chiqarilgan mahsulot."]]},
+ {k:"steps",tag:"TARIX",h:"Pul qanday rivojlangan?",steps:[["Metall pul","Odamlar metallni qayta ishlashni o‘rgangach"],["Oltin va kumush bo‘laklari","Har safar tarozida tortish kerak edi"],["Tangalar","Ma’lum og‘irlik, shakl va muhr — lekin vaqt o‘tib yeyilib yengillashgan"],["Qog‘oz pul","Birinchi qog‘oz pullar <b>812-yilda Xitoyda</b> chiqarilgan"]]},
+ {k:"def",tag:"TA’RIF",h:"Pul",items:[["Pul","mahsulot va xizmatlar uchun to‘lovni amalga oshirishga mo‘ljallangan maxsus ayirboshlash vositasi."],["Pul tizimi","pul muomalasining davlat tomonidan tashkil qilinish shakli."]]},
+ {k:"table",tag:"PUL TIZIMI",h:"Pul tizimining elementlari",head:["Element","Mazmuni"],rows:[["Pul birligi","Mamlakatda qabul qilingan pul nomi: so‘m, dollar, yena (1 dollar = 100 sent)"],["Narxlar ko‘lami","Tovar qiymatlarini o‘lchash usuli"],["Pul turlari","Muomaladagi qog‘oz pul va tangalar nominallari; naqd va naqdsiz pul"],["Pul emissiyasi","Pul belgilarini muomalaga chiqarish — <b>Markaziy bank</b> amalga oshiradi"]]},
+ {k:"cards",tag:"PUL AYLANISHI",h:"Pul aylanishining tarkibiy qismlari",n:3,cards:[["doc","To‘lov aylanishi","Ish haqi, soliqlar, qimmatli qog‘ozlar va majburiy to‘lovlar"],["bank","Naqdsiz aylanish","Bank hisob raqamidagi yozuvlar orqali"],["coins","Naqd aylanish","Naqd pul to‘lov vositasi sifatida"]]},
+ {k:"list",tag:"XUSUSIYATLAR",h:"Pul qanday bo‘lishi kerak?",items:["<b>Ixcham</b> — olib yurishga qulay","<b>Pishiq</b> — vaqt o‘tib sifat va qiymatini yo‘qotmaydi","<b>Kamyob</b> — unga erishish cheklangan","Har xil qiymatdagi <b>nominallari</b> bor","Oson taniladi, <b>soxtalashtirish qiyin</b>"]},
+ {k:"cards",tag:"FUNKSIYALAR",h:"Pul nima vazifalarni bajaradi?",n:3,cards:[["store","Muomala vositasi","Tovar pulga, pul tovarga almashinadi"],["scales","Qiymat o‘lchovi","Tovar qiymati pulda — bu narx"],["shield","Jamg‘arish vositasi","Pulni saqlab, keyin ishlatish mumkin"]],p:"Xalqaro savdoda pul — <b>dunyo puli</b>, to‘lovda esa — <b>to‘lov vositasi</b> vazifasini ham bajaradi."},
+ {k:"def",tag:"ZAMONAVIY PUL",h:"Pul turlari va pul massasi",list:["Naqd: tanga va qog‘oz pul","Kredit pullar: veksel, banknota, chek","Naqdsiz pul, plastik kartalardagi pul","Elektron pullar"],items:[["Pul massasi","jismoniy, yuridik shaxslar va davlat ixtiyoridagi naqd va naqdsiz pullarning umumiy hajmi."]]},
+ {k:"fact",kind:"bilasizmi",h:"Djon Meynard Keyns",text:"Ingliz iqtisodchisi <b>Keyns</b> bozor iqtisodiyotiga davlatning keng aralashuvi zarurligini asoslagan. Uning modeliga ko‘ra, <b>qat’iy soliq siyosati</b> va <b>yengil pul siyosati</b> uyg‘unlikda barqaror iqtisodiy o‘sishni ta’minlaydi."},
+ {k:"review",qa:[["Natural xo‘jalik nima?","Har kim mahsulotni o‘zi ishlab chiqarib, o‘zi iste’mol qiladigan xo‘jalik."],["Nega tangalardan qog‘oz pulga o‘tildi?","Tangalar yeyilib yengillashar, qiymati kamayardi."],["Birinchi qog‘oz pul qachon va qayerda?","812-yilda Xitoyda."],["Pulning 3 funksiyasi?","Muomala, qiymat o‘lchovi, jamg‘arish vositasi."],["Har qanday narsa pul bo‘la oladimi?","Yo‘q: ixcham, pishiq, kamyob, oson taniladigan bo‘lishi kerak."],["Pul emissiyasini kim amalga oshiradi?","Markaziy bank."]]}
+],
+terms:[["Natural xo‘jalik","Mahsulot o‘z ehtiyoji uchun ishlab chiqariladigan dastlabki xo‘jalik."],["Ayirboshlash","Mahsulotni sotish, sotib olish yoki boshqasiga almashtirish."],["Tovar","Ayirboshlash uchun ishlab chiqarilgan mahsulot."],["Pul","Tovar va xizmatlar uchun to‘lovga mo‘ljallangan maxsus ayirboshlash vositasi."],["Pul tizimi","Pul muomalasining davlat tomonidan tashkil qilinish shakli."],["Pul birligi","Mamlakatda qabul qilingan pul nomi (so‘m, dollar)."],["Pul emissiyasi","Pul belgilarini muomalaga chiqarish."],["Naqdsiz pul","Bank hisob raqamidagi yozuv ko‘rinishidagi pul."],["Pul massasi","Muomaladagi naqd va naqdsiz pullarning umumiy hajmi."]],
+sorts:[
+ {t:"Pulning qaysi funksiyasi?",L:"Muomala / o‘lchov",R:"Jamg‘arish / to‘lov",items:[["Non 4 000 so‘m turadi","L","Qiymat o‘lchovi."],["Velosiped uchun pul yig‘ish","R","Jamg‘arish."],["Bozorda olma sotib olish","L","Muomala vositasi."],["Soliq to‘lash","R","To‘lov vositasi."],["Ikki telefon narxini solishtirish","L","Qiymat o‘lchovi."],["Bankka omonat qo‘yish","R","Jamg‘arish."]]},
+ {t:"Naqd yoki naqdsiz?",L:"Naqd pul",R:"Naqdsiz pul",items:[["Hamyondagi 10 000 so‘mlik","L","Qog‘oz pul."],["Plastik kartadagi mablag‘","R","Hisob raqamidagi yozuv."],["Tanga","L","Naqd."],["Telefon orqali to‘lov","R","Elektron pul."],["Do‘konga qog‘oz pul berish","L","Naqd aylanish."],["Ish haqining kartaga tushishi","R","Naqdsiz aylanish."]]}
+],
+quiz:[
+ ["Iqtisodiyotning eng dastlabki shakli?",["Natural xo‘jalik","Bozor iqtisodiyoti","Bank tizimi","Birja"]],
+ ["Ayirboshlash uchun ishlab chiqarilgan mahsulot?",["Tovar","Resurs","Soliq","Ehtiyoj"]],
+ ["Birinchi qog‘oz pullar qayerda chiqarilgan?",["Xitoyda","Misrda","Rimda","Angliyada"]],
+ ["Birinchi qog‘oz pullar qachon?",["812-yil","1812-yil","1991-yil","300-yil"]],
+ ["Nega tangalar qiymati kamaygan?",["Yeyilib yengillashgan","Rangi o‘zgargan","Kattalashgan","Ko‘paygan"]],
+ ["Pul emissiyasini kim amalga oshiradi?",["Markaziy bank","Do‘kon","Fermer","Maktab"]],
+ ["AQSh pul birligi?",["Dollar","So‘m","Yena","Yevro"]],
+ ["Tovar qiymatining pulda ifodalanishi?",["Narx","Foyda","Soliq","Ish haqi"]],
+ ["Pulning xususiyati emas?",["Tez buziladi","Ixcham","Pishiq","Kamyob"]],
+ ["Pulni saqlab qo‘yish — qaysi funksiya?",["Jamg‘arish","Muomala","O‘lchov","Emissiya"]],
+ ["Muomaladagi barcha pullar hajmi?",["Pul massasi","Pul birligi","Narxlar ko‘lami","Soliq"]],
+ ["Keyns nimani asoslagan?",["Davlatning iqtisodiyotga aralashuvi zarurligini","Pulni bekor qilishni","Natural xo‘jalikni","Bozorsiz iqtisodiyotni"]]
+],
+cards:[["Natural xo‘jalik?","Mahsulotni o‘zi ishlab chiqarib, o‘zi iste’mol qiladigan dastlabki xo‘jalik."],["Ayirboshlash?","Mahsulotni sotish, sotib olish yoki almashtirish."],["Tovar?","Ayirboshlash uchun ishlab chiqarilgan mahsulot."],["Pulning rivojlanish bosqichlari?","Metall → oltin-kumush bo‘laklari → tangalar → qog‘oz pul."],["Birinchi qog‘oz pul?","812-yil, Xitoy."],["Pul tizimi elementlari?","Pul birligi, narxlar ko‘lami, pul turlari, emissiya."],["Pul aylanishi qismlari?","To‘lov, naqdsiz va naqd aylanish."],["Pulning 5 xususiyati?","Ixcham, pishiq, kamyob, turli nominal, soxtalash qiyin."],["Pulning 3 asosiy funksiyasi?","Muomala, qiymat o‘lchovi, jamg‘arish."],["Zamonaviy pul turlari?","Naqd, kredit, naqdsiz, plastik karta, elektron pul."],["Pul massasi?","Muomaladagi naqd va naqdsiz pullarning umumiy hajmi."],["Keyns modeli?","Qat’iy soliq va yengil pul siyosati barqaror o‘sishni ta’minlaydi."]],
+tasks:[
+ {t:"Etikdo‘zning zanjiri",q:"Pul bo‘lmaganda etikdo‘z non olish uchun qanday ayirboshlashlar qilishi kerak? Nechta qadam? Agar bug‘doy umumiy vosita bo‘lsa-chi?",steps:[["1","Etik → temirchiga → o‘roq"],["2","O‘roq → dehqonga → bug‘doy"],["3","Bug‘doy → tegirmonchiga → un"],["4","Un → novvoyga → non"],["Bug‘doy pul bo‘lsa","Etikni bug‘doyga sotadi, bug‘doyga non oladi — 2 qadam. Lekin bug‘doy og‘ir, buziladi, olib yurish noqulay"]],answer:"Pul ayirboshlashni <b>bitta oldi-sotdiga</b> aylantiradi. Shu sababli pul — insoniyatning eng katta kashfiyotlaridan biri."},
+ {t:"Pul funksiyalari hayotda",q:"Bir kunlik hayotingizdan pulning har bir funksiyasiga <b>bittadan</b> misol keltiring.",steps:[["Muomala vositasi","Oshxonada somsa sotib olish"],["Qiymat o‘lchovi","Ikki do‘kondagi daftar narxini solishtirish"],["Jamg‘arish","Har kuni 2 000 so‘mdan cho‘chqa-hamyonga solish"],["To‘lov vositasi","Ota-ona kommunal xizmat haqini to‘lashi"]],answer:"Pul bir kunda bir necha vazifani bajaradi — uni <b>oqilona</b> ishlatish iqtisodiy savodxonlik belgisi."}
+],
+film:[
+ {t:"Pulsiz zamon",bg:"field",s:["Etikdo‘zga non kerak, lekin novvoyga etik emas, un kerak.","Ayirboshlash juda qiyin!"],a:[["p",350,"worker",{face:"think",tag:"Etikdo‘z"}],["tandir",750,{s:.6,d:.4}],["p",1150,"farmer",{face:"think",tag:"Novvoy",d:.8}],["bubble",1400,300,"Un kerak!",{d:1.2}]]},
+ {t:"Uzun zanjir",bg:"day",s:["Etik → o‘roq → bug‘doy → un → non.","Bitta non uchun to‘rt marta almashtirish!"],a:[["minis",5,["Etik","O‘roq","Bug‘doy","Un","Non"]]]},
+ {t:"Tangalar",bg:"gold",s:["Oltin va kumush tangalar muomalaga chiqdi.","Lekin ular yeyilib, yengillashib borardi."],a:[["coins",500,420,6],["scales",1050,420,{s:.9,d:.8}]]},
+ {t:"Qog‘oz pul",bg:"night",s:["812-yilda Xitoyda birinchi qog‘oz pullar chiqarildi.","Ular yengil va qulay edi."],a:[["doc",500,450,"812 · XITOY",{}],["stars",10,{color:"#ffd36a"}],["check",1100,420,{s:.7,d:1}]]},
+ {t:"Markaziy bank",bg:"office",s:["Bugun pulni Markaziy bank chiqaradi.","Bu — pul emissiyasi."],a:[["bank",500,"MARKAZIY BANK",{s:.85}],["coins",1050,420,4,{d:.6}]]},
+ {t:"Uch funksiya",bg:"city",s:["Pul — muomala, o‘lchov va jamg‘arish vositasi.","Bugun u kartada va telefonda ham!"],a:[["minis",3,["Muomala","O‘lchov","Jamg‘arish"]],["laptop",1300,560,{s:.6,d:1.2}]]}
+]
+});

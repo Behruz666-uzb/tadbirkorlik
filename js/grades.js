@@ -18,6 +18,20 @@ var GRADES={
    {n:"IV",c:"#a855f7",from:22,to:27,uz:"Tadbirkorlik muvaffaqiyati asoslari",ru:"Основы успеха в предпринимательстве",ic:"people",m:"flag",mu:"Maqsad sari qat’iyat bilan!",mr:"К цели — с упорством!"},
    {n:"V",c:"#ef4444",from:28,to:30,uz:"Tadbirkorlikda risk va raqobatdoshlik",ru:"Риск и конкурентоспособность в предпринимательстве",ic:"shield",m:"shield",mu:"Xavflarni angla, imkoniyatlarni qo‘lga kirit!",mr:"Осознай риски — используй возможности!"}
   ]},
+ "8":{id:"8",dir:"js/g8",extra:false,themeShift:7,
+  label:{uz:"8-sinf",ru:"8 класс"},
+  book:{uz:"Iqtisodiy bilim asoslari",ru:"Основы экономических знаний"},
+  authors:{uz:"E. Sariqov, B. Xaydarov",ru:"Э. Сарыков, Б. Хайдаров"},
+  sub:{uz:"Iqtisodiyot — har kungi hayotimizda!",ru:"Экономика — в нашей повседневной жизни!"},
+  tag:{uz:"Har bir tanlov —<br>o‘z narxiga ega!",ru:"У каждого выбора —<br>своя цена!"},
+  ch:[
+   {n:"I",c:"#3b82f6",from:1,to:6,uz:"Iqtisodiyotga kirish",ru:"Введение в экономику",ic:"bulb",m:"target",mu:"Resurs cheklangan — tanlov esa bizning qo‘limizda.",mr:"Ресурсы ограничены — а выбор в наших руках."},
+   {n:"II",c:"#10b981",from:7,to:10,uz:"Bozor",ru:"Рынок",ic:"store",m:"coins",mu:"Bozor — xaridor va sotuvchining uchrashuv joyi.",mr:"Рынок — место встречи покупателя и продавца."},
+   {n:"III",c:"#f59e0b",from:11,to:16,uz:"Oila-uy xo‘jaliklari iqtisodiyoti",ru:"Экономика домашних хозяйств",ic:"home",m:"shield",mu:"Tejamkor oila — farovon oila.",mr:"Бережливая семья — благополучная семья."},
+   {n:"IV",c:"#a855f7",from:17,to:23,uz:"Talab va taklif",ru:"Спрос и предложение",ic:"scales",m:"grow",mu:"Narxni talab va taklif belgilaydi.",mr:"Цену определяют спрос и предложение."},
+   {n:"V",c:"#ef4444",from:24,to:27,uz:"Raqobat va bozor iqtisodiyoti",ru:"Конкуренция и рыночная экономика",ic:"trophy",m:"flag",mu:"Raqobat — sifat va taraqqiyot dvigateli.",mr:"Конкуренция — двигатель качества и прогресса."},
+   {n:"VI",c:"#14b8a6",from:28,to:30,uz:"Soliq tizimi",ru:"Налоговая система",ic:"tax",m:"bulb",mu:"Soliq — yurt farovonligiga qo‘shgan hissamiz.",mr:"Налог — наш вклад в благополучие страны."}
+  ]},
  "9":{id:"9",dir:"js/g9",extra:false,themeShift:13,
   label:{uz:"9-sinf",ru:"9 класс"},
   book:{uz:"Iqtisodiy bilim asoslari",ru:"Основы экономических знаний"},
@@ -33,7 +47,7 @@ var GRADES={
    {n:"VI",c:"#14b8a6",from:26,to:30,uz:"Jahon iqtisodiyoti",ru:"Мировая экономика",ic:"globe",m:"flag",mu:"Jahon bozori — yangi imkoniyatlar maydoni.",mr:"Мировой рынок — пространство новых возможностей."}
   ]}
 };
-var ORDER=["9","11"];
+var ORDER=["8","9","11"];
 function q(){var m=/[?&]g=(\d+)/.exec(location.search);return m&&GRADES[m[1]]?m[1]:null}
 function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,v)}catch(e){return null}}
 var cur=q()||ls("tb-grade");if(!GRADES[cur])cur="11";

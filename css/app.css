@@ -397,4 +397,4 @@
 .grade-sw button:hover{background:rgba(255,255,255,.06)}
 .grade-sw button.on{background:var(--gold);color:var(--gold-ink)}
 .grade-sw button.on small{color:var(--gold-ink);opacity:.75}
-.gate-book{font-size:2.2rem!important;letter-spacing:-.02em}
+.gate-book{font-size:1.75rem!important;letter-spacing:-.02em}

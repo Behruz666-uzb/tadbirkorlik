@@ -2,7 +2,7 @@
    Tadbirkorlik asoslari — server (Netlify Functions + Netlify Blobs)
    Ma’lumotlar (Blobs, "tb" ombori):
      users   → { "email": { note, grades:["9","11"], salt, hash, v, addedAt, lastLogin } }
-     videos  → { t01: "https://youtu.be/…" (11-sinf), "g9-t01": … (9-sinf) }
+     videos  → { t01: "https://youtu.be/…" (11-sinf), "g9-t01": … (9-sinf), "g8-t01": … (8-sinf) }
      admin   → { salt, hash, v }            (parol o‘zgartirilgach)
      secret  → tasodifiy kalit (sessiya tokenlarini imzolash uchun)
      fail:*  → noto‘g‘ri urinishlar hisobi
@@ -16,13 +16,13 @@ const ADMIN_DEFAULT = { salt: "188ab5ea07f68cf16dba8c1bc0a43137", hash: "697fb15
 const CODE_ABC = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
 const USER_TTL = 30 * 24 * 3600, ADMIN_TTL = 12 * 3600;
 const MAX_FAIL = 8, LOCK_MS = 15 * 60 * 1000;
-const VIDEO_KEY = /^(g9-)?t(0[1-9]|[12]\d|30)$/;
-export const GRADES = ["9", "11"];
+const VIDEO_KEY = /^(g[89]-)?t(0[1-9]|[12]\d|30)$/;
+export const GRADES = ["8", "9", "11"];
 const DEFAULT_GRADES = ["11"]; // sinflar joriy qilinishidan oldin qo‘shilganlar 11-sinfga ega edi
 /* ruxsat berilgan sinflar ro‘yxatini tozalash: faqat ma’lum sinflar, takrorsiz, tartibli */
 function normGrades(g) { const a = Array.isArray(g) ? g.map(String) : []; return GRADES.filter((x) => a.includes(x)); }
 function gradesOf(u) { return u && Array.isArray(u.grades) ? normGrades(u.grades) : DEFAULT_GRADES.slice(); }
-function videoGrade(key) { return key.startsWith("g9-") ? "9" : "11"; }
+function videoGrade(key) { const m = /^g(\d+)-/.exec(key); return m ? m[1] : "11"; }
 
 const json = (status, data) => new Response(JSON.stringify(data), { status, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" } });
 const err = (status, code, message) => json(status, { error: code, message });

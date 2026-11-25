@@ -1,0 +1,50 @@
+TB.add({
+n:2,page:12,title:"Cheklanganlik muammosi",
+sum:"Ehtiyoj va uning turlari (shaxsiy, ijtimoiy), erkin va iqtisodiy ne’matlar, resurslar — tabiiy, mehnat va kapital, tiklanadigan va tiklanmaydigan resurslar, cheklanganlik muammosi — iqtisodiyotning asosiy muammosi.",
+learn:["Ehtiyoj nima?","Shaxsiy va ijtimoiy ehtiyoj","Erkin va iqtisodiy ne’matlar","Resurslar turlari","Tiklanadigan va tiklanmaydigan","Cheklanganlik muammosi"],
+hook:{q:"3 daqiqa ichida o‘z ehtiyojlaringiz ro‘yxatini tuzing. Vaqt ko‘p bo‘lsa, ro‘yxat qachon tugaydi? Dunyodagi eng boy odamning ehtiyoji bormi?",a:"Ro‘yxat hech qachon tugamaydi! Ayiqning qorni to‘ysa, iniga kirib uxlaydi, inson esa erishgan narsasi bilan qanoatlanmaydi — yaxshiroq yashashga intiladi. Shuning uchun <b>inson ehtiyojlarining poyoni va cheki yo‘q</b>. Eng boy odamning ham ehtiyojlari bor."},
+slides:[
+ {k:"def",tag:"TUSHUNCHA",h:"Ehtiyoj nima?",items:[["Ehtiyoj","insonning muayyan sharoitda yashashi va kamol topishi uchun zarur bo‘lgan narsalarga <b>muhtojligi</b>."]],p:"Inson yaxshiroq ovqatlanish, kiyinish, yashash, bilim olishga intiladi — unga <b>har doim nimadir yetishmaydi</b>."},
+ {k:"vs",tag:"TURLARI",h:"Shaxsiy va ijtimoiy ehtiyojlar",cols:[["Shaxsiy ehtiyojlar","sky",["Faqat bir shaxsga tegishli","Shaxsiy gigiyena vositalari","Kiyim-kechak, gazeta o‘qish"]],["Ijtimoiy ehtiyojlar","gold",["Birgalikda qondiriladi","Maktabda bilim olish","Jamoat transportidan foydalanish"]]]},
+ {k:"law",tag:"IQTIBOS",h:"Abu Ali ibn Sino",q:"Hayvon tabiat ne’matlariga qanoat qiladi. Odamlarga esa tabiat ne’matlari kamlik qiladi. Hayvon ne’matlarni tayyor holda o‘zlashtiradi. Odam esa o‘z <b>mehnati</b> bilan o‘ziga ovqat, kiyim, turar joy yaratadi.",src:"Fan tarixiga oid asarlardan"},
+ {k:"vs",tag:"NE’MATLAR",h:"Erkin va iqtisodiy ne’matlar",cols:[["Erkin ne’matlar","up",["Tabiat <b>tekin</b> in’om etadi","Havo, quyosh nuri, issiqlik","Mehnat talab qilmaydi"]],["Iqtisodiy ne’matlar","violet",["Inson <b>mehnati</b> bilan yaratiladi","Non, kiyim, uy, xizmatlar","Resurs sarflanadi"]]]},
+ {k:"def",tag:"RESURSLAR",h:"Ne’mat yaratish uchun nima kerak?",items:[["Resurslar","mahsulot va xizmatlar yaratish uchun asqotadigan barcha narsalar: xom ashyo, jismoniy kuch, bilim, mashinalar, binolar."]]},
+ {k:"cards",tag:"UCH TUR",h:"Resurslar turlari",n:3,cards:[["leaf","Tabiiy","Yer, qazilma boyliklar, o‘rmon, suv, havo, quyosh nuri"],["users","Mehnat","Aholining mehnatga layoqatli (iqtisodiy faol) qismi"],["bank","Kapital","Bino, texnika, yo‘llar va moliyaviy mablag‘lar: valuta, qimmatbaho metallar, pul"]],p:"Zamonaviy iqtisodiyotda <b>ma’lumot va vaqt</b> kabi resurslarning ahamiyati tobora oshmoqda."},
+ {k:"vs",tag:"TABIIY RESURSLAR",h:"Tiklanadi yoki tiklanmaydi?",cols:[["Tiklanmaydi","down",["Neft, gaz","Ko‘mir","Temir rudasi"]],["Tiklanadi","up",["Yer — ishlov berilib o‘g‘itlansa, unumdorligi tiklanadi va hatto oshadi","O‘rmon, suv"]]]},
+ {k:"def",tag:"ASOSIY MUAMMO",h:"Cheklanganlik muammosi",items:[["Cheklanganlik muammosi","<b>cheksiz ehtiyojlar</b> va <b>cheklangan resurslar</b> o‘rtasidagi nomutanosiblik."]],p:"Bu — iqtisodiyotning asosiy muammosi. Iqtisodiyot fani cheklangan resurslardan foydalanib, cheksiz ehtiyojlarni <b>to‘laroq qondirish</b> yo‘llarini o‘rganadi."},
+ {k:"fact",kind:"bilasizmi",h:"Ma’naviyat va resurslar",text:"Cheklangan resurslardan qanday foydalanish insonning <b>ma’naviyatiga</b> ham bog‘liq. Yuksak ma’naviyatli inson moddiy ehtiyojlarini qondirar ekan, atrofdagilarga va jamiyatga ziyon yetkazmaslikka intiladi."},
+ {k:"review",qa:[["Nega inson ehtiyojlarining poyoni yo‘q?","Inson erishgan narsasi bilan qanoatlanmay, doim yaxshiroq yashashga intiladi."],["Shaxsiy va ijtimoiy ehtiyojning farqi?","Shaxsiy — bir kishiga tegishli; ijtimoiy — birgalikda qondiriladi (maktab, transport)."],["Erkin ne’matga misol?","Havo, quyosh nuri, issiqlik."],["Resurslarning uch turi?","Tabiiy, mehnat va kapital."],["Cheklanganlik muammosining mohiyati?","Ehtiyojlar cheksiz, resurslar esa cheklangan."],["Nega sizga xohlaganingizcha pul berilmaydi?","Oila daromadi — resurs, u cheklangan; boshqa ehtiyojlarga ham yetishi kerak."]]}
+],
+terms:[["Ehtiyoj","Yashash va kamol topish uchun zarur narsalarga muhtojlik."],["Shaxsiy ehtiyoj","Faqat alohida shaxsga tegishli ehtiyoj."],["Ijtimoiy ehtiyoj","Kishilar birgalikda qondiradigan umumiy ehtiyoj."],["Erkin ne’mat","Tabiat tekin in’om etgan ne’mat."],["Iqtisodiy ne’mat","Inson iqtisodiy faoliyati orqali yaratiladigan ne’mat."],["Resurslar","Mahsulot va xizmatlar yaratish uchun asqotadigan barcha narsalar."],["Mehnat resurslari","Aholining mehnatga layoqatli qismi."],["Kapital","Bino, uskuna, texnika va moliyaviy mablag‘lar."],["Cheklanganlik muammosi","Cheksiz ehtiyojlar va cheklangan resurslar o‘rtasidagi nomutanosiblik."]],
+sorts:[
+ {t:"Qanday ne’mat?",L:"Erkin ne’mat",R:"Iqtisodiy ne’mat",items:[["Quyosh nuri","L","Tabiat tekin beradi."],["Non","R","Mehnat bilan yaratiladi."],["Toza havo (tog‘da)","L","Erkin ne’mat."],["Darslik","R","Ishlab chiqariladi."],["Shamol","L","Tabiat in’omi."],["Sartarosh xizmati","R","Mehnat evaziga."]]},
+ {t:"Resurs turi",L:"Tabiiy resurs",R:"Kapital",items:[["Neft koni","L","Yer osti boyligi."],["Tikuv mashinasi","R","Ishlab chiqarish vositasi."],["Unumdor yer","L","Tabiat."],["Korxona binosi","R","Inson yaratgan."],["Daryo suvi","L","Tabiat."],["Bankdagi pul mablag‘i","R","Moliyaviy kapital."]]}
+],
+quiz:[
+ ["Ehtiyoj nima?",["Zarur narsalarga muhtojlik","Pul miqdori","Ish joyi","Narx"]],
+ ["Inson ehtiyojlari…",["Cheksiz","Cheklangan","Faqat ovqat","Bir xil"]],
+ ["Ijtimoiy ehtiyojga misol?",["Jamoat transportidan foydalanish","Tish cho‘tkasi","Shaxsiy kiyim","Gazeta o‘qish"]],
+ ["Erkin ne’matga misol?",["Quyosh nuri","Non","Telefon","Kitob"]],
+ ["Iqtisodiy ne’mat qanday yaratiladi?",["Inson mehnati bilan","Tabiat tekin beradi","O‘z-o‘zidan","Faqat davlat beradi"]],
+ ["Resurslarning nechta asosiy turi bor?",["3","2","5","10"]],
+ ["Mehnat resurslari — bu…",["Aholining mehnatga layoqatli qismi","Mashinalar","Yer","Pul"]],
+ ["Tiklanmaydigan resurs?",["Neft","Yer","O‘rmon","Suv"]],
+ ["Kapitalga nima kiradi?",["Bino, texnika va pul mablag‘lari","Faqat yer","Faqat havo","Ehtiyojlar"]],
+ ["Cheklanganlik muammosi — bu…",["Cheksiz ehtiyoj va cheklangan resurs nomutanosibligi","Pulning ko‘pligi","Ishsizlik","Narxlarning tushishi"]],
+ ["«Odam o‘z mehnati bilan ovqat, kiyim yaratadi» kimning so‘zi?",["Ibn Sino","Ksenofont","Beruniy","Navoiy"]],
+ ["Zamonaviy iqtisodiyotda ahamiyati oshayotgan resurslar?",["Ma’lumot va vaqt","Faqat ko‘mir","Faqat qum","Faqat tuz"]]
+],
+cards:[["Ehtiyoj?","Yashash va kamol topish uchun zarur narsalarga muhtojlik."],["Nega ehtiyojlar cheksiz?","Inson doim yaxshiroq yashashga intiladi."],["Shaxsiy ehtiyoj misoli?","Kiyim, gigiyena vositalari, gazeta o‘qish."],["Ijtimoiy ehtiyoj misoli?","Maktabda o‘qish, jamoat transporti."],["Erkin ne’mat?","Tabiat tekin bergan: havo, quyosh, issiqlik."],["Iqtisodiy ne’mat?","Inson mehnati bilan yaratiladigan ne’mat."],["Resurslar?","Mahsulot va xizmat yaratish uchun kerakli barcha narsalar."],["Tabiiy resurslar?","Yer, qazilmalar, o‘rmon, suv, havo, quyosh nuri."],["Mehnat resurslari?","Aholining iqtisodiy faol, mehnatga layoqatli qismi."],["Kapital resurslar?","Bino, inshoot, texnika, yo‘llar, moliyaviy mablag‘lar."],["Tiklanmaydigan resurslar?","Neft, gaz, ko‘mir, temir rudasi."],["Iqtisodiyotning asosiy muammosi?","Cheklanganlik: ehtiyoj cheksiz, resurs cheklangan."]],
+tasks:[
+ {t:"Ehtiyojlar ro‘yxati",q:"O‘zingizning <b>10 ta</b> ehtiyojingizni yozing va ularni shaxsiy hamda ijtimoiy ehtiyojlarga ajrating. Qaysilari erkin, qaysilari iqtisodiy ne’mat bilan qondiriladi?",steps:[["Shaxsiy","Kiyim, telefon, kitob, sport poyabzali, ovqat"],["Ijtimoiy","Maktab, avtobus, park, kutubxona, shifoxona"],["Erkin ne’mat bilan","Toza havo, quyosh issiqligi"],["Iqtisodiy ne’mat bilan","Qolgan deyarli barchasi — mehnat va resurs talab qiladi"]],answer:"Ehtiyojlarimizning aksariyati <b>iqtisodiy ne’matlar</b> bilan qondiriladi — ularni yaratish uchun cheklangan resurslar sarflanadi."},
+ {t:"Oila budjeti va cheklanganlik",q:"Oilaning oylik daromadi <b>6 mln so‘m</b>. Oziq-ovqatga 2,5 mln, kommunal to‘lovga 0,8 mln, kiyimga 1 mln, transportga 0,5 mln kerak. Sizga yangi telefon (<b>2 mln</b>) olinsa nima bo‘ladi?",steps:[["Majburiy xarajatlar","2,5 + 0,8 + 1 + 0,5 = <b>4,8 mln</b>"],["Qoldiq","6 − 4,8 = <b>1,2 mln</b>"],["Telefon","2 mln &gt; 1,2 mln — pul yetmaydi"],["Yechim","Bir necha oy jamg‘arish yoki boshqa xarajatni qisqartirish"]],answer:"Bu — <b>cheklanganlik muammosi</b>ning oila misoli: daromad (resurs) cheklangan, shuning uchun tanlov qilishga to‘g‘ri keladi."}
+],
+film:[
+ {t:"Ayiq va inson",bg:"field",s:["Ayiqning qorni to‘ysa, iniga kirib uxlaydi.","Inson esa doim yaxshiroq yashashni xohlaydi."],a:[["p",450,"farmer",{face:"think"}],["bubble",800,320,"Yana nima kerak?",{d:.6}],["stars",8,{color:"#ffd36a"}]]},
+ {t:"Ehtiyojlar cheksiz",bg:"city",s:["Kiyim, uy, bilim, sayohat, telefon...","Ro‘yxat hech tugamaydi!"],a:[["p",400,"student",{face:"wow",tag:"O‘quvchi"}],["minis",4,["Kiyim","Uy","Bilim","Telefon"],{d:.6}]]},
+ {t:"Erkin ne’mat",bg:"day",s:["Quyosh nuri va havoni tabiat tekin beradi.","Bular — erkin ne’matlar."],a:[["bulb",450,380,{s:1}],["sign",900,320,"TEKIN",{fs:56,fill:"#1f9d61",color:"#fff",d:.6}],["check",1300,420,{s:.7,d:1.2}]]},
+ {t:"Uch xil resurs",bg:"gold",s:["Tabiiy resurs, mehnat va kapital.","Har bir mahsulot ularsiz yaratilmaydi."],a:[["minis",3,["Tabiat","Mehnat","Kapital"]],["factory",800,"ISHLAB CHIQARISH",{s:.5,d:1.2}]]},
+ {t:"Neft tugaydi",bg:"night",s:["Neft, gaz, ko‘mir tiklanmaydi.","Ularni tejab ishlatish kerak."],a:[["factory",450,"NEFT",{s:.75}],["chart",950,160,"down","ZAXIRA ▼",{s:.7,d:.6}],["warn",1350,420,{s:.7,d:1.2}]]},
+ {t:"Asosiy muammo",bg:"office",s:["Ehtiyoj cheksiz, resurs cheklangan.","Bu — cheklanganlik muammosi."],a:[["scales",800,420,{s:1.2}],["sign",450,280,"EHTIYOJ ∞",{fs:44,fill:"#e2574c",color:"#fff",d:.6}],["sign",1150,280,"RESURS",{fs:44,fill:"#3b82f6",color:"#fff",d:1}]]}
+]
+});

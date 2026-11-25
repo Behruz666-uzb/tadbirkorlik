@@ -33,11 +33,14 @@ let [s,r]=await call("POST","/admin/login",{email:"dilfuzamavlanova446@gmail.com
 [s,r]=await call("GET","/me",null,t9); ok(s===200&&r.grades.join()==="9,11","me reflects new grades without re-login");
 [s,r]=await call("GET","/videos",null,t9); ok(r.t03&&r["g9-t05"],"videos for both grades");
 [s,r]=await call("PUT","/admin/users/grades",{email:"t9@gmail.com",grades:[]},at); ok(s===400,"cannot clear all grades");
+[s,r]=await call("PUT","/admin/videos",{key:"g8-t07",url:"https://youtu.be/bbbbbbbbbbb"},at); ok(s===200&&r["g8-t07"],"set grade-8 video");
+[s,r]=await call("PUT","/admin/users/grades",{email:"t9@gmail.com",grades:["8"]},at); ok(s===200&&r.grades.join()==="8","grade 8 access");
+[s,r]=await call("GET","/videos",null,t9); ok(r["g8-t07"]&&!r["g9-t05"]&&!r.t03,"grade-8 user sees only grade-8 videos");
 [s,r]=await call("PUT","/admin/users/grades",{email:"t9@gmail.com",grades:["9"]},t9); ok(s===401,"user cannot change grades");
 [s,r]=await call("GET","/admin/users",null,at); ok(r.find(x=>x.email==="teacher@gmail.com").grades.join()==="11","default grade 11");
 mem.set("users",JSON.stringify(Object.assign(JSON.parse(mem.get("users")),{"old@gmail.com":{note:"",salt:"aa",hash:"bb",v:0}})));
 [s,r]=await call("GET","/admin/users",null,at); ok(r.find(x=>x.email==="old@gmail.com").grades.join()==="11","legacy user without grades → 11");
-[s,r]=await call("POST","/login",{email:"dilfuzamavlanova446@gmail.com",code:PW}); ok(r.grades&&r.grades.length===2,"admin gets all grades");
+[s,r]=await call("POST","/login",{email:"dilfuzamavlanova446@gmail.com",code:PW}); ok(r.grades&&r.grades.length===3,"admin gets all grades");
 [s,r]=await call("DELETE","/admin/users?email=teacher@gmail.com",null,at); ok(s===200,"delete");
 [s,r]=await call("POST","/admin/password",{old:PW,new:"short"},at); ok(s===400,"weak pw");
 [s,r]=await call("POST","/admin/password",{old:PW,new:"NewPass12345"},at); ok(s===200&&r.token,"change pw"); const at2=r.token;
